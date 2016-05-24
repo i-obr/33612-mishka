@@ -1,7 +1,7 @@
 # Личный проект «Мишка» [![Build status][travis-image]][travis-url] [![Dependency status][dependency-image]][dependency-url]
 
 * Студент: [Иван Образцов](https://up.htmlacademy.ru/adaptive/7/user/33612).
-* Наставник: `Неизвестно`.
+* Наставник: [Николай Громов](https://htmlacademy.ru/profile/id6170).
 
 ---
 
