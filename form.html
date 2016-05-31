@@ -34,11 +34,11 @@
         <form class="form-order" action="/echo" method="post">
           <fieldset class="form-order__field-group">
             <legend class="form-order__legend">Тип</legend>
-            <div class="form-item">
+            <div class="form-radio">
               <input type="radio" name="type" id="accessory" checked>
               <label for="accessory">Аксессуар для интерьера</label>
             </div>
-            <div class="form-item">
+            <div class="form-radio">
               <input type="radio" name="type" id="toy">
               <label for="toy">Детская игрушка</label>
             </div>
@@ -46,32 +46,32 @@
 
           <fieldset class="form-order__field-group">
             <legend class="form-order__legend">Цвет</legend>
-            <div class="form-item">
+            <div class="form-checkbox">
               <input type="checkbox" name="color" id="white" checked>
               <label for="white">Белый</label>
             </div>
 
-            <div class="form-item">
+            <div class="form-checkbox">
               <input type="checkbox" name="color" id="gray" checked>
               <label for="gray">Серый</label>
             </div>
 
-            <div class="form-item">
+            <div class="form-checkbox">
               <input type="checkbox" name="color" id="tiffany">
               <label for="tiffany">&#171;Тиффани&#187;</label>
             </div>
 
-            <div class="form-item">
+            <div class="form-checkbox">
               <input type="checkbox" name="color" id="black">
               <label for="black">Черный</label>
             </div>
 
-            <div class="form-item">
+            <div class="form-checkbox">
               <input type="checkbox" name="color" id="pink">
               <label for="pink">Розовый</label>
             </div>
 
-            <div class="form-item">
+            <div class="form-checkbox">
               <input type="checkbox" name="color" id="orange">
               <label for="orange">Оранжевый</label>
             </div>
@@ -79,15 +79,15 @@
 
           <fieldset class="form-order__field-group">
             <legend class="form-order__legend">ФИО</legend>
-            <div class="form-item">
+            <div class="form-text">
               <label for="surname">Фамилия</label>
               <input type="text" name="surname" id="surname" placeholder="Укажите фамилию" required>
             </div>
-            <div class="form-item">
+            <div class="form-text">
               <label for="name">Имя</label>
               <input type="text" name="name" id="name" placeholder="Введите ваше имя" required>
             </div>
-            <div class="form-item">
+            <div class="form-text">
               <label for="patronymic">Отчество</label>
               <input type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
             </div>
@@ -95,21 +95,21 @@
 
           <fieldset class="form-order__field-group">
             <legend class="form-order__legend">Тел</legend>
-            <div class="form-item">
+            <div class="form-tel">
               <input type="tel" name="tel" placeholder="+7 XXX XXX XX XX" required>
             </div>
           </fieldset>
 
           <fieldset class="form-order__field-group">
             <legend class="form-order__legend">E-mail</legend>
-            <div class="form-item">
+            <div class="form-email">
               <input type="email" name="email" placeholder="Ваш e-mail" required>
             </div>
           </fieldset>
 
           <fieldset class="form-order__field-group">
             <legend class="form-order__legend">Доп</legend>
-            <div class="form-item">
+            <div class="form-textarea">
               <textarea name="extra" cols="30" rows="7">Опишите все ваши пожелания к заказу</textarea>
             </div>
           </fieldset>
