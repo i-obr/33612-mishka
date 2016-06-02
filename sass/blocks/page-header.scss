@@ -1,0 +1,15 @@
+.page-header {
+  text-align: center;
+
+  background: $white;
+  color: $black;
+
+  outline: 1px solid black;
+}
+
+.page-header__container {
+  width: 320px;
+  margin: 0 auto;
+
+  outline: 1px solid blue;
+}

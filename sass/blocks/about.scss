@@ -1,0 +1,81 @@
+.about {
+
+  outline: 1px solid black;
+}
+
+.about__container {
+  width: 260px;
+  margin: 0 auto;
+  padding: 0 30px;
+
+  outline: 1px solid blue;
+}
+
+.about__title {
+  margin: 0;
+  padding: 30px 0;
+
+  font-size: 24px;
+  line-height: 30px;
+  font-family: $font-verdana;
+
+  color: $black;
+}
+
+.about__list {
+  margin: 0;
+  padding: 0;
+
+  list-style: none;
+}
+
+.about__item {
+  position: relative;
+
+  padding-top: 60px;
+  padding-bottom: 30px;
+
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 700;
+  font-family: $font-verdana;
+
+  color: $black;
+
+  outline: 1px solid blue;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 55px;
+    height: 45px;
+  }
+
+  &--ecology::before {
+    background: url("../img/icon-feature-1.svg") no-repeat center;
+  }
+
+  &--norse-style::before {
+    background: url("../img/icon-feature-3.svg") no-repeat center;
+  }
+
+  &--heart::before {
+    background: url("../img/icon-feature-5.svg") no-repeat center;
+  }
+
+  &--knitting::before {
+    background: url("../img/icon-feature-2.svg") no-repeat center;
+  }
+
+  &--support::before {
+    background: url("../img/icon-feature-4.svg") no-repeat center;
+  }
+
+  &--gift-box::before {
+    background: url("../img/icon-feature-6.svg") no-repeat center;
+  }
+}

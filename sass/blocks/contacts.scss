@@ -1,0 +1,68 @@
+.contacts {
+  outline: 1px solid black;
+}
+
+.contacts__container {
+  width: 260px;
+  padding: 0 30px;
+  margin: 0 auto;
+
+  outline: 1px solid blue;
+}
+
+.contacts__title {
+  margin: 0;
+  padding: 40px 0;
+
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 700;
+  font-family: $font-verdana;
+
+  color: $black;
+}
+
+.contacts__items {
+  margin: 0;
+  margin-bottom: 30px;
+}
+
+.contacts__label {
+  font-size: 14px;
+  line-height: 30px;
+  font-family: $font-open-sans;
+
+  color: $gray--darken;
+}
+
+.contacts__email {
+  padding-bottom: 5px;
+
+  font-size: 14px;
+  line-height: 3px;
+  font-family: $font-open-sans;
+  text-decoration: none;
+
+  color: $gray--darken;
+
+  border-bottom: 2px solid $green;
+}
+
+.contacts__address {
+  font-size: 14px;
+  line-height: 30px;
+  font-family: $font-open-sans;
+  color: $gray--darken;
+}
+
+.contacts__map {
+  min-height: 458px;
+  width: 100%;
+  margin-bottom: 40px;
+
+  background: url("../img/icon-map-pin.svg") no-repeat center, url("../img/map-mobile@1x.jpg") no-repeat center $gray;
+}
+
+.contacts__button {
+  margin-bottom: 40px;
+}

@@ -1,0 +1,26 @@
+.promo {
+  text-align: center;
+
+  background: $gray--light url("../img/hero-mobile@1x.jpg") no-repeat center top;
+}
+
+.promo__container {
+  width: 320px;
+  margin: 0 auto;
+}
+
+.promo__title {
+  padding: 30px;
+  padding-top: 90px;
+  padding-bottom: 120px;
+  margin: 0;
+
+  font-size: 24px;
+  line-height: 30px;
+  font-family: $font-verdana;
+  font-weight: 700;
+  text-align: center;
+  white-space: pre-line;
+
+  color: $black;
+}
