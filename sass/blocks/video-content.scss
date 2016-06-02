@@ -1,0 +1,66 @@
+.video-content {
+  margin-bottom: 55px;
+  border: $border-main;
+}
+
+.video-content__title {
+  position: relative;
+
+  padding: 25px;
+  padding-left: 90px;
+  margin: 0;
+
+  font-size: 16px;
+  line-height: 24px;
+  font-family: $font-verdana;
+
+  color: $black;
+
+  &::before {
+    content: "";
+
+    position: absolute;
+    top: 35px;
+    left: 30px;
+
+    width: 35px;
+    height: 25px;
+
+    background: url("../img/icon-video.svg") no-repeat center;
+  }
+}
+
+.video-content__frame {
+  width: 258px;
+  height: 150px;
+
+  background: url("../img/icon-play.svg") no-repeat center, url("../img/video-mobile@1x.jpg");
+
+  iframe {
+    width: 258px;
+    height: 150px;
+
+    border: none;
+  }
+}
+
+.video-content__description {
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.video-content__teaser {
+  margin: 0;
+  padding-top: 25px;
+  padding-bottom: 20px;
+  padding-left: 35px;
+
+  font-size: 14px;
+  line-height: 24px;
+  font-family: $font-open-sans;
+  text-align: left;
+}
+
+.video-content__button {
+  width: 192px;
+}
