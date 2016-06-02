@@ -2,3 +2,24 @@ body {
   background: $white;
   color: $black;
 }
+
+label {
+  font-size: 16px;
+  line-height: 18px;
+  font-weight: 700;
+  font-family: $font-verdana;
+  vertical-align: middle;
+
+  color: $black;
+
+  cursor: pointer;
+}
+
+input::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+  font-size: 16px;
+  line-height: 18px;
+  font-family: $font-verdana;
+
+  color: $gray--darken;
+}

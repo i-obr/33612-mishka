@@ -26,3 +26,14 @@
 
   outline: 1px solid blue;
 }
+
+.page-content__description {
+  margin: 0;
+  margin-bottom: 30px;
+
+  font-size: 14px;
+  line-height: 24px;
+  font-family: $font-open-sans;
+
+  color: $gray--darken;
+}

@@ -1,0 +1,26 @@
+.form-order {
+  margin-bottom: 55px;
+}
+
+.form-order__field-group {
+  padding: 0;
+  margin: 0;
+  margin-bottom: 20px;
+
+  border: none;
+  border-top: 1px solid;
+  border-color: $green;
+}
+
+.form-order__legend {
+  width: 62px;
+  margin-bottom: 20px;
+
+  font-size: 16px;
+  line-height: 16px;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-family: $font-open-sans;
+
+  color: $green;
+}
