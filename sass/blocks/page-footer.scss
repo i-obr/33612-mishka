@@ -20,8 +20,8 @@
   p {
     margin: 0;
 
-    font-size: 18px;
-    line-height: 18px;
+    font-size: $fs-main + 2;
+    line-height: $lh-main - 6;
     font-weight: 700;
     font-family: $font-verdana;
   }

@@ -4,8 +4,8 @@ body {
 }
 
 label {
-  font-size: 16px;
-  line-height: 18px;
+  font-size: $fs-main;
+  line-height: $lh-main - 6;
   font-weight: 700;
   font-family: $font-verdana;
   vertical-align: middle;
@@ -17,8 +17,8 @@ label {
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  font-size: 16px;
-  line-height: 18px;
+  font-size: $fs-main;
+  line-height: $lh-main - 6;
   font-family: $font-verdana;
 
   color: $gray--darken;
