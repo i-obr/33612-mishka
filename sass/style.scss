@@ -3,10 +3,6 @@
 @import "base/fonts.scss";
 @import "base/scafolding.scss";
 
-
-
-/// Блоки, которые используются на всех страницах
-
 @import "blocks/page-header.scss";
 @import "blocks/page-content.scss";
 @import "blocks/page-footer.scss";
@@ -14,11 +10,6 @@
 @import "blocks/mishka-logo.scss";
 @import "blocks/main-nav.scss";
 @import "blocks/social.scss";
-
-
-
-/// Блоки на главной страницe
-
 @import "blocks/promo.scss";
 @import "blocks/sub-nav.scss";
 @import "blocks/popular-goods.scss";
@@ -26,23 +17,10 @@
 @import "blocks/reviews.scss";
 @import "blocks/pagination.scss";
 @import "blocks/contacts.scss";
-
-
-
-/// Блоки на странице формы заказа
-
 @import "blocks/form-order.scss";
 @import "blocks/form-radio.scss";
 @import "blocks/form-checkbox.scss";
 @import "blocks/form-text.scss";
-@import "blocks/form-tel.scss";
-@import "blocks/form-email.scss";
-@import "blocks/form-textarea.scss";
-
-
-
-/// Блоки на странице каталога
-
 @import "blocks/catalog.scss";
 @import "blocks/catalog-item.scss";
 @import "blocks/video-content.scss";

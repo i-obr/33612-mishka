@@ -1,68 +1,50 @@
 .contacts {
-  outline: 1px solid black;
-}
 
-.contacts__container {
-  width: 260px;
-  padding: 0 30px;
-  margin: 0 auto;
+  &__container {
+    width: 260px;
+    padding: 0 30px;
+    margin: 0 auto;
+  }
 
-  outline: 1px solid blue;
-}
+  &__title {
+    margin: 0;
+    padding-top: 45px;
+    padding-bottom: 25px;
+  }
 
-.contacts__title {
-  margin: 0;
-  padding: 40px 0;
+  &__items {
+    margin: 0;
+    margin-bottom: 30px;
 
-  font-size: $fs-main + 8;
-  line-height: $lh-main + 6;
-  font-weight: 700;
-  font-family: $font-verdana;
+    line-height: 2.1428;
+  }
 
-  color: $black;
-}
+  &__email {
+    padding-bottom: 5px;
 
-.contacts__items {
-  margin: 0;
-  margin-bottom: 30px;
-}
+    text-decoration: none;
 
-.contacts__label {
-  font-size: $fs-main - 2;
-  line-height: $lh-main + 6;
-  font-family: $font-open-sans;
+    border-bottom: 2px solid $green;
+  }
 
-  color: $gray--darken;
-}
+  &__map {
+    min-height: 457px;
+    width: 100%;
+    margin-bottom: 40px;
 
-.contacts__email {
-  padding-bottom: 5px;
+    text-align: center;
 
-  font-size: $fs-main - 2;
-  line-height: $lh-main + 6;
-  font-family: $font-open-sans;
-  text-decoration: none;
+    background: $gray;
 
-  color: $gray--darken;
+    img {
+      width: 320px;
+      height: 457px;
+    }
+  }
 
-  border-bottom: 2px solid $green;
-}
-
-.contacts__address {
-  font-size: $fs-main - 2;
-  line-height: $lh-main + 6;
-  font-family: $font-open-sans;
-  color: $gray--darken;
-}
-
-.contacts__map {
-  min-height: 458px;
-  width: 100%;
-  margin-bottom: 40px;
-
-  background: url("../img/icon-map-pin.svg") no-repeat center, url("../img/map-mobile@1x.jpg") no-repeat center $gray;
-}
-
-.contacts__button {
-  margin-bottom: 40px;
+  &__button {
+    padding-left: 53px;
+    padding-right: 53px;
+    margin-bottom: 40px;
+  }
 }

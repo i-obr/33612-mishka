@@ -1,66 +1,59 @@
 .video-content {
   margin-bottom: 55px;
   border: $border-main;
-}
 
-.video-content__title {
-  position: relative;
+  &__title {
+    position: relative;
 
-  padding: 25px;
-  padding-left: 90px;
-  margin: 0;
+    padding: 25px;
+    padding-left: 90px;
+    margin: 0;
 
-  font-size: $fs-main;
-  line-height: $lh-main;
-  font-family: $font-verdana;
+    &::before {
+      content: "";
 
-  color: $black;
+      position: absolute;
+      top: 35px;
+      left: 30px;
 
-  &::before {
-    content: "";
+      width: 35px;
+      height: 25px;
 
-    position: absolute;
-    top: 35px;
-    left: 30px;
-
-    width: 35px;
-    height: 25px;
-
-    background: url("../img/icon-video.svg") no-repeat center;
+      background: url("../img/icon-video.svg") no-repeat center;
+    }
   }
-}
 
-.video-content__frame {
-  width: 258px;
-  height: 150px;
-
-  background: url("../img/icon-play.svg") no-repeat center, url("../img/video-mobile@1x.jpg");
-
-  iframe {
+  &__frame {
     width: 258px;
     height: 150px;
 
-    border: none;
+    background: url("../img/icon-play.svg") no-repeat center, url("../img/video-mobile@1x.jpg");
+
+    iframe {
+      width: 258px;
+      height: 150px;
+
+      border: none;
+    }
   }
-}
 
-.video-content__description {
-  margin-bottom: 30px;
-  text-align: center;
-}
+  &__description {
+    margin-bottom: 30px;
+    text-align: center;
+  }
 
-.video-content__teaser {
-  margin: 0;
-  padding-top: 25px;
-  padding-bottom: 20px;
-  padding-left: 35px;
+  &__teaser {
+    margin: 0;
+    padding-top: 25px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 35px;
 
-  font-size: $fs-main - 2;
-  line-height: $lh-main;
-  font-family: $font-open-sans;
-  text-align: left;
-}
+    text-align: left;
+  }
 
-.video-content__button {
-  width: 192px;
+  &__button {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
 }

@@ -20,22 +20,22 @@
       margin-right: 0;
     }
   }
-}
 
-.social__link {
-  display: block;
-  width: 25px;
-  height: 30px;
+  &__link {
+    display: block;
+    width: 25px;
+    height: 30px;
 
-  &--inst {
-    background: url("../img/icon-insta.svg") no-repeat center;
-  }
+    &--inst {
+      background: url("../img/icon-insta.svg") no-repeat center;
+    }
 
-  &--fb {
-    background: url("../img/icon-fb.svg") no-repeat center;
-  }
+    &--fb {
+      background: url("../img/icon-fb.svg") no-repeat center;
+    }
 
-  &--tw {
-    background: url("../img/icon-twitter.svg") no-repeat center;
+    &--tw {
+      background: url("../img/icon-twitter.svg") no-repeat center;
+    }
   }
 }

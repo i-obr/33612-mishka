@@ -1,11 +1,9 @@
 .button {
   display: inline-block;
   box-sizing: border-box;
-  padding: 15px 0;
-  width: 260px;
+  padding: 12px;
 
-  font-size: $fs-main;
-  line-height: $lh-main - 8;
+  font-size: $font-size--button;
   font-weight: 700;
   font-family: $font-open-sans;
   text-transform: uppercase;

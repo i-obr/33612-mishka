@@ -3,48 +3,109 @@
 
   text-align: left;
 
-  outline: 1px solid red;
-}
+  &__list {
+    display: none;
+    padding: 0;
+    margin: 0;
 
-.main-nav__list {
-  padding: 0;
-  margin: 0;
+    list-style: none;
 
-  list-style: none;
-}
+    &--visible {
+      display: block;
+    }
+  }
 
-.main-nav__item {
+  &__item {
     border-bottom: $border-main;
 
-    &:first-child {
-      border-top: $border-main;
+    a {
+      display: inline-block;
+      box-sizing: border-box;
+      width: 100%;
+      padding: 30px 0;
+      padding-left: 75px;
+
+      font-size: $font-size--main;
+      line-height: 1.5;
+      font-weight: 700;
+      text-decoration: none;
+      vertical-align: top;
+
+      color: $black;
+    }
+  }
+
+  &__toggle {
+    position: absolute;
+    top: -50px;
+    right: 30px;
+    z-index: 1;
+
+    display: flex;
+    align-items: center;
+    width: 20px;
+    height: 20px;
+
+    user-select: none;
+
+    > span {
+      position: relative;
+
+      display: inline-block;
+      width: 100%;
+      height: 2px;
+
+      vertical-align: bottom;
+
+      background: $black;
+
+      transition: background 0.3s 0.3s;
+
+      &::before,
+      &::after {
+        content: "";
+
+        position: absolute;
+        left: 0;
+
+        width: 100%;
+        height: 2px;
+
+        background: $black;
+
+        transform-origin: 50% 50%;
+        transition: top 0.3s 0.6s, transform 0.3s;
+
+      }
+
+      &::before {
+        top: 6px;
+      }
+
+      &::after {
+        top: -6px;
+      }
     }
 
-  a {
-    display: inline-block;
-    box-sizing: border-box;
-    width: 100%;
-    padding: 30px 0;
-    padding-left: 75px;
+    &--close {
+      > span {
+        transition: background 0.3s;
+        background: transparent;
 
-    font-size: $fs-main;
-    line-height: $lh-main;
-    font-family: $font-verdana;
-    font-weight: 700;
-    text-decoration: none;
-    vertical-align: top;
+        &:before,
+        &:after {
+          transition: top 0.3s, transform 0.3s 0.5s;
+          top: 0;
+        }
 
-    color: $black;
+        &:before {
+          transform: rotate3d(0, 0, 1, 45deg);
+        }
+
+        &:after {
+          transform: rotate3d(0, 0, 1, -45deg);
+        }
+      }
+    }
   }
-}
-
-.main-nav__toggle {
-  position: absolute;
-  top: -50px;
-  right: 30px;
-
-  width: 22px;
-  height: 22px;
-
-  background: url("../img/icon-menu-close.svg") no-repeat center;
 }

@@ -1,30 +1,30 @@
 .pagination {
   margin-bottom: 40px;
   font-size: 0;
-}
 
-.pagination__button {
-  display: inline-block;
-  box-sizing: border-box;
-  width: 130px;
-  height: 50px;
+  &__button {
+    display: inline-block;
+    box-sizing: border-box;
+    width: 130px;
+    height: 50px;
 
-  vertical-align: top;
-  white-space: nowrap;
+    vertical-align: top;
+    white-space: nowrap;
 
-  border: $border-main;
+    border: $border-main;
 
-  cursor: pointer;
+    cursor: pointer;
 
-  &:first-child {
-    border-right: none;
-  }
+    &:first-child {
+      border-right: none;
+    }
 
-  &--prev {
-    background: url("../img/icon-left-arrow.svg") no-repeat center;
-  }
+    &--prev {
+      background: url("../img/icon-left-arrow.svg") no-repeat center;
+    }
 
-  &--next {
-    background: url("../img/icon-right-arrow.svg") no-repeat center;
+    &--next {
+      background: url("../img/icon-right-arrow.svg") no-repeat center;
+    }
   }
 }

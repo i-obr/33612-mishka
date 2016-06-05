@@ -5,32 +5,30 @@
   list-style: none;
 
   text-align: left;
-}
 
-.sub-nav__item {
+  &__item {
+    &--interior {
+      background: $green;
+    }
 
-  &--interior {
-    background: $green;
-  }
+    &--toys {
+      background: $green--dark;
+    }
 
-  &--toys {
-    background: $green--dark;
-  }
+    a {
+      display: inline-block;
+      width: 100%;
+      padding: 30px;
+      padding-top: 20px;
+      padding-right: 150px;
+      box-sizing: border-box;
 
-  a {
-    display: inline-block;
-    width: 100%;
-    padding: 30px;
-    padding-right: 150px;
-    box-sizing: border-box;
+      font-size: $font-size--button;
+      font-family: $font-tahoma;
+      font-weight: 700;
+      text-decoration: none;
 
-    font-size: 18px;
-    line-height: 24px;
-    font-family: $font-tahoma;
-    font-weight: 700;
-    vertical-align: top;
-    text-decoration: none;
-
-    color: $white;
+      color: $white;
+    }
   }
 }

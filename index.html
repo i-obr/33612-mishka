@@ -9,12 +9,12 @@
     <header class="page-header">
       <div class="page-header__container">
         <div class="mishka-logo">
-          <img src="img/logo-mobile.svg" width="95" height="40" alt="Mishka">
+          <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
           Mishka
         </div>
         <nav class="main-nav">
-          <a class="main-nav__toggle  main-nav__toggle--close" href="#"></a>
-          <ul class="main-nav__list">
+          <a class="main-nav__toggle" href="#" id="toggle"><span></span></a>
+          <ul class="main-nav__list" id="main-nav-list">
             <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
             <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
             <li class="main-nav__item"><a href="#">Поиск по сайту</a></li>
@@ -26,8 +26,7 @@
 
     <section class="promo">
       <div class="promo__container">
-        <h1 class="promo__title">Милые штуки ручной
-        работы для дома</h1>
+        <h1 class="promo__title">Милые штуки ручной работы для дома</h1>
 
         <ul class="sub-nav">
           <li class="sub-nav__item  sub-nav__item--interior"><a href="#">Предметы интерьера</a></li>
@@ -121,7 +120,7 @@
         </p>
       </div>
       <div class="contacts__map" id="map">
-        <!-- map -->
+        <img src="img/map-mobile@1x.jpg" width="320" height="457" alt="map">
       </div>
 
       <div class="contacts__container">
@@ -142,5 +141,9 @@
       </div>
     </footer>
 
+    <noscript>
+      <style type="text/css">.main-nav__list{display:block;}</style>
+    </noscript>
+    <script src="js/menu.js"></script>
   </body>
 </html>

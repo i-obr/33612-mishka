@@ -1,11 +1,37 @@
 body {
+  font: 100%/1.5 $font-verdana;
   background: $white;
   color: $black;
 }
 
+h1,
+h2 {
+  font-size: $font-size--title;
+  line-height: 1.25;
+  font-weight: 700;
+
+  color: $black;
+}
+
+h3 {
+  font-size: $font-size--main;
+  line-height: 1.5;
+  font-weight: 700;
+
+  color: $black;
+}
+
+p {
+  font-size: $font-size--text;
+  line-height: 1.71429;
+  font-family: $font-open-sans;
+
+  color: $gray--darken;
+}
+
 label {
-  font-size: $fs-main;
-  line-height: $lh-main - 6;
+  font-size: $font-size--main;
+  line-height: 1.125;
   font-weight: 700;
   font-family: $font-verdana;
   vertical-align: middle;
@@ -17,9 +43,10 @@ label {
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  font-size: $fs-main;
-  line-height: $lh-main - 6;
-  font-family: $font-verdana;
+  font-size: $font-size--main;
+  line-height: 1.125;
 
   color: $gray--darken;
+
+  opacity: 0.5;
 }

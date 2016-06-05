@@ -1,26 +1,36 @@
 .form-order {
-  margin-bottom: 55px;
-}
+  margin-bottom: 60px;
 
-.form-order__field-group {
-  padding: 0;
-  margin: 0;
-  margin-bottom: 20px;
+  &__button {
+    padding-left: 45px;
+    padding-right: 45px;
+    margin-top: 10px;
+  }
 
-  border: none;
-  border-top: 1px solid;
-  border-color: $green;
-}
+  &__field-group {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 30px;
 
-.form-order__legend {
-  width: 62px;
-  margin-bottom: 20px;
+    border: none;
+    border-top: 1px solid;
+    border-color: $green;
+  }
 
-  font-size: $fs-main;
-  line-height: $lh-main - 8;
-  font-weight: 700;
-  text-transform: uppercase;
-  font-family: $font-open-sans;
+  &__legend {
+    width: 62px;
+    margin-bottom: 30px;
 
-  color: $green;
+    font-size: $font-size--main;
+    line-height: 1;
+    font-weight: 700;
+    font-family: $font-open-sans;
+    text-transform: uppercase;
+
+    color: $green;
+
+    &--indent {
+      margin-bottom: 10px;
+    }
+  }
 }

@@ -4,12 +4,8 @@
   background: $white;
   color: $black;
 
-  outline: 1px solid black;
-}
-
-.page-header__container {
-  width: 320px;
-  margin: 0 auto;
-
-  outline: 1px solid blue;
+  &__container {
+    width: 320px;
+    margin: 0 auto;
+  }
 }

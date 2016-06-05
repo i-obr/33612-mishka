@@ -1,5 +1,9 @@
 .form-radio {
-  margin-bottom: 20px;
+  margin-bottom: 30px;
+
+  &:last-child {
+    margin-bottom: 15px;
+  }
 
   input[type="radio"] {
     display: none;
@@ -9,15 +13,16 @@
     position: relative;
 
     display: inline-block;
-    padding: 10px;
-    padding-left: 63px;
+    padding-left: 62px;
+
+    vertical-align: middle;
   }
 
   input[type="radio"] + label::before {
     content: "";
 
     position: absolute;
-    top: 0;
+    top: -5px;
     left: 0;
 
     display: block;
@@ -32,8 +37,8 @@
     content: "";
 
     position: absolute;
-    top: 14px;
-    left: 13px;
+    top: 9px;
+    left: 14px;
 
     display: block;
     width: 15px;
@@ -42,15 +47,5 @@
     border-radius: 50%;
 
     background: $green;
-  }
-
-  /// Плохой вариант наверное...
-
-  &:first-of-type input[type="radio"] + label::before {
-    top: 5px;
-  }
-
-  &:first-of-type input[type="radio"] + label::after {
-    top: 18px;
   }
 }

@@ -1,39 +1,24 @@
 .page-content {
-  outline: 1px solid black;
-}
 
-.page-content__title {
-  margin: 0;
-  margin-bottom: 30px;
-  padding-top: 75px;
-  padding-bottom: 80px;
+  &__title {
+    margin: 0;
+    margin-bottom: 25px;
+    padding-top: 75px;
+    padding-bottom: 83px;
 
-  font-size: $fs-main + 8;
-  line-height: $lh-main + 6;
-  font-family: $font-verdana;
-  text-align: center;
+    text-align: center;
 
-  color: $black;
-  background: $gray--light;
+    background: $gray--light;
+  }
 
-  outline: 1px solid blue;
-}
+  &__container {
+    width: 260px;
+    margin: 0 auto;
+    padding: 0 30px;
+  }
 
-.page-content__container {
-  width: 260px;
-  margin: 0 auto;
-  padding: 0 30px;
-
-  outline: 1px solid blue;
-}
-
-.page-content__description {
-  margin: 0;
-  margin-bottom: 30px;
-
-  font-size: $fs-main - 2;
-  line-height: $lh-main;
-  font-family: $font-open-sans;
-
-  color: $gray--darken;
+  &__description {
+    margin: 0;
+    margin-bottom: 30px;
+  }
 }
