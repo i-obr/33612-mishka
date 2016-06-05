@@ -4,8 +4,8 @@
   background: $gray--light url("../img/hero-mobile@1x.jpg") no-repeat center top;
 
   &__container {
-    width: 320px;
-    margin: 0 auto;
+    @include container;
+    padding: 0;
   }
 
   &__title {

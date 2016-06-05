@@ -5,7 +5,7 @@
   color: $black;
 
   &__container {
-    width: 320px;
-    margin: 0 auto;
+    @include container;
+    padding: 0;
   }
 }

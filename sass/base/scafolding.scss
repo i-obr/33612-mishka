@@ -1,5 +1,7 @@
 body {
-  font: 100%/1.5 $font-verdana;
+  font-family: $font-verdana;
+  font-size: $font-size;
+  line-height: 1.71429;
   background: $white;
   color: $black;
 }
@@ -14,7 +16,7 @@ h2 {
 }
 
 h3 {
-  font-size: $font-size--main;
+  font-size: $font-size;
   line-height: 1.5;
   font-weight: 700;
 
@@ -23,14 +25,13 @@ h3 {
 
 p {
   font-size: $font-size--text;
-  line-height: 1.71429;
   font-family: $font-open-sans;
 
   color: $gray--darken;
 }
 
 label {
-  font-size: $font-size--main;
+  font-size: $font-size;
   line-height: 1.125;
   font-weight: 700;
   font-family: $font-verdana;
@@ -43,10 +44,16 @@ label {
 
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
-  font-size: $font-size--main;
+  font-size: $font-size;
   line-height: 1.125;
 
   color: $gray--darken;
 
   opacity: 0.5;
+}
+
+
+/// Если не работает js
+.no-js .main-nav__list {
+  display: block !important;
 }

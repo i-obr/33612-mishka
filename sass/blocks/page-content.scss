@@ -12,9 +12,7 @@
   }
 
   &__container {
-    width: 260px;
-    margin: 0 auto;
-    padding: 0 30px;
+    @include container;
   }
 
   &__description {

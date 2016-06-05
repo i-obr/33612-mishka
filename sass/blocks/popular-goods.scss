@@ -4,9 +4,7 @@
   background: $white;
 
   &__container {
-    width: 260px;
-    padding: 0 30px;
-    margin: 0 auto;
+    @include container;
   }
 
   &__title {
@@ -29,7 +27,7 @@
   }
 
   &__title-note {
-    font-size:  $font-size--main;
+    font-size:  $font-size;
     font-family: $font-open-sans;
     line-height: 1;
     text-transform: uppercase;
@@ -69,7 +67,7 @@
   &__price {
     margin-bottom: 25px;
 
-    font-size: $font-size--main;
+    font-size: $font-size;
     font-weight: 700;
     text-align: center;
 

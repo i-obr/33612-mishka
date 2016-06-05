@@ -1,9 +1,7 @@
 .reviews {
 
   &__container {
-    width: 260px;
-    padding: 0 30px;
-    margin: 0 auto;
+    @include container;
   }
 
   &__title {
@@ -13,7 +11,7 @@
 
   &__item {
     margin: 0;
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 
     p {
       margin: 0;
@@ -42,6 +40,6 @@
   &__button {
     padding-left: 80px;
     padding-right: 80px;
-    margin-bottom: 45px;
+    margin-bottom: 40px;
   }
 }
