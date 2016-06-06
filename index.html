@@ -1,19 +1,24 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="no-js" lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+      // Маркер работающего javascript
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    </script>
   </head>
   <body>
     <header class="page-header">
       <div class="page-header__container">
         <div class="mishka-logo">
-          <img src="#" width="100" height="50" alt="Mishka">
+          <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
           Mishka
         </div>
         <nav class="main-nav">
-          <a class="main-nav__toggle  main-nav__toggle--close" href="#"></a>
-          <ul class="main-nav__list">
+          <a class="main-nav__toggle" href="#" id="toggle"><span></span></a>
+          <ul class="main-nav__list" id="main-nav-list">
             <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
             <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
             <li class="main-nav__item"><a href="#">Поиск по сайту</a></li>
@@ -57,7 +62,7 @@
           </table>
 
           <div class="popular-goods__photo">
-            <img src="#" width="100" height="100" alt="knitted basket">
+            <img src="img/triple-set-mobile@1x.jpg" width="260" height="315" alt="knitted basket">
           </div>
 
           <div class="popular-goods__price">Цена: 990 руб.</div>
@@ -85,7 +90,7 @@
       <div class="reviews__container">
         <h2 class="reviews__title">Отзывы</h2>
         <div class="reviews__list  slider">
-          <blockquote class="review__item">
+          <blockquote class="reviews__item">
             <p>Я молодая мама, но все равно фотографии не набирали и близко такого количества лайков, как у популярных инстамамочек. В отчаянии, я накупила аксессуаров и игрушек в Мишке и мои фотографии сразу стали более стильнее, а также набирают больше лайков!</p>
             <cite>Анастасия Красильникова</cite>
             <a href="#">@misssssiskras</a>
@@ -119,10 +124,10 @@
         </p>
       </div>
       <div class="contacts__map" id="map">
-        <!-- map -->
+        <img src="img/map-mobile@1x.jpg" width="320" height="457" alt="map">
       </div>
 
-      <div class="cantacts__container">
+      <div class="contacts__container">
         <a class="button contacts__button" href="#">Напишите нам</a>
       </div>
     </section>
@@ -140,5 +145,6 @@
       </div>
     </footer>
 
+    <script src="js/menu.js"></script>
   </body>
 </html>

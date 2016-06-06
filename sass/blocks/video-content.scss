@@ -1,0 +1,59 @@
+.video-content {
+  margin-bottom: 55px;
+  border: $border-main;
+
+  &__title {
+    position: relative;
+
+    padding: 25px;
+    padding-left: 90px;
+    margin: 0;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 35px;
+      left: 30px;
+
+      width: 35px;
+      height: 25px;
+
+      background: url("../img/icon-video.svg") no-repeat center;
+    }
+  }
+
+  &__frame {
+    width: 258px;
+    height: 150px;
+
+    background: url("../img/icon-play.svg") no-repeat center, url("../img/video-mobile@1x.jpg");
+
+    iframe {
+      width: 258px;
+      height: 150px;
+
+      border: none;
+    }
+  }
+
+  &__description {
+    margin-bottom: 30px;
+    text-align: center;
+  }
+
+  &__teaser {
+    margin: 0;
+    padding-top: 25px;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-left: 35px;
+
+    text-align: left;
+  }
+
+  &__button {
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+}

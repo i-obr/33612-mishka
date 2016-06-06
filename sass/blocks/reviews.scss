@@ -1,0 +1,45 @@
+.reviews {
+
+  &__container {
+    @include container;
+  }
+
+  &__title {
+    margin: 0;
+    padding: 20px 0;
+  }
+
+  &__item {
+    margin: 0;
+    margin-bottom: 30px;
+
+    p {
+      margin: 0;
+      margin-bottom: 20px;
+
+      line-height: 2.14286;
+    }
+
+    cite {
+      font-style: normal;
+      font-size: $font-size--text;
+      font-weight: 700;
+
+      color: $black;
+    }
+
+    a {
+      font-size: $font-size--text;
+      font-family: $font-open-sans;
+      text-decoration: none;
+
+      color: $gray--darken;
+    }
+  }
+
+  &__button {
+    padding-left: 80px;
+    padding-right: 80px;
+    margin-bottom: 40px;
+  }
+}

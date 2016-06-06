@@ -1,0 +1,35 @@
+.sub-nav {
+  padding: 0;
+  margin: 0;
+
+  list-style: none;
+
+  text-align: left;
+
+  &__item {
+    &--interior {
+      background: $green;
+    }
+
+    &--toys {
+      background: $green--dark;
+    }
+
+    a {
+      display: inline-block;
+      width: 100%;
+      padding: 30px;
+      padding-top: 25px;
+      padding-right: 150px;
+      box-sizing: border-box;
+
+      font-size: $font-size--button;
+      font-family: $font-tahoma;
+      font-weight: 700;
+      line-height: 1.3333;
+      text-decoration: none;
+
+      color: $white;
+    }
+  }
+}

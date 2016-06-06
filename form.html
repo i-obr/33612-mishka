@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="no-js lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+      // Маркер работающего javascript
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    </script>
   </head>
   <body>
     <header class="page-header">
       <div class="page-header__container">
         <div class="mishka-logo">
           <a href="index.html">
-            <img src="#" width="100" height="50" alt="Mishka">
+            <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
             Mishka
           </a>
         </div>
         <nav class="main-nav">
-          <a class="main-nav__toggle  main-nav__toggle--close" href="#"></a>
-          <ul class="main-nav__list">
+          <a class="main-nav__toggle" href="#" id="toggle"><span></span></a>
+          <ul class="main-nav__list" id="main-nav-list">
             <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
             <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
             <li class="main-nav__item"><a href="#">Поиск по сайту</a></li>
@@ -34,11 +39,11 @@
         <form class="form-order" action="/echo" method="post">
           <fieldset class="form-order__field-group">
             <legend class="form-order__legend">Тип</legend>
-            <div class="form-item">
+            <div class="form-radio">
               <input type="radio" name="type" id="accessory" checked>
               <label for="accessory">Аксессуар для интерьера</label>
             </div>
-            <div class="form-item">
+            <div class="form-radio">
               <input type="radio" name="type" id="toy">
               <label for="toy">Детская игрушка</label>
             </div>
@@ -46,32 +51,32 @@
 
           <fieldset class="form-order__field-group">
             <legend class="form-order__legend">Цвет</legend>
-            <div class="form-item">
+            <div class="form-checkbox">
               <input type="checkbox" name="color" id="white" checked>
               <label for="white">Белый</label>
             </div>
 
-            <div class="form-item">
+            <div class="form-checkbox">
               <input type="checkbox" name="color" id="gray" checked>
               <label for="gray">Серый</label>
             </div>
 
-            <div class="form-item">
+            <div class="form-checkbox">
               <input type="checkbox" name="color" id="tiffany">
               <label for="tiffany">&#171;Тиффани&#187;</label>
             </div>
 
-            <div class="form-item">
+            <div class="form-checkbox">
               <input type="checkbox" name="color" id="black">
               <label for="black">Черный</label>
             </div>
 
-            <div class="form-item">
+            <div class="form-checkbox">
               <input type="checkbox" name="color" id="pink">
               <label for="pink">Розовый</label>
             </div>
 
-            <div class="form-item">
+            <div class="form-checkbox">
               <input type="checkbox" name="color" id="orange">
               <label for="orange">Оранжевый</label>
             </div>
@@ -79,38 +84,38 @@
 
           <fieldset class="form-order__field-group">
             <legend class="form-order__legend">ФИО</legend>
-            <div class="form-item">
+            <div class="form-text">
               <label for="surname">Фамилия</label>
-              <input type="text" name="surname" id="surname" placeholder="Укажите фамилию" required>
+              <input class="form-text__input" type="text" name="surname" id="surname" placeholder="Укажите фамилию" required>
             </div>
-            <div class="form-item">
+            <div class="form-text">
               <label for="name">Имя</label>
-              <input type="text" name="name" id="name" placeholder="Введите ваше имя" required>
+              <input class="form-text__input" type="text" name="name" id="name" placeholder="Введите ваше имя" required>
             </div>
-            <div class="form-item">
+            <div class="form-text">
               <label for="patronymic">Отчество</label>
-              <input type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
+              <input class="form-text__input" type="text" name="patronymic" id="patronymic" placeholder="Отчество, если желаете">
             </div>
           </fieldset>
 
-          <fieldset class="form-order__field-group">
+          <fieldset class="form-order__field-group  form-order__field-group--indent">
             <legend class="form-order__legend">Тел</legend>
-            <div class="form-item">
-              <input type="tel" name="tel" placeholder="+7 XXX XXX XX XX" required>
+            <div class="form-text">
+              <input class="form-text__input  form-text__input--phone" type="tel" name="tel" placeholder="+7 XXX XXX XX XX" required>
             </div>
           </fieldset>
 
-          <fieldset class="form-order__field-group">
+          <fieldset class="form-order__field-group  form-order__field-group--indent">
             <legend class="form-order__legend">E-mail</legend>
-            <div class="form-item">
-              <input type="email" name="email" placeholder="Ваш e-mail" required>
+            <div class="form-text">
+              <input class="form-text__input  form-text__input--email" type="email" name="email" placeholder="Ваш e-mail" required>
             </div>
           </fieldset>
 
           <fieldset class="form-order__field-group">
             <legend class="form-order__legend">Доп</legend>
-            <div class="form-item">
-              <textarea name="extra" cols="30" rows="7">Опишите все ваши пожелания к заказу</textarea>
+            <div class="form-text">
+              <textarea class="form-text__input  form-text__input--textarea" name="extra" cols="34" rows="8" placeholder="Опишите все ваши пожелания к заказу"></textarea>
             </div>
           </fieldset>
           <button class="button  form-order__button" type="submit">Отправить заказ</button>
@@ -131,5 +136,6 @@
       </div>
     </footer>
 
+    <script src="js/menu.js"></script>
   </body>
 </html>

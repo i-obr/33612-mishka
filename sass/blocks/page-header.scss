@@ -1,0 +1,11 @@
+.page-header {
+  text-align: center;
+
+  background: $white;
+  color: $black;
+
+  &__container {
+    @include container;
+    padding: 0;
+  }
+}

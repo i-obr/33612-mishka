@@ -1,21 +1,26 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html class="no-js lang="ru">
   <head>
     <meta charset="utf-8">
     <title>HTML Academy: Мишка</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+      // Маркер работающего javascript
+      document.documentElement.className = document.documentElement.className.replace('no-js', 'js');
+    </script>
   </head>
   <body>
     <header class="page-header">
       <div class="page-header__container">
         <div class="mishka-logo">
           <a href="index.html">
-            <img src="#" width="100" height="50" alt="Mishka">
+            <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
             Mishka
           </a>
         </div>
         <nav class="main-nav">
-          <a class="main-nav__toggle  main-nav__toggle--close" href="#"></a>
-          <ul class="main-nav__list">
+          <a class="main-nav__toggle" href="#" id="toggle"><span></span></a>
+          <ul class="main-nav__list" id="main-nav-list">
             <li class="main-nav__item"><a href="catalog.html">Каталог товаров</a></li>
             <li class="main-nav__item"><a href="form.html">Вязание на заказ</a></li>
             <li class="main-nav__item"><a href="#">Поиск по сайту</a></li>
@@ -34,15 +39,15 @@
           <section class="catalog-item">
             <div class="catalog-item__photo">
               <a href="#">
-                <img src="#" width="100" height="50" alt="bunny">
+                <img src="img/photo-1-mobile@1x.jpg" width="260" height="195" alt="bunny">
               </a>
             </div>
-            <div class="catolog__description">
-              <h2 class="catalog__name"><a href="#">Зайчик-попрыгайчик</a></h2>
-              <div class="catalog__detail">Рост 30 см, вес 200 г</div>
-              <div class="catalog__price">
-                <span class="catalog__number">1 200 руб.</span>
-                <a class="catalog__icon-basket" href="#">basket</a>
+            <div class="catalog-item__description">
+              <h3 class="catalog-item__name"><a href="#">Зайчик-попрыгайчик</a></h3>
+              <div class="catalog-item__detail">Рост 30 см, вес 200 г</div>
+              <div class="catalog-item__price">
+                <span class="catalog-item__number">1 200 руб.</span>
+                <a class="catalog-item__icon-basket" href="#">basket</a>
               </div>
             </div>
           </section>
@@ -50,15 +55,15 @@
           <section class="catalog-item">
             <div class="catalog-item__photo">
               <a href="#">
-                <img src="#" width="100" height="50" alt="basket">
+                <img src="img/photo-2-mobile@1x.jpg" width="260" height="195" alt="basket">
               </a>
             </div>
-            <div class="catolog__description">
-              <h2 class="catalog__name"><a href="#">Корзинка для белья</a></h2>
-              <div class="catalog__detail">Диаметр 15 см, высота 10 см</div>
-              <div class="catalog__price">
-                <span class="catalog__number">690 руб.</span>
-                <a class="catalog__icon-basket" href="#">basket</a>
+            <div class="catalog-item__description">
+              <h3 class="catalog-item__name"><a href="#">Корзинка для белья</a></h3>
+              <div class="catalog-item__detail">Диаметр 15 см, высота 10 см</div>
+              <div class="catalog-item__price">
+                <span class="catalog-item__number">690 руб.</span>
+                <a class="catalog-item__icon-basket" href="#">basket</a>
               </div>
             </div>
           </section>
@@ -66,24 +71,24 @@
           <section class="catalog-item">
             <div class="catalog-item__photo">
               <a href="#">
-                <img src="#" width="100" height="50" alt="big-basket">
+                <img src="img/photo-3-mobile@1x.jpg" width="260" height="195" alt="big-basket">
               </a>
             </div>
-            <div class="catolog__description">
-              <h2 class="catalog__name"><a href="#">Большая корзинка для игрушек</a></h2>
-              <div class="catalog__detail">Диаметр 30 см, высота 30 см</div>
-              <div class="catalog__price">
-                <span class="catalog__number">1 500 руб.</span>
-                <a class="catalog__icon-basket" href="#">basket</a>
+            <div class="catalog-item__description">
+              <h3 class="catalog-item__name"><a href="#">Большая корзинка для игрушек</a></h3>
+              <div class="catalog-item__detail">Диаметр 30 см, высота 30 см</div>
+              <div class="catalog-item__price">
+                <span class="catalog-item__number">1 500 руб.</span>
+                <a class="catalog-item__icon-basket" href="#">basket</a>
               </div>
             </div>
           </section>
         </div>
 
         <section class="video-content">
-          <h2 class="video-content__title">Процесс производства</h2>
+          <h3 class="video-content__title">Процесс производства</h3>
           <div class="video-content__frame">
-            <iframe width="260" height="150" src="#" allowfullscreen></iframe>
+            <iframe width="258" height="150" src="https://www.com" allowfullscreen></iframe>
           </div>
 
           <div class="video-content__description">
@@ -107,5 +112,6 @@
       </div>
     </footer>
 
+    <script src="js/menu.js"></script>
   </body>
 </html>

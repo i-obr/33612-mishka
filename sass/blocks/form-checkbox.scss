@@ -1,0 +1,47 @@
+.form-checkbox {
+  margin-bottom: 25px;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  input[type="checkbox"] + label {
+    position: relative;
+
+    display: inline-block;
+    padding: 11px;
+    padding-left: 63px;
+  }
+
+  input[type="checkbox"] + label::before {
+    content: "";
+
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    display: block;
+    width: 36px;
+    height: 36px;
+
+    border: $border-button;
+  }
+
+  input[type="checkbox"]:checked + label::after {
+    content: "";
+
+    position: absolute;
+    top: 5px;
+    left: 8px;
+
+    display: block;
+    width: 25px;
+    height: 25px;
+
+    background: url("../img/icon-tick.svg") no-repeat center;
+  }
+}

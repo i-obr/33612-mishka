@@ -1,0 +1,82 @@
+.popular-goods {
+  text-align: left;
+
+  background: $white;
+
+  &__container {
+    @include container;
+  }
+
+  &__title {
+    margin: 0;
+    margin-bottom: 30px;
+    padding-top: 25px;
+
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+  }
+
+  &__title-main {
+    margin-bottom: 5px;
+    flex-grow: 1;
+
+    font-weight: 700;
+    white-space: nowrap;
+    text-align: center;
+  }
+
+  &__title-note {
+    font-size:  $font-size;
+    font-family: $font-open-sans;
+    line-height: 1;
+    text-transform: uppercase;
+
+    color: $green--dark;
+  }
+
+  &__description {
+    margin-top: 0;
+    margin-bottom: 10px;
+  }
+
+  &__detail {
+    width: 100%;
+    margin-bottom: 25px;
+
+    border-collapse: collapse;
+
+    td {
+      padding: 12px;
+      padding-left: 0;
+
+      font-size: $font-size--text;
+      line-height: 1.4285;
+      font-family: $font-open-sans;
+
+      color: $gray--darken;
+
+      border-bottom: $border-main;
+    }
+  }
+
+  &__photo {
+    margin-bottom: 15px;
+  }
+
+  &__price {
+    margin-bottom: 25px;
+
+    font-size: $font-size;
+    font-weight: 700;
+    text-align: center;
+
+    color: $gray--darken;
+  }
+
+  &__button {
+    padding-left: 85px;
+    padding-right: 85px;
+    margin-bottom: 35px;
+  }
+}
