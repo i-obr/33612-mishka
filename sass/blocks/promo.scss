@@ -6,6 +6,7 @@
   &__container {
     @include container;
     padding: 0;
+    width: 100%;
   }
 
   &__title {
