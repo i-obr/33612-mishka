@@ -9,6 +9,12 @@
     text-align: center;
 
     background: $gray--light;
+
+    &--inner {
+      padding-top: 75px;
+      padding-bottom: 85px;
+      margin-bottom: 25px;
+    }
   }
 
   &__container {
@@ -19,7 +25,7 @@
 
   &__description {
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
   }
 }
 
@@ -34,6 +40,21 @@
       padding-top: 90px;
       padding-bottom: 85px;
       margin-bottom: 80px;
+
+      &--inner {
+        margin-bottom: 70px;
+      }
+    }
+
+    &__description {
+      margin-bottom: 55px;
+
+      span {
+        width: 100%;
+        display: inline-block;
+
+        vertical-align: baseline;
+      }
     }
   }
 }
@@ -44,6 +65,14 @@
     &__title {
       padding-bottom: 105px;
       margin-bottom: 130px;
+
+      &--inner {
+        margin-bottom: 125px;
+      }
+    }
+
+    &__description {
+      padding-left: 175px;
     }
   }
 }

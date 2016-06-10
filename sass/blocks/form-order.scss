@@ -2,10 +2,12 @@
   margin-bottom: 60px;
 
   &__field-group {
+    @include container;
+    max-width: none;
     padding: 0;
-    margin: 0;
+    margin: 0 auto;
     padding-top: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 
     border: none;
     border-top: 1px solid;
@@ -13,6 +15,7 @@
 
     &--indent {
       padding-top: 10px;
+      margin-bottom: 45px;
     }
   }
 
@@ -29,8 +32,92 @@
   }
 
   &__button {
-    padding-left: 40px;
-    padding-right: 40px;
+    width: 81%;
     margin-top: 10px;
+    margin-left: 10%;
+  }
+
+  &__small-text {
+    display: none;
+
+    font-size: $font-size;
+    font-family: $font-open-sans;
+  }
+}
+
+@include respond-to("medium") {
+  .form-order {
+
+    &__container {
+      @include container;
+      @include clearfix;
+
+      padding-left: 197px;
+
+      font-size: 0;
+    }
+
+    &__field-group {
+      position: relative;
+
+      width: 100%;
+      margin-bottom: 50px;
+      padding: 0;
+
+      border: none;
+
+      &--bg-gray {
+        background: $gray--light;
+
+      }
+    }
+
+    &__legend {
+      position: absolute;
+      top: 20%;
+      left: 7%;
+    }
+
+    &__button {
+      width: 230px;
+      float: left;
+      margin-left: -167px;
+    }
+
+    &__small-text {
+      display: block;
+      float: right;
+      width: 334px;
+      text-align: right;
+    }
+  }
+}
+
+@include respond-to("large") {
+  .form-order {
+
+    &__container {
+      padding-left: 205px;
+    }
+
+    &__field-group {
+
+      &--mod {
+        padding: 35px 0;
+      }
+    }
+
+    &__legend {
+      left: 10%;
+    }
+
+    &__button {
+      width: 230px;
+      margin-left: 0;
+    }
+
+    &__small-text {
+      margin-right: 175px;
+    }
   }
 }

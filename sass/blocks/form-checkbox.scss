@@ -2,7 +2,7 @@
   margin-bottom: 25px;
 
   &:last-child {
-    margin-bottom: 0;
+    margin-bottom: 0px;
   }
 
   input[type="checkbox"] {
@@ -13,8 +13,10 @@
     position: relative;
 
     display: inline-block;
-    padding: 11px;
+    line-height: 39px;
     padding-left: 63px;
+
+    vertical-align: top;
   }
 
   input[type="checkbox"] + label::before {
@@ -25,8 +27,8 @@
     left: 0;
 
     display: block;
-    width: 36px;
-    height: 36px;
+    width: 39px;
+    height: 39px;
 
     border: $border-button;
   }
@@ -43,5 +45,53 @@
     height: 25px;
 
     background: url("../img/icon-tick.svg") no-repeat center;
+  }
+}
+
+@include respond-to("medium") {
+  .form-checkbox {
+    display: inline-block;
+    width: 46%;
+    margin-right: 33px;
+
+    vertical-align: top;
+
+    &:nth-child(even) {
+      margin-right: 0;
+    }
+
+    &:nth-child(n + 5) {
+      margin-bottom: 0;
+    }
+
+    input[type="checkbox"] + label {
+      padding-left: 80px;
+
+      line-height: 52px;
+    }
+
+    input[type="checkbox"] + label::before {
+      width: 54px;
+      height: 52px;
+    }
+
+    input[type="checkbox"]:checked + label::after {
+      top: 10px;
+      left: 15px;
+    }
+  }
+}
+
+@include respond-to("large") {
+  .form-checkbox {
+    width: 230px;
+
+    &:nth-child(even) {
+      margin-right: 33px;
+    }
+
+    &:nth-child(n + 4) {
+      margin-bottom: 0;
+    }
   }
 }
