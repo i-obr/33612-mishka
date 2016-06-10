@@ -21,12 +21,18 @@
         </div>
         <nav class="main-nav">
           <a class="main-nav__toggle" href="#" id="toggle"><span></span></a>
-          <ul class="main-nav__list" id="main-nav-list">
+
+          <ul class="main-nav__list  main-nav__list--left">
             <li class="main-nav__item"><a class="main-nav__link" href="catalog.html">Каталог товаров</a></li>
             <li class="main-nav__item"><a class="main-nav__link" href="form.html">Вязание на заказ</a></li>
+            <li class="main-nav__item  main-nav__item--sub-menu"><a class="main-nav__link" href="#">Новые поступления</a></li>
+            <li class="main-nav__item  main-nav__item--sub-menu"><a class="main-nav__link" href="#">Распродажа</a></li>
+          </ul>
+
+          <ul class="main-nav__list  main-nav__list--right">
             <li class="main-nav__item">
               <form class="main-nav__search-form" action="/echo" method="get">
-                <label class="main-nav__link">
+                <label class="main-nav__link  main-nav__link--label">
                   <svg class="main-nav__icon-search" version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
                     width="17.6px" height="17.6px" viewBox="-0.8 -0.8 17.6 17.6" enable-background="new -0.8 -0.8 17.6 17.6" xml:space="preserve">
                     <path fill="#d3d2d2" d="M16.47,14.93l-3.415-3.415C14.02,10.226,14.6,8.634,14.6,6.899c0-4.253-3.447-7.699-7.7-7.699
@@ -41,6 +47,9 @@
             <li class="main-nav__item"><a class="main-nav__link  main-nav__link--cart" href="#">Корзина: <span>пока пуста</span></a></li>
           </ul>
         </nav>
+
+        <span class="page-header__delivery">Бесплатная доставка по России</span>
+
       </div>
     </header>
 

@@ -20,7 +20,7 @@
       width: 100%;
       padding: 30px;
       padding-top: 25px;
-      padding-right: 150px;
+      padding-right: 60%;
       box-sizing: border-box;
 
       font-size: $font-size--button;
@@ -30,6 +30,27 @@
       text-decoration: none;
 
       color: $white;
+    }
+  }
+}
+
+@include respond-to("medium") {
+  .sub-nav {
+    font-size: 0;
+
+    &__item {
+      display: inline-block;
+      width: 50%;
+
+      vertical-align: top;
+
+      a {
+        padding-top: 30px;
+        padding-left: 35px;
+
+        font-size: $font-size--button + 2;
+        line-height: 1.5;
+      }
     }
   }
 }

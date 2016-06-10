@@ -2,11 +2,14 @@
 
   &__container {
     @include container;
+
+    padding: 0;
   }
 
   &__title {
     margin: 0;
-    padding: 30px 0;
+    padding: 35px 0;
+    padding-bottom: 30px;
   }
 
   &__list {
@@ -20,7 +23,7 @@
     position: relative;
 
     padding-top: 55px;
-    padding-bottom: 30px;
+    padding-bottom: 27px;
 
     font-size: $font-size;
     line-height: 1.25;
@@ -61,6 +64,79 @@
 
     &--gift-box::before {
       background: url("../img/icon-feature-6.svg") no-repeat center;
+    }
+  }
+}
+
+@include respond-to("medium") {
+  .about {
+    margin-bottom: 30px;
+
+    &__container {
+      padding: 0 30px;
+    }
+
+    &__title {
+      padding-top: 45px;
+      padding-bottom: 50px;
+    }
+
+    &__list {
+      column-count: 2;
+      column-width: 50%;
+      column-gap: 0;
+    }
+
+    /// Вы наверное будете смеяться... ) ничего лучше не придумал
+
+    &__item {
+      padding-bottom: 50px;
+
+      font-size: $font-size + 4;
+
+      &--ecology {
+        padding-right: 34%;
+      }
+
+      &--norse-style {
+        padding-right: 24%;
+      }
+
+      &--heart{
+        padding-right: 30%;
+      }
+
+      &--knitting {
+        padding-right: 19%;
+      }
+
+      &--support {
+        padding-right: 3%;
+      }
+
+      &--gift-box {
+        padding-right: 23%;
+      }
+    }
+  }
+}
+
+@include respond-to("large") {
+  .about {
+    margin-bottom: 35px;
+
+    &__title {
+      padding-top: 60px;
+      padding-left: 175px;
+    }
+
+    &__list {
+      width: 700px;
+      margin: 0 auto;
+    }
+
+    &__item {
+      padding-right: 20px;
     }
   }
 }

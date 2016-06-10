@@ -3,6 +3,12 @@
 
   &__container {
     @include container;
+
+    padding: 0;
+  }
+
+  &__logo {
+    display: none;
   }
 
   &__copyright {
@@ -20,15 +26,51 @@
 
     a {
       display: inline-block;
-      margin-left: 25px;
-      width: 50px;
-      height: 50px;
+      margin-left: 35px;
+      width: 35px;
+      height: 45px;
 
       font-size: 0;
 
       vertical-align: middle;
 
       background: url("../img/htmlacademy.svg") no-repeat center;
+    }
+  }
+}
+
+@include respond-to("medium") {
+  .page-footer {
+
+    &__container {
+      @include clearfix;
+
+      padding: 30px;
+    }
+
+    &__logo {
+      font-size: 0;
+      display: block;
+      position: static;
+      float: left;
+      width: 167px;
+      margin-right: 80px;
+
+      padding: 27px 0;
+    }
+
+    &__copyright {
+      float: right;
+      width: 190px;
+    }
+  }
+}
+
+@include respond-to("large") {
+  .page-footer {
+
+    &__logo {
+      margin-right: 275px;
     }
   }
 }

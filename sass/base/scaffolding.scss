@@ -1,7 +1,18 @@
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+html {
+  box-sizing: border-box;
+}
+
 body {
+  min-width: 320px;
+
   font-family: $font-verdana;
   font-size: $font-size;
   line-height: 1.71429;
+
   background: $white;
   color: $black;
 }
@@ -13,6 +24,15 @@ h2 {
   font-weight: 700;
 
   color: $black;
+
+  @include respond-to("medium") {
+    font-size: ($font-size--title + 16px);
+  }
+
+  @include respond-to("large") {
+    font-size: ($font-size--title + 26px);
+    line-height: 1.14;
+  }
 }
 
 h3 {
@@ -28,6 +48,11 @@ p {
   font-family: $font-open-sans;
 
   color: $gray--darken;
+
+  @include respond-to("medium") {
+    font-size: ($font-size--text + 2px);
+    line-height: 1.875;
+  }
 }
 
 label {
@@ -50,6 +75,12 @@ textarea::-webkit-input-placeholder {
   color: $gray--darken;
 
   opacity: 0.5;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  border: 0;
 }
 
 

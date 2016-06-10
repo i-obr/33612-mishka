@@ -1,13 +1,20 @@
 .contacts {
+  margin-bottom: 40px;
+
+  text-align: center;
 
   &__container {
     @include container;
+
+    padding: 0;
   }
 
   &__title {
     margin: 0;
     padding-top: 45px;
     padding-bottom: 25px;
+
+    text-align: left;
   }
 
   &__items {
@@ -15,6 +22,8 @@
     margin-bottom: 30px;
 
     line-height: 2.1428;
+
+    text-align: left;
   }
 
   &__email {
@@ -38,15 +47,119 @@
 
     img {
       display: block;
-      width: 320px;
-      height: 457px;
       margin: 0 auto;
     }
   }
 
   &__button {
-    padding-left: 49px;
-    padding-right: 49px;
-    margin-bottom: 40px;
+    padding-left: 48px;
+    padding-right: 48px;
+  }
+}
+
+@include respond-to("medium") {
+  .contacts {
+    margin-bottom: 60px;
+
+    &__container {
+      padding: 0 30px;
+
+      font-size: 0;
+    }
+
+    &__title {
+      position: relative;
+
+      padding-top: 60px;
+      margin-bottom: 20px;
+
+      &::after {
+        content: "";
+
+        position: absolute;
+        bottom: 10px;
+        right: 0;
+
+        width: 50px;
+        height: 82px;
+
+        background: url("../img/icon-flag.svg") no-repeat center;
+      }
+    }
+
+    &__column-left {
+      margin-bottom: 50px;
+    }
+
+    &__items {
+      display: inline-block;
+      width: 50%;
+
+      vertical-align: top;
+    }
+
+    &__map {
+      margin-bottom: 55px;
+    }
+
+    &__button {
+      padding-left: 40px;
+      padding-right: 40px;
+    }
+  }
+}
+
+@include respond-to("large") {
+  .contacts {
+    position: relative;
+
+    margin-bottom: 105px;
+
+    text-align: left;
+
+    &__title {
+      position: absolute;
+      top: 140px;
+
+      padding-top: 0;
+      padding-left: 175px;
+
+      &::after {
+        left: 60px;
+      }
+    }
+
+    &__wrapper {
+      @include clearfix;
+
+      width: 50%;
+      padding-top: 70px;
+    }
+
+    &__column-left {
+      float: left;
+      width: 100%;
+      margin-top: 170px;
+      margin-bottom: 75px;
+    }
+
+    &__items {
+      width: 100%;
+      padding-left: 175px;
+    }
+
+    &__map {
+      position: absolute;
+      left: 50%;
+      top: 70px;
+
+      width: 525px;
+      margin-bottom: 0;
+    }
+
+    &__button {
+      margin-left: 175px;
+      margin-bottom: 0;
+    }
   }
 }

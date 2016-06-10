@@ -1,7 +1,38 @@
 @mixin container {
   width: 81.25%;
+  max-width: 1110px;
   margin: 0 auto;
   padding: 0 30px;
 
-  outline: 1px solid red;
+  /*outline: 1px solid red;*/
+
+  @include respond-to("medium") {
+    width: 94.8%;
+    /*outline: 2px solid blue;*/
+  }
+
+  @include respond-to("large") {
+    width: 96.6%;
+    /*outline: 3px solid green;*/
+  }
+}
+
+@mixin clearfix {
+  &::after {
+    content: "";
+
+    display: table;
+    clear: both;
+  }
+}
+
+@mixin respond-to($breakpoint) {
+  @if map-has-key($breakpoints, $breakpoint) {
+    @media #{inspect(map-get($breakpoints, $breakpoint))} {
+      @content;
+    }
+  } @else {
+    @error "Не указано значение для `#{$breakpoint}`. "
+         + "Пожалуйста, убедитесь, что точка остановки объявлена в карте `$breakpoints`.";
+  }
 }

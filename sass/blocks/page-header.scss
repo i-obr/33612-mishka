@@ -9,4 +9,33 @@
     padding: 0;
     width: 100%;
   }
+
+  &__delivery {
+    display: none;
+
+    padding: 20px 0;
+
+    font-size: $font-size--text;
+
+    color: $gray--darken;
+  }
+}
+
+@include respond-to("medium") {
+  .page-header {
+    border-bottom: $border-second;
+
+    &__container {
+      position: relative;
+
+      padding: 0 30px;
+    }
+
+    &__delivery {
+      display: block;
+
+      position: absolute;
+      right: 30px;
+    }
+  }
 }

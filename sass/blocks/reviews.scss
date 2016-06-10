@@ -1,21 +1,29 @@
 .reviews {
+  text-align: center;
+  margin-bottom: 45px;
 
   &__container {
     @include container;
+
+    padding: 0;
   }
 
   &__title {
     margin: 0;
-    padding: 20px 0;
+    padding: 30px 0;
+
+    text-align: left;
   }
 
   &__item {
     margin: 0;
     margin-bottom: 30px;
 
+    text-align: left;
+
     p {
       margin: 0;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
 
       line-height: 2.14286;
     }
@@ -40,6 +48,71 @@
   &__button {
     padding-left: 80px;
     padding-right: 80px;
-    margin-bottom: 40px;
+  }
+}
+
+@include respond-to("medium") {
+  .reviews {
+    margin-bottom: 85px;
+
+    &__container {
+      position: relative;
+      padding: 0 30px;
+
+      background: url(../img/review@1x.jpg) no-repeat 0 top;
+    }
+
+    &__title {
+      padding-top: 75px;
+      padding-bottom: 30px;
+      margin-bottom: 20px;
+    }
+
+    &__list {
+      position: relative;
+    }
+
+
+    &__item {
+      padding-bottom: 95px;
+      margin-bottom: 0;
+
+      p {
+        margin-bottom: 10px;
+
+        line-height: 1.875;
+      }
+
+      cite {
+        display: block;
+        padding-bottom: 5px;
+      }
+    }
+
+    &__button {
+      position: absolute;
+      top: 75px;
+      right: 30px;
+
+      padding-left: 40px;
+      padding-right: 36px;
+    }
+  }
+}
+
+@include respond-to("large") {
+  .reviews {
+    margin-bottom: 90px;
+
+    &__title {
+      padding-top: 65px;
+      padding-left: 175px;
+      padding-right: 175px;
+    }
+
+    &__item {
+      padding-left: 175px;
+      padding-right: 175px;
+    }
   }
 }

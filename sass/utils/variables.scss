@@ -1,3 +1,8 @@
+$breakpoints: (
+  "medium":                   (min-width: 768px),
+  "large":                    (min-width: 1150px),
+);
+
 $white:                       #ffffff;
 $black:                       #000000;
 

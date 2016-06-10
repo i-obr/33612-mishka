@@ -17,37 +17,46 @@
 
   &__item {
     border-bottom: $border-main;
+
+    &--sub-menu {
+      display: none;
+    }
   }
 
   &__link {
     display: inline-block;
     box-sizing: border-box;
     width: 100%;
-    padding: 30px 0;
+    padding: 27px 0;
     padding-left: 75px;
 
     font-size: $font-size;
     line-height: 1.5;
     font-weight: 700;
     text-decoration: none;
-    vertical-align: top;
+    vertical-align: bottom;
 
     color: $black;
-  }
 
-  &__link--cart {
-    position: relative;
+    &--label {
+      padding-top: 20px;
+      padding-bottom: 19px;
+    }
 
-    &::before {
-      content: "";
+    &--cart {
+      position: relative;
 
-      position: absolute;
-      top: 33px;
-      left: 30px;
+      &::before {
+        content: "";
 
-      width: 20px;
-      height: 20px;
-      background: url("../img/icon-cart.svg") no-repeat center;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+
+        width: 20px;
+        height: 20px;
+        background: url("../img/icon-cart.svg") no-repeat center;
+      }
     }
   }
 
@@ -57,7 +66,7 @@
 
   &__icon-search {
     position: absolute;
-    top: 33px;
+    top: 30px;
     left: 30px;
 
     width: 20px;
@@ -66,11 +75,14 @@
 
   &__input {
     display: inline-block;
-    vertical-align: middle;
+    vertical-align: top;
     width: 85%;
+    padding: 10px 0;
 
-    border: none;
+    background: transparent;
+
     outline: none;
+    border: none;
 
     &::-webkit-input-placeholder {
       color: $black;
@@ -148,6 +160,139 @@
 
         &:after {
           transform: rotate3d(0, 0, 1, -45deg);
+        }
+      }
+    }
+  }
+}
+
+@include respond-to("medium") {
+  .main-nav {
+    @include clearfix;
+
+    position: relative;
+
+    &__toggle {
+      display: none;
+    }
+
+    &__list {
+      display: block;
+
+      font-size: 0;
+
+      &--left {
+        position: absolute;
+        top: 89px;
+
+        a {
+          padding-top: 20px;
+          padding-right: 34px;
+          padding-bottom: 20px;
+          padding-left: 0;
+
+          font-size: $font-size--text;
+        }
+      }
+
+      &--right {
+        float: right;
+        width: auto;
+        max-width: 540px;
+
+        li {
+          border-left: $border-main;
+        }
+      }
+    }
+
+    &__item {
+      display: inline-block;
+
+      vertical-align: top;
+
+      border: none;
+
+      &--sub-menu {
+        display: none;
+      }
+    }
+
+    &__link {
+      padding-top: 32px;
+      padding-bottom: 32px;
+
+      &--label {
+        padding-top: 25px;
+        padding-left: 76px;
+        padding-bottom: 23px;
+      }
+    }
+
+    &__icon-search {
+      left: 33px;
+      top: 33px;
+    }
+
+    &__input {
+      width: 1px;               /// если ширина 0, то :focus в Safari не работает;
+      margin-right: 5px;
+
+      font-weight: 400;
+
+      transition: width 0.5s;
+
+      &:focus {
+        width: 170px;
+        padding-right: 5px;
+        padding-bottom: 8px;
+
+        border-bottom: $border-button;
+      }
+    }
+  }
+}
+
+@include respond-to ("large") {
+  .main-nav {
+
+    &__list {
+
+      &--left {
+        top: 0;
+        width: 450px;
+
+        a {
+          padding-top: 32px;
+          padding-bottom: 32px;
+          font-size: $font-size;
+        }
+
+        li:nth-child(2) {
+          border-left: $border-main;
+        }
+
+        li:nth-child(2n) {  /// Такое плохо? Или модификатор?
+
+          a {
+            padding-left: 34px;
+          }
+        }
+      }
+    }
+
+    &__item {
+
+      &--sub-menu {
+        display: inline-block;
+
+        a {
+          padding-top: 20px;
+          padding-right: 34px;
+          padding-bottom: 20px;
+          padding-left: 0;
+
+          font-size: $font-size--text;
         }
       }
     }
