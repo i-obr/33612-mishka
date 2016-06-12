@@ -1,9 +1,13 @@
 .form-radio {
-  margin-bottom: 20px;
-  padding: 5px 0;
+  margin-bottom: 35px;
+
 
   &:last-child {
     margin-bottom: 0px;
+  }
+
+  @include respond-to("medium") {
+    margin-bottom: 25px;
   }
 
   input[type="radio"] {
@@ -17,6 +21,12 @@
     padding-left: 62px;
 
     vertical-align: top;
+
+    @include respond-to("medium") {
+      padding-top: 15px;
+      padding-bottom: 15px;
+      padding-left: 80px;
+    }
   }
 
   input[type="radio"] + label::before {
@@ -32,6 +42,12 @@
 
     border: $border-button;
     border-radius: 50%;
+
+    @include respond-to("medium") {
+      top: 0;
+      width: 52px;
+      height: 52px;
+    }
   }
 
   input[type="radio"]:checked + label::after {
@@ -48,51 +64,13 @@
     border-radius: 50%;
 
     background: $green;
-  }
-}
 
-@include respond-to("medium") {
-  .form-radio {
-    margin-bottom: 15px;
-    outline: 1px solid red;
-
-    input[type="radio"] + label {
-      padding-top: 15px;
-      padding-bottom: 15px;
-      padding-left: 80px;
-    }
-
-    input[type="radio"] + label::before {
-      top: 0;
-      width: 52px;
-      height: 52px;
-    }
-
-    input[type="radio"]:checked + label::after {
+    @include respond-to("medium") {
       top: 15px;
       left: 15px;
 
       width: 22px;
       height: 22px;
-    }
-  }
-}
-
-@include respond-to("large") {
-  .form-radio {
-    margin-bottom: 20px;
-    outline: 1px solid blue;
-
-    input[type="radio"] + label {
-      padding-top: 10px;
-    }
-
-    input[type="radio"] + label::before {
-      top: -5px;
-    }
-
-    input[type="radio"]:checked + label::after {
-      top: 10px;
     }
   }
 }

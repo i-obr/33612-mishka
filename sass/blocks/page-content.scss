@@ -10,10 +10,31 @@
 
     background: $gray--light;
 
+    @include respond-to("medium") {
+      padding-top: 90px;
+      padding-bottom: 85px;
+      margin-bottom: 80px;
+    }
+
+    @include respond-to("large") {
+      padding-bottom: 105px;
+      margin-bottom: 130px;
+    }
+
     &--inner {
       padding-top: 75px;
       padding-bottom: 85px;
       margin-bottom: 25px;
+
+      @include respond-to("medium") {
+        padding-top: 90px;
+        margin-bottom: 70px;
+      }
+
+      @include respond-to("large") {
+        padding-bottom: 105px;
+        margin-bottom: 125px;
+      }
     }
   }
 
@@ -21,32 +42,17 @@
     @include container;
 
     padding: 0;
+
+    @include respond-to("medium") {
+      padding: 0 30px;
+    }
   }
 
   &__description {
     margin: 0;
-    margin-bottom: 25px;
-  }
-}
+    margin-bottom: 27px;
 
-@include respond-to("medium") {
-  .page-content {
-
-    &__container {
-      padding: 0 30px;
-    }
-
-    &__title {
-      padding-top: 90px;
-      padding-bottom: 85px;
-      margin-bottom: 80px;
-
-      &--inner {
-        margin-bottom: 70px;
-      }
-    }
-
-    &__description {
+    @include respond-to("medium") {
       margin-bottom: 55px;
 
       span {
@@ -56,22 +62,8 @@
         vertical-align: baseline;
       }
     }
-  }
-}
 
-@include respond-to("large") {
-  .page-content {
-
-    &__title {
-      padding-bottom: 105px;
-      margin-bottom: 130px;
-
-      &--inner {
-        margin-bottom: 125px;
-      }
-    }
-
-    &__description {
+    @include respond-to("large") {
       padding-left: 175px;
     }
   }

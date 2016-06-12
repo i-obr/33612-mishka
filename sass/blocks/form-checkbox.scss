@@ -5,6 +5,30 @@
     margin-bottom: 0px;
   }
 
+  @include respond-to("medium") {
+    display: inline-block;
+    width: 46%;
+    margin-right: 30px;
+
+    vertical-align: top;
+
+    &:nth-child(odd) {
+      margin-right: 0;
+    }
+
+    &:nth-child(n + 5) {
+      margin-bottom: 0;
+    }
+  }
+
+  @include respond-to("large") {
+    width: 230px;
+
+    &:nth-child(odd) {
+      margin-right: 30px;
+    }
+  }
+
   input[type="checkbox"] {
     display: none;
   }
@@ -17,6 +41,12 @@
     padding-left: 63px;
 
     vertical-align: top;
+
+    @include respond-to("medium") {
+      padding-left: 80px;
+
+      line-height: 52px;
+    }
   }
 
   input[type="checkbox"] + label::before {
@@ -27,10 +57,15 @@
     left: 0;
 
     display: block;
-    width: 39px;
-    height: 39px;
+    width: 40px;
+    height: 40px;
 
     border: $border-button;
+
+    @include respond-to("medium") {
+      width: 54px;
+      height: 52px;
+    }
   }
 
   input[type="checkbox"]:checked + label::after {
@@ -45,53 +80,10 @@
     height: 25px;
 
     background: url("../img/icon-tick.svg") no-repeat center;
-  }
-}
 
-@include respond-to("medium") {
-  .form-checkbox {
-    display: inline-block;
-    width: 46%;
-    margin-right: 33px;
-
-    vertical-align: top;
-
-    &:nth-child(even) {
-      margin-right: 0;
-    }
-
-    &:nth-child(n + 5) {
-      margin-bottom: 0;
-    }
-
-    input[type="checkbox"] + label {
-      padding-left: 80px;
-
-      line-height: 52px;
-    }
-
-    input[type="checkbox"] + label::before {
-      width: 54px;
-      height: 52px;
-    }
-
-    input[type="checkbox"]:checked + label::after {
+    @include respond-to("medium") {
       top: 10px;
       left: 15px;
-    }
-  }
-}
-
-@include respond-to("large") {
-  .form-checkbox {
-    width: 230px;
-
-    &:nth-child(even) {
-      margin-right: 33px;
-    }
-
-    &:nth-child(n + 4) {
-      margin-bottom: 0;
     }
   }
 }

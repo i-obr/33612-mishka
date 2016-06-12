@@ -3,6 +3,12 @@
 
   text-align: left;
 
+  @include respond-to("medium") {
+    @include clearfix;
+
+    position: relative;
+  }
+
   &__list {
     display: none;
     padding: 0;
@@ -13,13 +19,67 @@
     &--visible {
       display: block;
     }
+
+    @include respond-to("medium") {
+      display: block;
+
+      font-size: 0;
+    }
+
+    &--left {
+
+      @include respond-to("medium") {
+        position: absolute;
+        top: 89px;
+      }
+
+      @include respond-to("large") {
+        top: 0;
+        width: 450px;
+
+        li:nth-child(2) {
+          border-left: $border-main;
+        }
+      }
+    }
+
+    &--right {
+
+      @include respond-to("medium") {
+        float: right;
+        width: auto;
+        max-width: 540px;
+
+        li {
+          border-left: $border-main;
+        }
+      }
+    }
   }
 
   &__item {
     border-bottom: $border-main;
 
+    @include respond-to("medium") {
+      display: inline-block;
+
+      vertical-align: top;
+
+      border: none;
+    }
+
     &--sub-menu {
       display: none;
+
+      @include respond-to("medium") {
+        display: none;
+      }
+
+      @include respond-to("large") {
+        display: inline-block;
+
+        vertical-align: top;
+      }
     }
   }
 
@@ -38,10 +98,70 @@
 
     color: $black;
 
+    @include respond-to("medium") {
+      padding-top: 32px;
+      padding-bottom: 32px;
+    }
+
     &--label {
       padding-top: 20px;
       padding-bottom: 19px;
+
+      @include respond-to("medium") {
+        padding-top: 25px;
+        padding-left: 76px;
+        padding-bottom: 23px;
+      }
     }
+
+    &--catalog,
+    &--knitting {
+
+      @include respond-to("medium") {
+        padding-top: 20px;
+        padding-right: 34px;
+        padding-bottom: 20px;
+        padding-left: 0;
+
+        font-size: $font-size--text;
+      }
+
+      @include respond-to("large") {
+        padding-top: 32px;
+        padding-bottom: 32px;
+
+        font-size: $font-size;
+      }
+    }
+
+    &--new,
+    &--sale {
+
+      @include respond-to("large") {
+        padding-top: 20px;
+        padding-right: 34px;
+        padding-bottom: 20px;
+        padding-left: 0;
+
+        font-size: $font-size--text;
+      }
+    }
+
+    &--knitting {
+
+      @include respond-to("large") {
+        padding-left: 34px;
+      }
+    }
+
+    &--sale {
+
+      @include respond-to("large") {
+        padding-left: 25px;
+      }
+    }
+
+
 
     &--cart {
       position: relative;
@@ -71,6 +191,11 @@
 
     width: 20px;
     height: 20px;
+
+    @include respond-to("medium") {
+      left: 33px;
+      top: 33px;
+    }
   }
 
   &__input {
@@ -86,8 +211,23 @@
 
     &::-webkit-input-placeholder {
       color: $black;
+    }
 
-      opacity: 1;
+    @include respond-to("medium") {
+      width: 1px;
+      margin-right: 5px;
+
+      font-weight: 400;
+
+      transition: width 0.5s;
+
+      &:focus {
+        width: 170px;
+        padding-right: 5px;
+        padding-bottom: 8px;
+
+        border-bottom: $border-button;
+      }
     }
   }
 
@@ -163,97 +303,14 @@
         }
       }
     }
-  }
-}
 
-@include respond-to("medium") {
-  .main-nav {
-    @include clearfix;
-
-    position: relative;
-
-    &__toggle {
+    @include respond-to("medium") {
       display: none;
     }
-
-    &__list {
-      display: block;
-
-      font-size: 0;
-
-      &--left {
-        position: absolute;
-        top: 89px;
-
-        a {
-          padding-top: 20px;
-          padding-right: 34px;
-          padding-bottom: 20px;
-          padding-left: 0;
-
-          font-size: $font-size--text;
-        }
-      }
-
-      &--right {
-        float: right;
-        width: auto;
-        max-width: 540px;
-
-        li {
-          border-left: $border-main;
-        }
-      }
-    }
-
-    &__item {
-      display: inline-block;
-
-      vertical-align: top;
-
-      border: none;
-
-      &--sub-menu {
-        display: none;
-      }
-    }
-
-    &__link {
-      padding-top: 32px;
-      padding-bottom: 32px;
-
-      &--label {
-        padding-top: 25px;
-        padding-left: 76px;
-        padding-bottom: 23px;
-      }
-    }
-
-    &__icon-search {
-      left: 33px;
-      top: 33px;
-    }
-
-    &__input {
-      width: 1px;               /// если ширина 0, то :focus в Safari не работает;
-      margin-right: 5px;
-
-      font-weight: 400;
-
-      transition: width 0.5s;
-
-      &:focus {
-        width: 170px;
-        padding-right: 5px;
-        padding-bottom: 8px;
-
-        border-bottom: $border-button;
-      }
-    }
   }
 }
 
-@include respond-to ("large") {
+/*@include respond-to ("large") {
   .main-nav {
 
     &__list {
@@ -262,21 +319,8 @@
         top: 0;
         width: 450px;
 
-        a {
-          padding-top: 32px;
-          padding-bottom: 32px;
-          font-size: $font-size;
-        }
-
         li:nth-child(2) {
           border-left: $border-main;
-        }
-
-        li:nth-child(2n) {  /// Такое плохо? Или модификатор?
-
-          a {
-            padding-left: 34px;
-          }
         }
       }
     }
@@ -286,15 +330,36 @@
       &--sub-menu {
         display: inline-block;
 
-        a {
-          padding-top: 20px;
-          padding-right: 34px;
-          padding-bottom: 20px;
-          padding-left: 0;
+        vertical-align: top;
+      }
+    }
 
-          font-size: $font-size--text;
-        }
+    &__link {
+
+      &--catalog,
+      &--knitting {
+        padding-top: 32px;
+        padding-bottom: 32px;
+        font-size: $font-size;
+      }
+
+      &--new,
+      &--sale {
+        padding-top: 20px;
+        padding-right: 34px;
+        padding-bottom: 20px;
+        padding-left: 0;
+
+        font-size: $font-size--text;
+      }
+
+      &--knitting {
+        padding-left: 34px;
+      }
+
+      &--sale {
+        padding-left: 25px;
       }
     }
   }
-}
+}*/

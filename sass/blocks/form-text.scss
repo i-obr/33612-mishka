@@ -5,16 +5,34 @@
     margin-bottom: 0px;
   }
 
+  @include respond-to("medium") {
+    font-size: 0;
+
+    margin-bottom: 25px;
+  }
+
   label {
     padding-top: 5px;
     padding-bottom: 4px;
     display: block;
+
+    @include respond-to("medium") {
+      display: inline-block;
+      margin-right: 25px;
+      width: 20%;
+
+      vertical-align: middle;
+    }
+
+    @include respond-to("large") {
+      width: 14%;
+    }
   }
 
   &__input {
     width: 100%;
-    padding-top: 15px;
-    padding-bottom: 15px;
+    padding-top: 12px;
+    padding-bottom: 17px;
 
     font-size: $font-size;
     background: transparent;
@@ -24,72 +42,65 @@
 
     outline: none;
 
+    @include respond-to("medium") {
+      display: inline-block;
+      width: 75%;
+      padding-left: 17px;
+
+      vertical-align: middle;
+    }
+
+    @include respond-to("large") {
+      width: 78%;
+    }
+
     &--phone {
+      padding-right: 40px;
+
       background: url("../img/icon-phone.svg") no-repeat right 0.5em center;
+
+      @include respond-to("medium") {
+        width: 100%;
+        padding-right: 60px;
+
+        background-position: right 1.5em bottom 1em;
+      }
+
+      @include respond-to("large") {
+        width: 96%;
+      }
     }
 
     &--email {
+      padding-right: 40px;
+
       background: url("../img/icon-mail.svg") no-repeat right 0.25em center;
+
+      @include respond-to("medium") {
+        width: 100%;
+        padding-right: 60px;
+
+        background-position: right 1.5em bottom 0.5em;
+      }
+
+      @include respond-to("large") {
+        width: 96%;
+      }
     }
 
     &--textarea {
       height: 150px;
-      padding-left: 15px;
+      padding: 15px;
 
       border: $border-button;
-    }
-  }
-}
 
-@include respond-to("medium") {
-  .form-text {
-    width: 500px;
-    font-size: 0;
-    margin-bottom: 32px;
-
-    &--inline {
-
-      label {
-        display: inline-block;
-        padding-right: 20px;
-        width: auto;
-
-        vertical-align: middle;
-      }
-    }
-
-    &__input {
-
-      &--width {
-        display: inline-block;
-        width: 75.1%;
-        padding-top: 5px;
-        padding-left: 20px;
-
-        font-size: ($font-size + 2);
-
-        vertical-align: top;
+      @include respond-to("medium") {
+        width: 100%;
+        height: 140px;
       }
 
-
-      &--name {
-        width: 85.6%;
-      }
-    }
-  }
-}
-
-@include respond-to("large") {
-  .form-text {
-    width: 700px;
-
-    &__input {
-      &--width {
-        width: 574px;
-      }
-
-      &--name {
-        width: 627px;
+      @include respond-to("large") {
+        width: 96%;
       }
     }
   }

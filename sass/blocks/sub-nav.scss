@@ -6,6 +6,10 @@
 
   text-align: left;
 
+  @include respond-to("medium") {
+    font-size: 0;
+  }
+
   &__item {
     &--interior {
       background: $green;
@@ -31,14 +35,8 @@
 
       color: $white;
     }
-  }
-}
 
-@include respond-to("medium") {
-  .sub-nav {
-    font-size: 0;
-
-    &__item {
+    @include respond-to("medium") {
       display: inline-block;
       width: 50%;
 

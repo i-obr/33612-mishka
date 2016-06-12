@@ -1,16 +1,13 @@
 .catalog {
   margin-bottom: 30px;
-}
 
-@include respond-to("medium") {
-  .catalog {
-    margin-bottom: 53px;
+  @include respond-to("medium") {
+    margin-bottom: 50px;
   }
-}
 
-@include respond-to("large") {
-  .catalog {
+  @include respond-to("large") {
     font-size: 0;
+
     margin-bottom: 55px;
   }
 }

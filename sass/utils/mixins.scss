@@ -4,16 +4,12 @@
   margin: 0 auto;
   padding: 0 30px;
 
-  /*outline: 1px solid red;*/
-
   @include respond-to("medium") {
     width: 94.8%;
-    /*outline: 2px solid blue;*/
   }
 
   @include respond-to("large") {
     width: 96.6%;
-    /*outline: 3px solid green;*/
   }
 }
 

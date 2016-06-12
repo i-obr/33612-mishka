@@ -1,15 +1,36 @@
 .about {
+  @include respond-to("medium") {
+    margin-bottom: 30px;
+  }
+
+  @include respond-to("large") {
+    margin-bottom: 35px;
+  }
 
   &__container {
     @include container;
 
     padding: 0;
+
+    @include respond-to("medium") {
+      padding: 0 30px;
+    }
   }
 
   &__title {
     margin: 0;
     padding: 35px 0;
     padding-bottom: 30px;
+
+    @include respond-to("medium") {
+      padding-top: 45px;
+      padding-bottom: 50px;
+    }
+
+    @include respond-to("large") {
+      padding-top: 60px;
+      padding-left: 175px;
+    }
   }
 
   &__list {
@@ -17,6 +38,17 @@
     padding: 0;
 
     list-style: none;
+
+    @include respond-to("medium") {
+      column-count: 2;
+      column-width: 50%;
+      column-gap: 0;
+    }
+
+    @include respond-to("large") {
+      width: 700px;
+      margin: 0 auto;
+    }
   }
 
   &__item {
@@ -65,31 +97,8 @@
     &--gift-box::before {
       background: url("../img/icon-feature-6.svg") no-repeat center;
     }
-  }
-}
 
-@include respond-to("medium") {
-  .about {
-    margin-bottom: 30px;
-
-    &__container {
-      padding: 0 30px;
-    }
-
-    &__title {
-      padding-top: 45px;
-      padding-bottom: 50px;
-    }
-
-    &__list {
-      column-count: 2;
-      column-width: 50%;
-      column-gap: 0;
-    }
-
-    /// Вы наверное будете смеяться... ) ничего лучше не придумал
-
-    &__item {
+    @include respond-to("medium") {
       padding-bottom: 50px;
 
       font-size: $font-size + 4;
@@ -118,24 +127,8 @@
         padding-right: 23%;
       }
     }
-  }
-}
 
-@include respond-to("large") {
-  .about {
-    margin-bottom: 35px;
-
-    &__title {
-      padding-top: 60px;
-      padding-left: 175px;
-    }
-
-    &__list {
-      width: 700px;
-      margin: 0 auto;
-    }
-
-    &__item {
+    @include respond-to("large") {
       padding-right: 20px;
     }
   }

@@ -2,6 +2,14 @@
   margin-bottom: 40px;
   font-size: 0;
 
+  @include respond-to("medium") {
+    position: absolute;
+    bottom: 100px;
+    right: 0;
+
+    margin-bottom: 0;
+  }
+
   &__button {
     display: inline-block;
     width: 130px;
@@ -25,18 +33,8 @@
     &--next {
       background: url("../img/icon-right-arrow.svg") no-repeat center;
     }
-  }
-}
 
-@include respond-to("medium") {
-  .pagination {
-    position: absolute;
-    bottom: 100px;
-    right: 0;
-
-    margin-bottom: 0;
-
-    &__button {
+    @include respond-to("medium") {
       width: 88px;
       border: none;
     }

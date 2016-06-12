@@ -4,10 +4,20 @@
   background: $white;
   color: $black;
 
+  @include respond-to("medium") {
+    border-bottom: $border-second;
+  }
+
   &__container {
     @include container;
     padding: 0;
     width: 100%;
+
+    @include respond-to("medium") {
+      position: relative;
+
+      padding: 0 30px;
+    }
   }
 
   &__delivery {
@@ -18,24 +28,12 @@
     font-size: $font-size--text;
 
     color: $gray--darken;
-  }
-}
 
-@include respond-to("medium") {
-  .page-header {
-    border-bottom: $border-second;
-
-    &__container {
-      position: relative;
-
-      padding: 0 30px;
-    }
-
-    &__delivery {
-      display: block;
-
+    @include respond-to("medium") {
       position: absolute;
       right: 30px;
+
+      display: block;
     }
   }
 }

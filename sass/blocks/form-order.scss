@@ -1,21 +1,135 @@
 .form-order {
   margin-bottom: 60px;
 
+  @include respond-to("medium") {
+    margin-bottom: 45px;
+  }
+
+  @include respond-to("large") {
+    margin-bottom: 95px;
+  }
+
+  &__container {
+    margin-bottom: 10px;
+
+    @include respond-to("medium") {
+      @include clearfix;
+      margin-bottom: 0;
+    }
+
+    &--bg-gray {
+
+      @include respond-to("medium") {
+        background: $gray--light;
+      }
+    }
+  }
+
   &__field-group {
     @include container;
-    max-width: none;
+
     padding: 0;
-    margin: 0 auto;
-    padding-top: 30px;
-    margin-bottom: 35px;
 
     border: none;
     border-top: 1px solid;
     border-color: $green;
 
-    &--indent {
-      padding-top: 10px;
-      margin-bottom: 45px;
+    @include respond-to("medium") {
+      position: relative;
+
+      padding-left: 197px;
+      padding-right: 30px;
+
+      border: none;
+    }
+
+    @include respond-to("large") {
+      padding-left: 205px;
+      padding-right: 175px;
+    }
+
+    &--type {
+      padding-top: 30px;
+      padding-bottom: 26px;
+
+      @include respond-to("medium") {
+        padding-top: 5px;
+        margin-bottom: 30px;
+      }
+
+      @include respond-to("medium") {
+        padding-top: 0;
+      }
+    }
+
+    &--color {
+      padding-top: 29px;
+      padding-bottom: 26px;
+
+      @include respond-to("medium") {
+        padding-top: 59px;
+        padding-bottom: 55px;
+        margin-bottom: 10px;
+
+        font-size: 0;
+      }
+
+      @include respond-to("large") {
+        padding-bottom: 50px;
+        padding-right: 0;
+      }
+    }
+
+    &--name {
+      padding-top: 34px;
+      padding-bottom: 25px;
+
+      @include respond-to("medium") {
+        padding-top: 45px;
+        padding-bottom: 60px;
+        margin-bottom: 10px;
+      }
+
+      @include respond-to("large") {
+        padding-top: 55px;
+      }
+    }
+
+    &--phone {
+      padding-top: 15px;
+      padding-bottom: 30px;
+
+      @include respond-to("medium") {
+        padding-top: 55px;
+        padding-bottom: 15px;
+      }
+    }
+
+    &--email {
+      padding-top: 15px;
+      padding-bottom: 25px;
+
+      @include respond-to("medium") {
+        padding-bottom: 55px;
+        margin-bottom: 10px;
+      }
+    }
+
+    &--textarea {
+      padding-top: 35px;
+      padding-bottom: 30px;
+
+      margin-bottom: 20px;
+
+      @include respond-to("medium") {
+        padding-top: 65px;
+        padding-bottom: 35px;
+      }
+
+      @include respond-to("large") {
+        padding-top: 60px;
+        margin-bottom: 55px;
+      }
     }
   }
 
@@ -29,12 +143,27 @@
     text-transform: uppercase;
 
     color: $green;
+
+    @include respond-to("medium") {
+      position: absolute;
+      top: 0;
+      left: 0;
+    }
   }
 
   &__button {
     width: 81%;
-    margin-top: 10px;
     margin-left: 10%;
+
+    @include respond-to("medium") {
+      float: left;
+      width: 230px;
+      margin-left: 6.5%;
+    }
+
+    @include respond-to("large") {
+      margin-left: 19.5%;
+    }
   }
 
   &__small-text {
@@ -42,82 +171,20 @@
 
     font-size: $font-size;
     font-family: $font-open-sans;
-  }
-}
 
-@include respond-to("medium") {
-  .form-order {
-
-    &__container {
-      @include container;
-      @include clearfix;
-
-      padding-left: 197px;
-
-      font-size: 0;
-    }
-
-    &__field-group {
-      position: relative;
-
-      width: 100%;
-      margin-bottom: 50px;
-      padding: 0;
-
-      border: none;
-
-      &--bg-gray {
-        background: $gray--light;
-
-      }
-    }
-
-    &__legend {
-      position: absolute;
-      top: 20%;
-      left: 7%;
-    }
-
-    &__button {
-      width: 230px;
-      float: left;
-      margin-left: -167px;
-    }
-
-    &__small-text {
+    @include respond-to("medium") {
       display: block;
       float: right;
-      width: 334px;
+      width: 325px;
+      padding: 10px 0;
+
+      text-align: left;
+    }
+
+    @include respond-to("large") {
+      margin-right: 19.5%;
+
       text-align: right;
-    }
-  }
-}
-
-@include respond-to("large") {
-  .form-order {
-
-    &__container {
-      padding-left: 205px;
-    }
-
-    &__field-group {
-
-      &--mod {
-        padding: 35px 0;
-      }
-    }
-
-    &__legend {
-      left: 10%;
-    }
-
-    &__button {
-      width: 230px;
-      margin-left: 0;
-    }
-
-    &__small-text {
-      margin-right: 175px;
     }
   }
 }

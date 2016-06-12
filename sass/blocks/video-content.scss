@@ -3,6 +3,17 @@
 
   border: $border-main;
 
+  @include respond-to("medium") {
+    position: relative;
+    padding-top: 455px;
+  }
+
+  @include respond-to("large") {
+    @include clearfix;
+
+    padding-top: 0;
+  }
+
   &__title {
     position: relative;
 
@@ -23,6 +34,28 @@
 
       background: url("../img/icon-video.svg") no-repeat center;
     }
+
+    @include respond-to("medium") {
+      padding-top: 35px;
+      padding-left: 105px;
+
+      &::before {
+        left: 40px;
+      }
+    }
+
+    @include respond-to("large") {
+      float: right;
+      width: 34.9%;
+      padding-top: 90px;
+      padding-right: 145px;
+      padding-left: 77px;
+
+      &::before {
+        top: 45px;
+        left: 77px;
+      }
+    }
   }
 
   &__frame {
@@ -37,11 +70,35 @@
 
       border: none;
     }
+
+    @include respond-to("medium") {
+      position: absolute;
+      top: 0px;
+      width: 100%;
+      height: 455px;
+
+      border-bottom: $border-main;
+    }
+
+    @include respond-to("large") {
+      float: left;
+      width: 682px;
+      position: static;
+    }
   }
 
   &__description {
     margin-bottom: 30px;
     text-align: center;
+
+    @include respond-to("medium") {
+      margin-bottom: 45px;
+    }
+
+    @include respond-to("large") {
+      float: right;
+      width: 34.9%;
+    }
   }
 
   &__teaser {
@@ -52,90 +109,29 @@
     padding-left: 35px;
 
     text-align: left;
-  }
 
-  &__button {
-    padding-left: 25px;
-    padding-right: 25px;
-  }
-}
-
-@include respond-to("medium") {
-  .video-content {
-    position: relative;
-    padding-top: 455px;
-
-    &__title {
-      padding-top: 35px;
-      padding-left: 105px;
-
-      &::before {
-        left: 40px;
-      }
-    }
-
-    &__frame {
-      position: absolute;
-      top: 0px;
-      width: 100%;
-      height: 455px;
-
-      border-bottom: $border-main;
-    }
-
-    &__description {
-      margin-bottom: 45px;
-    }
-
-    &__teaser {
+    @include respond-to("medium") {
       padding-top: 10px;
       padding-left: 40px;
       padding-bottom: 30px;
     }
 
-    &__button {
-      width: 87.5%;
-    }
-  }
-}
-
-@include respond-to("large") {
-  .video-content {
-    @include clearfix;
-
-    padding-top: 0;
-
-    &__title {
-      float: right;
-      width: 34.9%;
-      padding-top: 90px;
-      padding-right: 145px;
-      padding-left: 77px;
-
-      &::before {
-        top: 45px;
-        left: 77px;
-      }
-    }
-
-    &__frame {
-      float: left;
-      width: 682px;
-      position: static;
-    }
-
-    &__description {
-      float: right;
-      width: 34.9%;
-    }
-
-    &__teaser {
+    @include respond-to("large") {
       padding-top: 5px;
       padding-left: 77px;
       margin-bottom: 15px;
     }
+  }
 
-    &__button {
+  &__button {
+    padding-left: 25px;
+    padding-right: 25px;
+
+    @include respond-to("medium") {
+      width: 87.5%;
+    }
+
+    @include respond-to("large") {
       width: 62.5%;
       margin-left: 20px;
     }
