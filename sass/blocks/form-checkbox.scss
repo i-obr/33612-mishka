@@ -8,11 +8,11 @@
   @include respond-to("medium") {
     display: inline-block;
     width: 46%;
-    margin-right: 30px;
+    margin-right: 25px;
 
     vertical-align: top;
 
-    &:nth-child(odd) {
+    &:nth-child(even) {
       margin-right: 0;
     }
 
@@ -24,8 +24,12 @@
   @include respond-to("large") {
     width: 230px;
 
-    &:nth-child(odd) {
-      margin-right: 30px;
+    &:nth-child(even) {
+      margin-right: 25px;
+    }
+
+    &:nth-child(n + 4) {
+      margin-bottom: 0;
     }
   }
 

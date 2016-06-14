@@ -50,10 +50,10 @@
 
   &__description {
     margin: 0;
-    margin-bottom: 27px;
+    margin-bottom: 20px;
 
     @include respond-to("medium") {
-      margin-bottom: 55px;
+      margin-bottom: 7px;
 
       span {
         width: 100%;
