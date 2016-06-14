@@ -182,6 +182,8 @@
 
   &__search-form {
     position: relative;
+    z-index: 3;
+    background: $white;
   }
 
   &__icon-search {
