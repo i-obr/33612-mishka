@@ -1,53 +1,146 @@
 .popular-goods {
-  text-align: left;
-
   background: $white;
+
+  @include respond-to("medium") {
+    margin-bottom: 70px;
+
+    text-align: left;
+  }
+
+  @include respond-to("large") {
+    position: relative;
+
+    margin-bottom: 95px;
+  }
 
   &__container {
     @include container;
+
+    padding: 0;
+
+    @include respond-to("medium") {
+      padding: 0 30px;
+    }
   }
 
   &__title {
-    margin: 0;
-    margin-bottom: 30px;
-    padding-top: 25px;
-
     display: flex;
     align-items: flex-end;
     flex-wrap: wrap;
+    margin: 0;
+    margin-bottom: 25px;
+    padding-top: 30px;
+
+    @include respond-to("medium") {
+      padding-top: 40px;
+      margin-bottom: 55px;
+
+      align-items: center;
+    }
+
+    @include respond-to("large") {
+      position: absolute;
+      top: 125px;
+
+      padding-top: 0;
+    }
   }
 
   &__title-main {
     margin-bottom: 5px;
+    flex-basis: 100%;
     flex-grow: 1;
 
     font-weight: 700;
     white-space: nowrap;
-    text-align: center;
+    text-align: left;
+
+    @include respond-to("medium") {
+      flex-basis: 500px;
+      width: 500px;
+      margin-bottom: 0;
+    }
+
+    @include respond-to("large") {
+      order: 1;
+    }
   }
 
   &__title-note {
     font-size:  $font-size;
     font-family: $font-open-sans;
     line-height: 1;
+    font-weight: 700;
     text-transform: uppercase;
 
     color: $green--dark;
+
+    @include respond-to("medium") {
+      flex-basis: 115px;
+      padding: 15px 0;
+      padding-bottom: 10px;
+
+      text-align: center;
+    }
+
+    @include respond-to("large") {
+      flex-basis: 175px;
+      padding: 0 55px;
+    }
+  }
+
+  &__wrapper {
+
+    @include respond-to("medium") {
+      @include clearfix;
+    }
+
+    @include respond-to("large") {
+      padding-top: 70px;
+      margin-bottom: 70px;
+    }
+  }
+
+  &__column-left {
+
+    @include respond-to("medium") {
+      float: left;
+      width: 50%;
+    }
+
+    @include respond-to("large") {
+      padding-left: 175px;
+    }
   }
 
   &__description {
     margin-top: 0;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
+
+    text-align: left;
+
+    @include respond-to("medium") {
+      padding-right: 50px;
+      margin-bottom: 25px;
+    }
+
+    @include respond-to("large") {
+      margin-top: 160px;
+      margin-bottom: 50px;
+    }
   }
 
   &__detail {
     width: 100%;
     margin-bottom: 25px;
 
+    text-align: left;
+
     border-collapse: collapse;
 
     td {
-      padding: 12px;
+      padding: 10px;
+      padding-right: 20px;
       padding-left: 0;
 
       font-size: $font-size--text;
@@ -58,10 +151,40 @@
 
       border-bottom: $border-main;
     }
+
+    @include respond-to("medium") {
+      width: 86.8%;
+      margin-bottom: 50px;
+
+      td {
+        font-size: ($font-size--text + 1);
+      }
+    }
+
+    @include respond-to("large") {
+      width: 290px;
+      margin-bottom: 100px;
+    }
   }
 
   &__photo {
-    margin-bottom: 15px;
+    width: 260px;
+    height: 315px;
+    margin: 0 auto;
+    margin-bottom: 25px;
+
+    @include respond-to("medium") {
+      float: right;
+      width: 50%;
+      height: 403px;
+      margin-bottom: 0;
+
+      background: $gray--light;
+    }
+
+    @include respond-to("large") {
+      height: 634px;
+    }
   }
 
   &__price {
@@ -72,11 +195,25 @@
     text-align: center;
 
     color: $gray--darken;
+
+    @include respond-to("medium") {
+      padding-left: 70px;
+      margin-bottom: 30px;
+
+      font-size: ($font-size + 2);
+      text-align: left;
+    }
   }
 
   &__button {
     padding-left: 85px;
     padding-right: 85px;
     margin-bottom: 35px;
+
+    @include respond-to("medium") {
+      padding-left: 105px;
+      padding-right: 95px;
+      margin-bottom: 0;
+    }
   }
 }

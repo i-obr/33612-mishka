@@ -1,23 +1,93 @@
 .form-order {
-  margin-bottom: 60px;
+  margin-bottom: 30px;
 
-  &__field-group {
+  @include respond-to("medium") {
+    margin-bottom: 65px;
+  }
+
+  @include respond-to("large") {
+    margin-bottom: 95px;
+  }
+
+  &__container {
+    @include container;
+
+    @include clearfix;
+
     padding: 0;
-    margin: 0;
-    padding-top: 30px;
-    margin-bottom: 30px;
 
-    border: none;
-    border-top: 1px solid;
-    border-color: $green;
+    @include respond-to("medium") {
+      width: 87%;
+    }
 
-    &--indent {
-      padding-top: 10px;
+    @include respond-to("large") {
+      width: 61%;
+      padding-top: 50px;
     }
   }
 
-  &__legend {
-    width: 62px;
+  &__group {
+    @include container;
+
+    padding: 0;
+
+    @include respond-to("medium") {
+
+      @include clearfix;
+
+      width: 100%;
+      max-width: none;
+    }
+
+    &--bg-gray {
+
+      @include respond-to("medium") {
+        padding-top: 5px;
+        padding-bottom: 5px;
+
+        background: $gray;
+      }
+    }
+  }
+
+  &__wrapper {
+    padding-top: 25px;
+    padding-bottom: 30px;
+
+    @include respond-to("medium") {
+      float: right;
+      width: 65%;
+      padding-top: 50px;
+      padding-bottom: 60px;
+      margin-right: 50px;
+    }
+
+    @include respond-to("large") {
+      width: 76%;
+      max-width: 1000px;
+    }
+
+    &--phone,
+    &--email {
+      padding-top: 0px;
+    }
+
+    &--phone {
+
+      @include respond-to("medium") {
+        padding-top: 65px;
+        padding-bottom: 20px;
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    z-index: 2;
+    background: $white;
+    display: inline-block;
+    width: 100%;
+    margin-bottom: 10px;
 
     font-size: $font-size;
     line-height: 1;
@@ -26,11 +96,69 @@
     text-transform: uppercase;
 
     color: $green;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      right: 0;
+
+      width: 80%;
+      height: 1px;
+      z-index: 1;
+
+      background: $green;
+    }
+
+    @include respond-to("medium") {
+      float: left;
+      width: 24%;
+      margin-left: 30px;
+      background: transparent;
+      padding-top: 70px;
+      padding-left: 20px;
+      text-align: left;
+
+      &::after {
+        content: none;
+      }
+    }
+
+    @include respond-to("large") {
+      width: 15%;
+      padding-left: 0;
+      text-align: center;
+    }
+
+    &--email {
+
+      @include respond-to("medium") {
+        padding-top: 15px;
+      }
+    }
+  }
+
+  &__small-text {
+    display: none;
+
+    font-size: $font-size;
+    font-family: $font-open-sans;
+
+    @include respond-to("medium") {
+      display: block;
+      float: right;
+      padding: 12px 0;
+    }
   }
 
   &__button {
-    padding-left: 40px;
-    padding-right: 40px;
-    margin-top: 10px;
+    width: 100%;
+
+    @include respond-to("medium") {
+      width: 230px;
+      float: left;
+      margin-left: 0;
+    }
   }
 }

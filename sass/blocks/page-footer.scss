@@ -3,12 +3,46 @@
 
   &__container {
     @include container;
+
+    padding: 0;
+
+    @include respond-to("medium") {
+      @include clearfix;
+
+      padding: 30px;
+    }
+  }
+
+  &__logo {
+    display: none;
+
+    @include respond-to("medium") {
+      position: static;
+
+      display: block;
+      float: left;
+      width: 167px;
+      margin-right: 80px;
+      padding: 27px 0;
+
+      font-size: 0;
+    }
+
+    @include respond-to("large") {
+      margin-right: 275px;
+    }
   }
 
   &__copyright {
     padding: 20px 0;
+    white-space: nowrap;
 
     text-align: center;
+
+    @include respond-to("medium") {
+      float: right;
+      width: 190px;
+    }
 
     p {
       margin: 0;
@@ -20,9 +54,9 @@
 
     a {
       display: inline-block;
-      margin-left: 25px;
-      width: 50px;
-      height: 50px;
+      margin-left: 35px;
+      width: 35px;
+      height: 45px;
 
       font-size: 0;
 

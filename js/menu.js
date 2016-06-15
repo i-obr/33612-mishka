@@ -1,9 +1,13 @@
 (function(){
   var toggler = document.getElementById('toggle');
+  var nav = document.querySelectorAll('.main-nav__list');
+  var i;
 
-    toggler.onclick = function(evt){
-      evt.preventDefault();
-      toggler.classList.toggle('main-nav__toggle--close');
-      document.getElementById('main-nav-list').classList.toggle('main-nav__list--visible');
-    }
+  toggler.addEventListener('click', function(evt) {
+    evt.preventDefault();
+    toggler.classList.toggle('main-nav__toggle--close');
+    for(i = 0; i < nav.length; i++) {
+      nav[i].classList.toggle('main-nav__list--visible');
+    };
+  });
 })()

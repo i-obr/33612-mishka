@@ -5,4 +5,23 @@
 
   border-top: $border-main;
   border-bottom: $border-main;
+
+  @include respond-to("medium") {
+    position: absolute;
+    left: 30px;
+    top: 0;
+    z-index: 2;
+
+    width: 113px;
+    padding: 25px 0;
+
+    border: none;
+  }
+
+  @include respond-to("large") {
+    left: 50%;
+
+    width: 150px;
+    margin-left: -75px;
+  }
 }
