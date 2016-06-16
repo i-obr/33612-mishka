@@ -1,22 +1,15 @@
 .page-header {
-  text-align: center;
-
-  background: $white;
-  color: $black;
-
-  @include respond-to("medium") {
-    border-bottom: $border-second;
-  }
 
   &__container {
-    @include container;
-    padding: 0;
     width: 100%;
+    padding: 0;
 
     @include respond-to("medium") {
+      @include container;
+
       position: relative;
 
-      padding: 0 30px;
+      outline: 1px solid blue;
     }
   }
 
@@ -31,6 +24,7 @@
 
     @include respond-to("medium") {
       position: absolute;
+      top: 85px;
       right: 30px;
 
       display: block;

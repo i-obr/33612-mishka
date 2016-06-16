@@ -3,6 +3,11 @@
 
   background: $gray--light url("../img/hero-mobile@1x.jpg") no-repeat center top;
 
+  @include respond-to("medium") {
+    border-top: $border-main;
+    margin-top: -61px;
+  }
+
   &__container {
     @include container;
     padding: 0;

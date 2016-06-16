@@ -13,23 +13,26 @@
   <body>
     <header class="page-header">
       <div class="page-header__container">
-        <div class="mishka-logo">
-          <a href="index.html">
-            <img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
-            Mishka
-          </a>
-        </div>
-        <nav class="main-nav">
-          <a class="main-nav__toggle" href="#" id="toggle"><span></span></a>
 
-          <ul class="main-nav__list  main-nav__list--left">
+        <nav class="main-nav  main-nav--closed  main-nav--no-js">
+          <div class="mishka-logo">
+            <a href="index.html"><img src="img/logo-mobile.svg" width="86" height="35" alt="Mishka">
+            </a>
+            Mishka
+          </div>
+
+          <a class="main-nav__buns" id="toggle">
+            <button class="main-nav__toggle"></button>
+          </a>
+
+          <ul class="main-nav__list">
             <li class="main-nav__item"><a class="main-nav__link  main-nav__link--catalog" href="catalog.html">Каталог товаров</a></li>
             <li class="main-nav__item"><a class="main-nav__link  main-nav__link--knitting" href="form.html">Вязание на заказ</a></li>
             <li class="main-nav__item  main-nav__item--sub-menu"><a class="main-nav__link  main-nav__link--new" href="#">Новые поступления</a></li>
             <li class="main-nav__item  main-nav__item--sub-menu"><a class="main-nav__link  main-nav__link--sale" href="#">Распродажа</a></li>
           </ul>
 
-          <ul class="main-nav__list  main-nav__list--right">
+          <ul class="main-nav__list  main-nav__list--dashboard">
             <li class="main-nav__item">
               <form class="main-nav__search-form" action="/echo" method="get">
                 <label class="main-nav__link  main-nav__link--label">
@@ -40,7 +43,7 @@
                     c0.607,0,1.1-0.492,1.1-1.1C16.8,15.459,16.739,15.2,16.47,14.93z M1.399,6.899c0-3.038,2.462-5.5,5.5-5.5s5.5,2.462,5.5,5.5
                     s-2.462,5.5-5.5,5.5S1.399,9.938,1.399,6.899z"/>
                   </svg>
-                  <input class="main-nav__input" type="search" placeholder="Поиск по сайту">
+                  <input class="main-nav__input" type="search" name="search" placeholder="Поиск по сайту">
                 </label>
               </form>
             </li>
@@ -49,7 +52,6 @@
         </nav>
 
         <span class="page-header__delivery">Бесплатная доставка по России</span>
-
       </div>
     </header>
 
