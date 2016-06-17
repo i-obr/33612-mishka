@@ -24,7 +24,7 @@
     }
 
     @include respond-to("large") {
-      width: 65%;
+      width: 62%;
       padding-top: 50px;
     }
   }
@@ -64,7 +64,7 @@
     }
 
     @include respond-to("large") {
-      width: 76%;
+      width: 75%;
       max-width: 1000px;
     }
 
@@ -126,7 +126,7 @@
     }
 
     @include respond-to("large") {
-      width: 15%;
+      width: 17%;
       padding-left: 0;
       text-align: center;
     }
