@@ -1,3 +1,5 @@
+/* Здесь мне не понятно почему catalog-item-ы не становятся одинаковой высоты на десктопе, они ведь флекс-элементы. Задавать им минимальную высоту?
+*/
 .catalog-item {
   margin-bottom: 30px;
 
@@ -6,22 +8,16 @@
   }
 
   @include respond-to("medium") {
-    @include clearfix;
+    display: flex;
 
-    margin-bottom: 55px;
+    margin-bottom: 54px;
   }
 
   @include respond-to("large") {
-    display: inline-block;
     width: 315px;
-    margin-right: 50px;
     margin-bottom: 0;
 
-    vertical-align: top;
-
-    &:last-child {
-      margin-right: 0;
-    }
+    flex-direction: column;
   }
 
   &__photo {
@@ -31,39 +27,46 @@
     background: $gray--light;
 
     @include respond-to("medium") {
-      float: left;
       width: 50%;
       height: 334px;
     }
 
     @include respond-to("large") {
-      float: none;
       width: 100%;
       height: 462px;
     }
   }
 
   &__description {
-    padding-left: 30px;
-    padding-right: 25px;
+    padding-left: 27px;
+    padding-right: 27px;
 
     border: $border-main;
 
     @include respond-to("medium") {
-      float: right;
       width: 50%;
+
+      display: flex;
+      flex-direction: column;
     }
 
     @include respond-to("large") {
-      float: none;
       width: 100%;
+      justify-content: center;
     }
   }
 
   &__name {
     margin: 0;
-    padding-top: 25px;
-    padding-bottom: 10px;
+    padding-top: 27px;
+    padding-bottom: 5px;
+
+    @include respond-to("medium") {
+      padding-top: 25px;
+    }
+
+    @include respond-to("large") {
+    }
 
     a {
       text-decoration: none;
@@ -73,24 +76,47 @@
   }
 
   &__detail {
-    padding-bottom: 20px;
+    padding-bottom: 23px;
 
     font-size: $font-size--text;
     font-family: $font-open-sans;
+    line-height: 2;
 
     color: $gray--darken;
 
-    border-bottom: $border-main;
+    @include respond-to("medium") {
+      font-size: ($font-size--text + 1);
+    }
+
+    @include respond-to("large") {
+      padding-bottom: 40px;
+    }
   }
 
   &__price {
-    margin-top: 20px;
-    margin-bottom: 28px;
+    padding-top: 21px;
+    padding-bottom: 25px;
+
+    border-top: $border-main;
+
+    display: flex;
+    justify-content: space-between;
+
+    @include respond-to("medium") {
+      margin-top: auto;
+    }
+
+    @include respond-to("large") {
+    }
   }
 
   &__number {
     font-size: $font-size--text;
     font-weight: 700;
+
+    @include respond-to("medium") {
+      font-size: ($font-size--text + 2);
+    }
   }
 
   &__icon-basket {

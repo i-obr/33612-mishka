@@ -7,7 +7,8 @@
     padding: 0;
 
     @include respond-to("medium") {
-      @include clearfix;
+      display: flex;
+      justify-content: space-between;
 
       padding: 30px;
     }
@@ -17,19 +18,11 @@
     display: none;
 
     @include respond-to("medium") {
-      position: static;
-
       display: block;
-      float: left;
       width: 167px;
-      margin-right: 80px;
       padding: 27px 0;
 
       font-size: 0;
-    }
-
-    @include respond-to("large") {
-      margin-right: 275px;
     }
   }
 
@@ -38,11 +31,6 @@
     white-space: nowrap;
 
     text-align: center;
-
-    @include respond-to("medium") {
-      float: right;
-      width: 190px;
-    }
 
     p {
       margin: 0;

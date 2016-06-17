@@ -7,7 +7,8 @@
   text-align: left;
 
   @include respond-to("medium") {
-    font-size: 0;
+    display: flex;
+    flex-wrap: wrap;
   }
 
   &__item {
@@ -37,10 +38,7 @@
     }
 
     @include respond-to("medium") {
-      display: inline-block;
       width: 50%;
-
-      vertical-align: top;
 
       a {
         padding-top: 30px;
