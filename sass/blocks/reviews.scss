@@ -5,10 +5,14 @@
 
   @include respond-to("medium") {
     margin-bottom: 85px;
+
+    background: url(../img/review@1x.jpg) no-repeat 0 top;
   }
 
   @include respond-to("large") {
     margin-bottom: 90px;
+
+    background: none;
   }
 
   &__container {
@@ -19,8 +23,10 @@
     @include respond-to("medium") {
       position: relative;
       padding: 0 30px;
+    }
 
-      background: url(../img/review@1x.jpg) no-repeat 0 top;
+    @include respond-to("large") {
+      background: url(../img/review@1x.jpg) no-repeat left 30px top;
     }
   }
 
