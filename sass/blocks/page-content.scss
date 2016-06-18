@@ -14,6 +14,9 @@
       padding-top: 90px;
       padding-bottom: 85px;
       margin-bottom: 80px;
+
+      border-top: $border-main;
+      margin-top: -61px;
     }
 
     @include respond-to("large") {

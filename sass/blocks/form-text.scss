@@ -6,24 +6,22 @@
   }
 
   @include respond-to("medium") {
-    font-size: 0;
+    display: flex;
+    align-items: center;
+    width: 100%;
 
     margin-bottom: 30px;
+  }
+
+  @include respond-to("large") {
+    width: 700px;
   }
 
   label {
     display: block;
 
     @include respond-to("medium") {
-      display: inline-block;
       margin-right: 25px;
-      width: 20%;
-
-      vertical-align: middle;
-    }
-
-    @include respond-to("large") {
-      width: 14%;
     }
   }
 
@@ -41,17 +39,14 @@
     outline: none;
 
     @include respond-to("medium") {
-      display: inline-block;
-      width: 74%;
       padding-top: 10px;
       padding-bottom: 14px;
       padding-left: 17px;
-
-      vertical-align: middle;
     }
 
     @include respond-to("large") {
       width: 63%;
+      flex-grow: 1;
     }
 
     &--phone {

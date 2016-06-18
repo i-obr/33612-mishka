@@ -43,6 +43,7 @@ h3 {
 
   @include respond-to("medium") {
     font-size: ($font-size + 2px);
+    line-height: 1.33;
   }
 }
 
@@ -90,10 +91,4 @@ img {
   max-width: 100%;
   height: auto;
   border: 0;
-}
-
-
-/// Если не работает js
-.no-js .main-nav__list {
-  display: block !important;
 }

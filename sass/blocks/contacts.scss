@@ -3,6 +3,8 @@
 
   text-align: center;
 
+  /*outline: 1px solid red;*/
+
   @include respond-to("medium") {
     margin-bottom: 60px;
   }
@@ -68,58 +70,84 @@
   }
 
   &__wrapper {
-
-    @include respond-to("large") {
-      @include clearfix;
-
-      width: 50%;
-      padding-top: 70px;
-    }
-  }
-
-  &__column-left {
+    margin-bottom: 35px;
 
     @include respond-to("medium") {
       margin-bottom: 50px;
     }
 
     @include respond-to("large") {
-      float: left;
+      @include clearfix;
+
+      width: 50%;
+      padding-top: 70px;
+      margin-bottom: 40px;
+    }
+  }
+
+  &__column-left {
+
+    @include respond-to("medium") {
+      display: flex;
+      justify-content: space-around;
+    }
+
+    @include respond-to("large") {
+      flex-direction: column;
       width: 100%;
       margin-top: 170px;
-      margin-bottom: 75px;
     }
   }
 
   &__items {
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 25px;
 
     line-height: 2.1428;
 
     text-align: left;
 
-    @include respond-to("medium") {
-      display: inline-block;
-      width: 50%;
+    display: flex;
+    justify-content: space-between;
 
-      vertical-align: top;
+    @include respond-to("medium") {
+      width: 50%;
+      justify-content: flex-start;
+      align-items: flex-start;
+      margin-bottom: 0
     }
 
     @include respond-to("large") {
       width: 100%;
       padding-left: 175px;
+      margin-bottom: 30px;
+    }
+  }
+
+  &__label {
+
+    @include respond-to("medium") {
+      padding-right: 25px;
     }
   }
 
   &__email {
-    padding-bottom: 5px;
+    padding-bottom: 0px;
 
     text-decoration: none;
 
     color: $gray--darken;
 
     border-bottom: 2px solid $green;
+    width: 185px;
+  }
+
+  &__address {
+    width: 185px;
+
+    @include respond-to("medium") {
+      width: 220px;
+    }
   }
 
   &__map {

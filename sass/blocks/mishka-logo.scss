@@ -1,27 +1,25 @@
 .mishka-logo {
+  position: relative;
+  z-index: 1;
+
   padding: 20px 0;
 
   font-size: 0;
+  text-align: center;
 
   border-top: $border-main;
   border-bottom: $border-main;
 
   @include respond-to("medium") {
-    position: absolute;
-    left: 30px;
-    top: 0;
-    z-index: 2;
-
-    width: 113px;
     padding: 25px 0;
 
-    border: none;
+    border-top: 0;
+    border-bottom: 0;
+
+    text-align: left;
   }
 
   @include respond-to("large") {
-    left: 50%;
-
-    width: 150px;
-    margin-left: -75px;
+    order: 2;
   }
 }
