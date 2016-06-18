@@ -58,7 +58,6 @@
 
     @include respond-to("large") {
       padding-top: 25px;
-      /*padding-bottom: 20px;*/
       width: auto;
 
       flex-grow: 1;

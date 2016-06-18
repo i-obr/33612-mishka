@@ -2,6 +2,7 @@
   text-align: left;
 
   position: relative;
+  z-index: 2;
 
   @include respond-to("medium-only") {
     &--closed .main-nav__list {
@@ -254,6 +255,7 @@
 
   &__buns {
     position: absolute;
+    z-index: 2;
     top: 10px;
     right: 5px;
     padding: 25px;
