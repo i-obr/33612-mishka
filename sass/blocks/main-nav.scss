@@ -14,8 +14,10 @@
   @include respond-to("medium-only") {
     &--opened .main-nav__list {
       transform: translateY(0);
-      height: auto;
-      transition: transform 0.4s;
+
+      /// Высота фиксированная...((
+      height: 159px;
+      transition: all 0.4s;
     }
   }
 
@@ -217,7 +219,7 @@
     }
   }
 
-    &__input {
+  &__input {
     display: inline-block;
     vertical-align: top;
     width: 85%;
@@ -230,7 +232,7 @@
 
     &::-webkit-input-placeholder {
       color: $black;
-    }
+  }
 
     @include respond-to("medium") {
       width: 1px;
