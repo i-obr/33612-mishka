@@ -2,6 +2,8 @@ $breakpoints: (
   "medium-only":              (max-width: 767px),
   "medium":                   (min-width: 768px),
   "large":                    (min-width: 1150px),
+
+  "retina":                   (min-resolution: 144dpi) (min-resolution: 1.5dppx),
 );
 
 $white:                       #ffffff;

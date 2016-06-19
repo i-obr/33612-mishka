@@ -11,7 +11,9 @@
   border-bottom: $border-main;
 
   @include respond-to("medium") {
-    padding: 25px 0;
+    padding: 0;
+
+    align-self: center;
 
     border-top: 0;
     border-bottom: 0;
@@ -21,5 +23,7 @@
 
   @include respond-to("large") {
     order: 2;
+    align-self: flex-start;
+    padding: 20px 0;
   }
 }

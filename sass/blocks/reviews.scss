@@ -6,7 +6,14 @@
   @include respond-to("medium") {
     margin-bottom: 85px;
 
-    background: url(../img/review@1x.jpg) no-repeat 0 top;
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 top;
+    background-size: contain;
+
+    @include respond-to("retina") {
+      background-image: url("/img/review@2x.jpg");
+    }
   }
 
   @include respond-to("large") {
@@ -26,7 +33,15 @@
     }
 
     @include respond-to("large") {
-      background: url(../img/review@1x.jpg) no-repeat left 30px top;
+      background-image: url("../img/review@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: left 30px top;
+      background-size: contain;
+
+      @include respond-to("retina") {
+        background-image: url("../img/review@2x.jpg");
+
+      }
     }
   }
 
@@ -70,6 +85,8 @@
     }
 
     cite {
+      display: block;
+
       font-style: normal;
       font-size: $font-size--text;
       font-weight: 700;

@@ -16,7 +16,6 @@
     &--opened .main-nav__list {
       transform: translateY(0);
 
-      /// Высота фиксированная...((
       height: 159px;
       transition: all 0.4s;
     }
@@ -64,7 +63,7 @@
     }
 
     @include respond-to("large") {
-      width: 440px;
+      width: 420px;
       order: 1;
 
       li:nth-child(2) {
@@ -203,6 +202,7 @@
 
   &__search-form {
     position: relative;
+    z-index: 3;
     background: $white;
   }
 
