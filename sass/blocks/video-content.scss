@@ -62,14 +62,28 @@
   &__frame {
     width: 258px;
     height: 150px;
+    margin: 0 auto;
 
-    background: url("../img/icon-play.svg") no-repeat center, url("../img/video-mobile@1x.jpg") no-repeat center $gray--light;
+    background-color: $gray--light;
+    background-image: url("../img/video-mobile@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: contain;
+
+    @include respond-to("retina") {
+      background-image: url("../img/video-mobile@2x.jpg");
+    }
 
     iframe {
-      width: 258px;
+      width: 260px;
       height: 150px;
 
       border: none;
+
+      @include respond-to("medium") {
+        width: 668px;
+        height: 455px;
+      }
     }
 
     @include respond-to("medium") {
@@ -79,12 +93,24 @@
       height: 455px;
 
       border-bottom: $border-main;
+
+      background-image: url("../img/video-tablet@1x.jpg");
+
+      @include respond-to("retina") {
+        background-image: url("../img/video-tablet@2x.jpg");
+      }
     }
 
     @include respond-to("large") {
       float: left;
       width: 682px;
       position: static;
+
+      background-image: url("../img/video-desktop@1x.jpg");
+
+      @include respond-to("retina") {
+        background-image: url("../img/video-desktop@2x.jpg");
+      }
     }
   }
 
