@@ -105,6 +105,7 @@
     @include respond-to("medium") {
       float: left;
       width: 50%;
+      clear: left;
     }
 
     @include respond-to("large") {
