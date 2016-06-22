@@ -10,6 +10,51 @@
   border-top: $border-main;
   border-bottom: $border-main;
 
+  &--mobile {
+    width: 85px;
+    height: 35px;
+
+    @include respond-to("medium") {
+      display: none;
+    }
+  }
+
+  &--tablet {
+    display: none;
+
+    @include respond-to("medium") {
+      display: inline-block;
+      width: 112px;
+      height: 46px;
+
+      vertical-align: baseline;
+    }
+
+    @include respond-to("large") {
+      display: none;
+    }
+  }
+
+  &--desktop {
+    display: none;
+
+    @include respond-to("large") {
+      display: inline-block;
+      width: 148px;
+      height: 72px;
+
+      vertical-align: baseline;
+
+      &:hover {
+        fill: rgba(0, 0, 0, 0.5);
+      }
+
+      &:active {
+        fill: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
   @include respond-to("medium") {
     padding: 0;
 

@@ -126,6 +126,25 @@
       padding-bottom: 32px;
     }
 
+    @include respond-to("large") {
+
+      &:hover {
+        color: rgba(0, 0, 0, 0.5);
+      }
+
+      &:active {
+        color: rgba(0, 0, 0, 0.3);
+      }
+
+      &:hover .icon {
+        fill: $green;
+      }
+
+      &:active .icon {
+        opacity: 0.3;
+      }
+    }
+
     &--label {
       padding-top: 20px;
       padding-bottom: 19px;
@@ -146,18 +165,6 @@
 
     &--cart {
       position: relative;
-
-      &::before {
-        content: "";
-
-        position: absolute;
-        top: 30px;
-        left: 30px;
-
-        width: 20px;
-        height: 20px;
-        background: url("../img/icon-cart.svg") no-repeat center;
-      }
     }
 
     &--catalog,
@@ -208,6 +215,20 @@
     }
   }
 
+  &__icon-cart {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+
+    width: 20px;
+    height: 20px;
+    fill: $gray-210;
+
+    @include respond-to("medium") {
+      top: 33px;
+    }
+  }
+
   &__search-form {
     position: relative;
     z-index: 3;
@@ -221,6 +242,8 @@
 
     width: 20px;
     height: 20px;
+
+    fill: $gray-210;
 
     @include respond-to("medium") {
       left: 33px;
@@ -273,9 +296,9 @@
       padding: 0;
 
       &:focus {
-        width: 170px;
+        width: 230px;
         padding: 0;
-        padding-left: 5px;
+        padding-left: 10px;
         border: 0;
         border-left: $border-main;
       }

@@ -26,17 +26,31 @@
       border-right: none;
     }
 
-    &--prev {
-      background: url("../img/icon-left-arrow.svg") no-repeat center;
-    }
-
-    &--next {
-      background: url("../img/icon-right-arrow.svg") no-repeat center;
-    }
-
     @include respond-to("medium") {
       width: 88px;
       border: none;
     }
+
+    @include respond-to("large") {
+
+      &:hover .pagination__icon {
+        fill: #666666;
+      }
+
+      &:active .pagination__icon {
+        fill: #b2b2b2;
+      }
+    }
+  }
+
+  &__icon {
+    display: inline-block;
+    width: 50px;
+    height: 26px;
+    margin-top: 12px;
+
+    vertical-align: baseline;
+
+    fill: $black;
   }
 }

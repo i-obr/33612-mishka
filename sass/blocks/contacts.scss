@@ -39,19 +39,6 @@
 
       padding-top: 65px;
       margin-bottom: 20px;
-
-      &::after {
-        content: "";
-
-        position: absolute;
-        bottom: 10px;
-        right: 0;
-
-        width: 50px;
-        height: 82px;
-
-        background: url("../img/icon-flag.svg") no-repeat center;
-      }
     }
 
     @include respond-to("large") {
@@ -60,10 +47,26 @@
 
       padding-top: 0;
       padding-left: 175px;
+    }
+  }
 
-      &::after {
-        left: 60px;
-      }
+  &__icon-flag {
+    display: none;
+
+    @include respond-to("medium") {
+      position: absolute;
+      bottom: 10px;
+      right: 0;
+
+      display: inline-block;
+      width: 50px;
+      height: 82px;
+
+      vertical-align: middle;
+    }
+
+    @include respond-to("large") {
+      left: 60px;
     }
   }
 
@@ -138,6 +141,17 @@
 
     border-bottom: 2px solid $green;
     width: 185px;
+
+    @include respond-to("large") {
+
+      &:hover {
+        color: $green;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
   }
 
   &__address {

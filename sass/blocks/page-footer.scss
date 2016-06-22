@@ -26,6 +26,21 @@
     }
   }
 
+  &__mishka {
+    fill: $black;
+
+    @include respond-to("large") {
+
+      &:hover {
+        fill: $green;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+  }
+
   &__copyright {
     padding-top: 17px;
     padding-bottom: 23px;
@@ -43,19 +58,28 @@
       font-size: $font-size--button;
       line-height: 1;
       font-weight: 700;
+
+      @include respond-to("large") {
+
+        &:active {
+          opacity: 0.3;
+        }
+      }
     }
 
     a {
       display: inline-block;
-      margin-left: 35px;
-      width: 35px;
-      height: 45px;
+      margin-left: 20px;
+      width: 25px;
+      height: 34px;
 
       font-size: 0;
 
       vertical-align: middle;
 
-      background: url("../img/htmlacademy.svg") no-repeat center;
+      fill: $green;
+
+      /*background: url("../img/htmlacademy.svg") no-repeat center;*/
     }
   }
 }

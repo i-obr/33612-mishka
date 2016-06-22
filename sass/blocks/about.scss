@@ -63,73 +63,52 @@
 
     color: $black;
 
-    &::before {
-      content: "";
-
-      position: absolute;
-      top: 0;
-      left: 0;
-
-      width: 55px;
-      height: 45px;
-    }
-
-    &--ecology::before {
-      background: url("../img/icon-feature-1.svg") no-repeat center;
-    }
-
-    &--norse-style::before {
-      background: url("../img/icon-feature-3.svg") no-repeat center;
-    }
-
-    &--heart::before {
-      background: url("../img/icon-feature-5.svg") no-repeat center;
-    }
-
-    &--knitting::before {
-      background: url("../img/icon-feature-2.svg") no-repeat center;
-    }
-
-    &--support::before {
-      background: url("../img/icon-feature-4.svg") no-repeat center;
-    }
-
-    &--gift-box::before {
-      background: url("../img/icon-feature-6.svg") no-repeat center;
-    }
-
     @include respond-to("medium") {
       padding-bottom: 50px;
 
       font-size: $font-size + 4;
-
-      &--ecology {
-        padding-right: 34%;
-      }
-
-      &--norse-style {
-        padding-right: 24%;
-      }
-
-      &--heart{
-        padding-right: 30%;
-      }
-
-      &--knitting {
-        padding-right: 19%;
-      }
-
-      &--support {
-        padding-right: 3%;
-      }
-
-      &--gift-box {
-        padding-right: 23%;
-      }
     }
 
     @include respond-to("large") {
       padding-right: 20px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    fill: $green;
+
+    &--ecology {
+      width: 32px;
+      height: 37px;
+    }
+
+    &--norse-style {
+      width: 47px;
+      height: 27px;
+    }
+
+    &--heart{
+      width: 34px;
+      height: 27px;
+    }
+
+    &--knitting {
+      width: 35px;
+      height: 34px;
+    }
+
+    &--support {
+      width: 55px;
+      height: 23px;
+    }
+
+    &--gift-box {
+      width: 33px;
+      height: 32px;
     }
   }
 }
