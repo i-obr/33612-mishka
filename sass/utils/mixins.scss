@@ -22,6 +22,33 @@
   }
 }
 
+@mixin wavy-line {
+  &::after {
+    content: "";
+
+    position: absolute;
+    bottom: -6px;
+    right: 0;
+    left: 0;
+
+    display: block;
+    height: 6px;
+
+    background-image: url("../img/bg-zigzag-line.svg");
+    background-size: auto 6px;
+
+    @include respond-to("medium") {
+      height: 17px;
+      background-size: auto 17px;
+    }
+
+    @include respond-to("large") {
+      height: 23px;
+      background-size: auto 23px;
+    }
+  }
+}
+
 @mixin respond-to($breakpoint) {
   @if map-has-key($breakpoints, $breakpoint) {
     @media #{inspect(map-get($breakpoints, $breakpoint))} {

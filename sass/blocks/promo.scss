@@ -1,4 +1,6 @@
 .promo {
+  position: relative;
+
   text-align: center;
 
   background-color: $gray--lighten;
@@ -6,6 +8,8 @@
 
   background-repeat: no-repeat;
   background-position: center top;
+
+  @include wavy-line;
 
   @include respond-to("retina") {
     background-image: url("../img/hero-mobile@2x.jpg");

@@ -1,15 +1,18 @@
 .reviews {
+  position: relative;
+
   text-align: center;
 
-  margin-bottom: 45px;
+  @include wavy-line;
 
   @include respond-to("medium") {
-    margin-bottom: 85px;
+    padding-bottom: 80px;
+
 
     background-image: url("../img/review@1x.jpg");
     background-repeat: no-repeat;
     background-position: 0 top;
-    background-size: contain;
+    background-size: 350px 457px;
 
     @include respond-to("retina") {
       background-image: url("/img/review@2x.jpg");
@@ -17,7 +20,7 @@
   }
 
   @include respond-to("large") {
-    margin-bottom: 90px;
+    margin-bottom: 10px;
 
     background: none;
   }
@@ -68,6 +71,7 @@
 
     @include respond-to("medium") {
       position: relative;
+      /*padding-bottom: 85px;*/
     }
   }
 
@@ -126,6 +130,7 @@
 
   &__button {
     width: 260px;
+    margin-bottom: 45px;
 
     @include respond-to("medium") {
       position: absolute;
