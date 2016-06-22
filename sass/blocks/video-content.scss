@@ -62,6 +62,8 @@
   }
 
   &__frame {
+    position: relative;
+
     width: 258px;
     height: 150px;
     margin: 0 auto;
@@ -71,6 +73,20 @@
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+
+    &::before {
+      content: "";
+
+      position: absolute;
+      top: 50%;
+      left: 50%;
+
+      width: 101px;
+      height: 77px;
+      transform: translate(-50px, -38px);
+
+      background-image: url("../img/icon-play.svg");
+    }
 
     @include respond-to("retina") {
       background-image: url("../img/video-mobile@2x.jpg");
