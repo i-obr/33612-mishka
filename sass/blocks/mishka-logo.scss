@@ -24,7 +24,8 @@
   @include respond-to("large") {
     order: 2;
     align-self: flex-start;
-    padding: 10px 0;
+    padding-top: 10px;
+    padding-bottom: 5px;
     transform: translateX(-35px);
   }
 }

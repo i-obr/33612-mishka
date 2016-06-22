@@ -21,6 +21,10 @@
     @include respond-to("medium") {
       padding: 0 30px;
     }
+
+    @include respond-to("large") {
+      position: relative;
+    }
   }
 
   &__title {
@@ -33,7 +37,7 @@
 
     @include respond-to("medium") {
       padding-top: 40px;
-      margin-bottom: 55px;
+      margin-bottom: 45px;
 
       align-items: center;
     }
@@ -41,6 +45,7 @@
     @include respond-to("large") {
       position: absolute;
       top: 125px;
+      left: 0;
 
       padding-top: 0;
     }
@@ -53,11 +58,13 @@
 
     font-weight: 700;
     text-align: left;
+    white-space: nowrap;
 
     @include respond-to("medium") {
       flex-basis: 500px;
-      width: 500px;
       margin-bottom: 0;
+
+      white-space: normal;
     }
 
     @include respond-to("large") {
@@ -83,7 +90,7 @@
     }
 
     @include respond-to("large") {
-      flex-basis: 175px;
+      flex-basis: 200px;
       padding: 0 55px;
     }
   }
@@ -121,7 +128,7 @@
 
     @include respond-to("medium") {
       padding-right: 50px;
-      margin-bottom: 25px;
+      margin-bottom: 35px;
     }
 
     @include respond-to("large") {
@@ -176,6 +183,7 @@
       float: right;
       width: 334px;
       height: 403px;
+      margin-top: 10px;
       margin-bottom: 0;
 
       background: $gray--light;
@@ -184,6 +192,7 @@
     @include respond-to("large") {
       height: 634px;
       width: 525px;
+      margin-top: 0;
     }
   }
 
@@ -206,13 +215,11 @@
   }
 
   &__button {
-    padding-left: 85px;
-    padding-right: 85px;
+    width: 260px;
     margin-bottom: 35px;
 
     @include respond-to("medium") {
-      padding-left: 105px;
-      padding-right: 95px;
+      width: 290px;
       margin-bottom: 0;
     }
   }

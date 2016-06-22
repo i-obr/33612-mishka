@@ -4,7 +4,7 @@
   text-align: center;
 
   @include respond-to("medium") {
-    margin-bottom: 60px;
+    margin-bottom: 55px;
   }
 
   @include respond-to("large") {
@@ -29,7 +29,7 @@
 
   &__title {
     margin: 0;
-    padding-top: 45px;
+    padding-top: 43px;
     padding-bottom: 25px;
 
     text-align: left;
@@ -99,7 +99,7 @@
 
   &__items {
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
 
     line-height: 2.1428;
 
@@ -151,7 +151,7 @@
   &__map {
     min-height: 455px;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 37px;
 
     text-align: center;
 
@@ -177,12 +177,10 @@
   }
 
   &__button {
-    padding-left: 48px;
-    padding-right: 48px;
+    width: 260px;
 
     @include respond-to("medium") {
-      padding-left: 40px;
-      padding-right: 40px;
+      width: 230px;
     }
 
     @include respond-to("large") {

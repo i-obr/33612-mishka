@@ -6,6 +6,7 @@
   @include respond-to("medium") {
     position: relative;
     padding-top: 455px;
+    margin-bottom: 65px;
   }
 
   @include respond-to("large") {
@@ -48,8 +49,9 @@
     @include respond-to("large") {
       float: right;
       width: 34.9%;
-      padding-top: 90px;
+      padding-top: 95px;
       padding-right: 145px;
+      padding-bottom: 30px;
       padding-left: 77px;
 
       &::before {

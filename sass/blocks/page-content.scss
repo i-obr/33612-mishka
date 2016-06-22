@@ -26,12 +26,12 @@
 
     &--inner {
       padding-top: 75px;
-      padding-bottom: 85px;
+      padding-bottom: 80px;
       margin-bottom: 25px;
 
       @include respond-to("medium") {
         padding-top: 90px;
-        margin-bottom: 70px;
+        margin-bottom: 75px;
       }
 
       @include respond-to("large") {
