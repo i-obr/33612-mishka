@@ -26,6 +26,19 @@
       padding-bottom: 15px;
       padding-left: 80px;
     }
+
+    @include respond-to("large") {
+      &:hover {
+
+        &::before {
+          border-color: $green;
+        }
+      }
+    }
+  }
+
+  input[type="radio"]:disabled + label::before {
+    border-color: $gray-210;
   }
 
   input[type="radio"] + label::before {
@@ -41,6 +54,8 @@
 
     border: $border-button;
     border-radius: 50%;
+
+    /*border-color: red;*/
 
     @include respond-to("medium") {
       top: 0;

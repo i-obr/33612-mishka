@@ -51,6 +51,19 @@
 
       line-height: 52px;
     }
+
+    @include respond-to("large") {
+      &:hover {
+
+      &::before {
+        border-color: $green;
+      }
+    }
+    }
+  }
+
+  input[type="checkbox"]:disabled + label::before {
+    border-color: $gray-210;
   }
 
   input[type="checkbox"] + label::before {
