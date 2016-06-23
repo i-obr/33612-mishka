@@ -32,7 +32,7 @@
     @include respond-to("large") {
 
       &:hover {
-        fill: $green;
+        fill: $color-success;
       }
 
       &:active {
@@ -79,7 +79,9 @@
 
       fill: $green;
 
-      /*background: url("../img/htmlacademy.svg") no-repeat center;*/
+      @include respond-to("medium") {
+        margin-left: 35px;
+      }
     }
   }
 }

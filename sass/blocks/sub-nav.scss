@@ -87,12 +87,24 @@
 
     fill: #35a999;
 
+    @include respond-to("medium") {
+      top: 30px;
+    }
+
     &--interior {
       right: 30px;
+
+      @include respond-to("medium") {
+        right: 35px;
+      }
     }
 
     &--toys {
       right: 20px;
+
+      @include respond-to("medium") {
+        right: 35px;
+      }
     }
   }
 }

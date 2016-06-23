@@ -19,6 +19,10 @@ $gray:                        #ececec;
 $gray--dark:                  #e5e5e5;
 $gray--darken:                #444444;
 
+$color-error:                 #f0b1b1;
+$color-success:               $green;
+$color-disabled:              $gray-210;
+
 $border-main:                 1px solid $gray;
 $border-second:               1px solid $gray--dark;
 $border-button:               2px solid $gray--darken;

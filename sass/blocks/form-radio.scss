@@ -31,14 +31,14 @@
       &:hover {
 
         &::before {
-          border-color: $green;
+          border-color: $color-success;
         }
       }
     }
   }
 
   input[type="radio"]:disabled + label::before {
-    border-color: $gray-210;
+    border-color: $color-disabled;
   }
 
   input[type="radio"] + label::before {
@@ -54,8 +54,6 @@
 
     border: $border-button;
     border-radius: 50%;
-
-    /*border-color: red;*/
 
     @include respond-to("medium") {
       top: 0;

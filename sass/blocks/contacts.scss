@@ -145,7 +145,7 @@
     @include respond-to("large") {
 
       &:hover {
-        color: $green;
+        color: $color-success;
       }
 
       &:active {

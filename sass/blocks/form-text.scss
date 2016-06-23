@@ -43,16 +43,20 @@
     outline: none;
 
     &:focus {
-      border-color: $green;
+      border-color: $color-success;
       font-size: ($font-size + 2);
     }
 
     &:focus + .form-text__icon {
-      fill: $green;
+      fill: $color-success;
     }
 
     &:invalid:not(:placeholder-shown) {
-      border-color: #f0b1b1;
+      border-color: $color-error;
+    }
+
+    &:invalid:not(:placeholder-shown) + .form-text__icon {
+      fill: $color-disabled;
     }
 
     @include respond-to("medium") {
@@ -66,11 +70,11 @@
       flex-grow: 1;
 
       &:hover {
-        border-color: $green;
+        border-color: $color-success;
       }
 
       &:hover + .form-text__icon {
-        fill: $green;
+        fill: $color-success;
       }
     }
 

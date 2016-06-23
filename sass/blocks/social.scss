@@ -34,7 +34,7 @@
     @include respond-to("large") {
 
       &:hover {
-        fill: $green;
+        fill: $color-success;
       }
 
       &:active {

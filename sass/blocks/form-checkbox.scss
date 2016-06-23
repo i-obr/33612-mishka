@@ -56,14 +56,14 @@
       &:hover {
 
       &::before {
-        border-color: $green;
+        border-color: $color-success;
       }
     }
     }
   }
 
   input[type="checkbox"]:disabled + label::before {
-    border-color: $gray-210;
+    border-color: $color-disabled;
   }
 
   input[type="checkbox"] + label::before {
