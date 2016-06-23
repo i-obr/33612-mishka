@@ -51,6 +51,10 @@
       fill: $green;
     }
 
+    &:invalid:not(:placeholder-shown) {
+      border-color: #f0b1b1;
+    }
+
     @include respond-to("medium") {
       padding-top: 9px;
       padding-bottom: 13px;
