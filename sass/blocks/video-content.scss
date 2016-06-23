@@ -1,64 +1,19 @@
 .video-content {
+  position: relative;
   margin-bottom: 60px;
-
   border: $border-main;
 
   @include respond-to("medium") {
-    position: relative;
-    padding-top: 455px;
     margin-bottom: 65px;
+    border: 0;
   }
 
   @include respond-to("large") {
-    @include clearfix;
+    display: flex;
+    justify-content: flex-start;
 
     padding-top: 0;
     margin-bottom: 100px;
-  }
-
-  &__title {
-    position: relative;
-
-    padding: 25px;
-    padding-top: 20px;
-    padding-left: 90px;
-    margin: 0;
-
-    &::before {
-      content: "";
-
-      position: absolute;
-      top: 35px;
-      left: 30px;
-
-      width: 35px;
-      height: 25px;
-
-      background: url("../img/icon-video.svg") no-repeat center;
-    }
-
-    @include respond-to("medium") {
-      padding-top: 35px;
-      padding-left: 105px;
-
-      &::before {
-        left: 40px;
-      }
-    }
-
-    @include respond-to("large") {
-      float: right;
-      width: 34.9%;
-      padding-top: 95px;
-      padding-right: 145px;
-      padding-bottom: 30px;
-      padding-left: 77px;
-
-      &::before {
-        top: 45px;
-        left: 77px;
-      }
-    }
   }
 
   &__frame {
@@ -67,12 +22,30 @@
     width: 258px;
     height: 150px;
     margin: 0 auto;
+    margin-top: 95px;
 
     background-color: $gray--light;
     background-image: url("../img/video-mobile@1x.jpg");
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+
+    &:hover {
+      &::before {
+        content: "";
+
+        transform: scale(1.2);
+      }
+    }
+
+    &:active {
+      &::before {
+        content: "";
+
+        transform: scale(0.8);
+        opacity: 0.9;
+      }
+    }
 
     &::before {
       content: "";
@@ -83,9 +56,12 @@
 
       width: 101px;
       height: 77px;
-      transform: translate(-50px, -38px);
+
+      margin-top: -38px;
+      margin-left: -50px;
 
       background-image: url("../img/icon-play.svg");
+      background-repeat: no-repeat;
     }
 
     @include respond-to("retina") {
@@ -102,13 +78,16 @@
         width: 668px;
         height: 455px;
       }
+
+      @include respond-to("large") {
+        width: 682px;
+      }
     }
 
     @include respond-to("medium") {
-      position: absolute;
-      top: 0px;
       width: 100%;
       height: 455px;
+      margin-top: 0;
 
       border-bottom: $border-main;
 
@@ -120,9 +99,7 @@
     }
 
     @include respond-to("large") {
-      float: left;
       width: 682px;
-      position: static;
 
       background-image: url("../img/video-desktop@1x.jpg");
 
@@ -138,19 +115,75 @@
 
     @include respond-to("medium") {
       margin-bottom: 45px;
+
+      border: $border-main;
     }
 
     @include respond-to("large") {
-      float: right;
-      width: 34.9%;
+      margin-bottom: 0;
+      width: 368px;
+
+      &:hover {
+        box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      &:active {
+        box-shadow: 0 6px 10px 2px rgba(0, 0, 0, 0.1);
+      }
+    }
+  }
+
+  &__title {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    text-align: left;
+
+    padding: 25px;
+    padding-top: 25px;
+    padding-left: 90px;
+    margin: 0;
+
+    @include respond-to("medium") {
+      position: relative;
+      padding-top: 35px;
+      padding-left: 105px;
+    }
+
+    @include respond-to("large") {
+      padding-top: 95px;
+      padding-right: 145px;
+      padding-bottom: 30px;
+      padding-left: 77px;
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 30px;
+    left: 30px;
+
+    width: 35px;
+    height: 30px;
+
+    fill: $green;
+
+    @include respond-to("medium") {
+      left: 40px;
+    }
+
+    @include respond-to("large") {
+      top: 45px;
+      left: 77px;
     }
   }
 
   &__teaser {
     margin: 0;
-    padding-top: 25px;
+    padding-top: 30px;
     padding-right: 20px;
-    padding-bottom: 25px;
+    padding-bottom: 20px;
     padding-left: 35px;
 
     text-align: left;
@@ -158,13 +191,13 @@
     @include respond-to("medium") {
       padding-top: 10px;
       padding-left: 40px;
-      padding-bottom: 30px;
+      padding-bottom: 35px;
     }
 
     @include respond-to("large") {
       padding-top: 5px;
       padding-left: 77px;
-      margin-bottom: 15px;
+      margin-bottom: 10px;
     }
   }
 
@@ -174,6 +207,7 @@
 
     @include respond-to("medium") {
       width: 87.5%;
+      margin-bottom: 45px;
     }
 
     @include respond-to("large") {
