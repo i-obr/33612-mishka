@@ -9,6 +9,7 @@
     @include respond-to("medium") {
       display: flex;
       justify-content: space-between;
+      align-items: center;
 
       padding: 30px;
     }
@@ -20,17 +21,36 @@
     @include respond-to("medium") {
       display: block;
       width: 167px;
-      padding: 27px 0;
 
       font-size: 0;
     }
   }
 
+  &__mishka {
+    fill: $black;
+
+    @include respond-to("large") {
+
+      &:hover {
+        fill: $color-success;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+  }
+
   &__copyright {
-    padding: 20px 0;
+    padding-top: 17px;
+    padding-bottom: 23px;
     white-space: nowrap;
 
     text-align: center;
+
+    @include respond-to("medium") {
+      padding: 0;
+    }
 
     p {
       margin: 0;
@@ -38,19 +58,30 @@
       font-size: $font-size--button;
       line-height: 1;
       font-weight: 700;
+
+      @include respond-to("large") {
+
+        &:active {
+          opacity: 0.3;
+        }
+      }
     }
 
     a {
       display: inline-block;
-      margin-left: 35px;
-      width: 35px;
-      height: 45px;
+      margin-left: 20px;
+      width: 25px;
+      height: 34px;
 
       font-size: 0;
 
       vertical-align: middle;
 
-      background: url("../img/htmlacademy.svg") no-repeat center;
+      fill: $green;
+
+      @include respond-to("medium") {
+        margin-left: 35px;
+      }
     }
   }
 }

@@ -26,6 +26,19 @@
       padding-bottom: 15px;
       padding-left: 80px;
     }
+
+    @include respond-to("large") {
+      &:hover {
+
+        &::before {
+          border-color: $color-success;
+        }
+      }
+    }
+  }
+
+  input[type="radio"]:disabled + label::before {
+    border-color: $color-disabled;
   }
 
   input[type="radio"] + label::before {

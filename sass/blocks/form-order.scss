@@ -1,5 +1,6 @@
 .form-order {
-  margin-bottom: 55px;
+  text-align: center;
+  margin-bottom: 60px;
 
   @include respond-to("medium") {
     margin-bottom: 55px;
@@ -15,31 +16,22 @@
     padding: 0;
 
     @include respond-to("medium") {
-      width: 87%;
+      padding: 0 30px;
 
       display: flex;
+      align-items: flex-start;
       justify-content: space-between;
-      align-items: center;
-      padding-top: 10px;
     }
 
     @include respond-to("large") {
-      width: 62%;
-      padding-top: 50px;
+      justify-content: flex-start;
     }
   }
 
   &__group {
-    @include container;
-
     padding: 0;
 
-
-    @include respond-to("medium") {
-      display: flex;
-      width: 100%;
-      max-width: none;
-    }
+    text-align: left;
 
     &--bg-gray {
 
@@ -57,13 +49,14 @@
     padding-bottom: 30px;
 
     @include respond-to("medium") {
-      width: 65%;
+      width: 100%;
       padding-top: 50px;
       padding-bottom: 60px;
-      margin-right: 50px;
+      padding-left: 50px;
     }
 
     @include respond-to("large") {
+      padding-left: 0;
       width: 75%;
       max-width: 1000px;
     }
@@ -71,6 +64,18 @@
     &--phone,
     &--email {
       padding-top: 0px;
+    }
+
+    &--extra {
+
+      @include respond-to("medium") {
+        padding-top: 65px;
+        padding-bottom: 55px;
+      }
+
+      @include respond-to("large") {
+        padding-bottom: 90px;
+      }
     }
 
     &--phone {
@@ -113,12 +118,9 @@
     }
 
     @include respond-to("medium") {
-      width: 24%;
-      margin-left: 30px;
+      width: 21%;
       background: transparent;
       padding-top: 70px;
-      padding-left: 20px;
-      text-align: left;
 
       &::after {
         content: none;
@@ -149,16 +151,24 @@
       display: block;
       padding: 12px 0;
     }
+
+    @include respond-to("large") {
+      margin-left: 190px;
+    }
   }
 
   &__button {
     width: 100%;
-    margin-top: 25px;
+    margin-top: 20px;
 
     @include respond-to("medium") {
       width: 230px;
       margin-top: 0;
       margin-left: 0;
+    }
+
+    @include respond-to("large") {
+      margin-left: 17%;
     }
   }
 }

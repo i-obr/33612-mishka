@@ -6,21 +6,34 @@
 
   text-align: left;
 
+  background: $green;
+
   @include respond-to("medium") {
     display: flex;
     flex-wrap: wrap;
   }
 
   &__item {
+    position: relative;
+
+    &::after {
+      content: "";
+
+      position: absolute;
+      top: 23px;
+    }
+
     &--interior {
-      background: $green;
+      background-color: $green;
     }
 
     &--toys {
-      background: $green--dark;
+      background-color: $green--dark;
     }
 
     a {
+      position: relative;
+
       display: inline-block;
       width: 100%;
       padding: 30px;
@@ -35,6 +48,17 @@
       text-decoration: none;
 
       color: $white;
+
+      @include respond-to("large") {
+
+        &:active {
+          color: rgba(250, 250, 250, 0.3);
+        }
+
+        &:active .sub-nav__icon {
+          fill: #37b2a0;
+        }
+      }
     }
 
     @include respond-to("medium") {
@@ -46,6 +70,40 @@
 
         font-size: $font-size--button + 2;
         line-height: 1.5;
+      }
+    }
+
+    @include respond-to("large") {
+
+      &:hover {
+        transform: translateY(-5px);
+      }
+    }
+  }
+
+  &__icon {
+    position: absolute;
+    top: 23px;
+
+    fill: #35a999;
+
+    @include respond-to("medium") {
+      top: 30px;
+    }
+
+    &--interior {
+      right: 30px;
+
+      @include respond-to("medium") {
+        right: 35px;
+      }
+    }
+
+    &--toys {
+      right: 20px;
+
+      @include respond-to("medium") {
+        right: 35px;
       }
     }
   }

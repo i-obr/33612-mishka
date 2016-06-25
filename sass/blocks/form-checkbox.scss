@@ -51,6 +51,19 @@
 
       line-height: 52px;
     }
+
+    @include respond-to("large") {
+      &:hover {
+
+      &::before {
+        border-color: $color-success;
+      }
+    }
+    }
+  }
+
+  input[type="checkbox"]:disabled + label::before {
+    border-color: $color-disabled;
   }
 
   input[type="checkbox"] + label::before {
@@ -83,7 +96,9 @@
     width: 25px;
     height: 25px;
 
-    background: url("../img/icon-tick.svg") no-repeat center;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='32.666' height='22.742' viewBox='0 0 32.666 22.742'%3E%3Cpath d='M32.666 1.414L31.252 0 11.338 19.914 1.414 9.99 0 11.402l9.924 9.925 1.414 1.414 1.415-1.414'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: center;
 
     @include respond-to("medium") {
       top: 10px;

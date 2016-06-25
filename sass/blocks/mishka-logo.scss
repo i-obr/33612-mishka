@@ -2,24 +2,78 @@
   position: relative;
   z-index: 1;
 
-  padding: 20px 0;
-
   font-size: 0;
   text-align: center;
 
   border-top: $border-main;
   border-bottom: $border-main;
 
+  background: $white;
+  color: $black;
+
+  svg {
+    width: 150px;
+    height: 78px;
+  }
+
   @include respond-to("medium") {
-    padding: 25px 0;
+    padding: 0;
+
+    align-self: center;
 
     border-top: 0;
     border-bottom: 0;
 
     text-align: left;
+    transform: translateX(-20px);
   }
 
   @include respond-to("large") {
     order: 2;
+    align-self: flex-start;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transform: translateX(-35px);
+
+    a {
+      &:hover {
+        fill: rgba(0, 0, 0, 0.5);
+      }
+
+      &:active {
+        fill: rgba(0, 0, 0, 0.3);
+      }
+    }
+  }
+
+  &__mobile {
+
+    @include respond-to("medium") {
+      display: none;
+    }
+  }
+
+  &__tablet {
+    display: none;
+
+    @include respond-to("medium") {
+      display: inline-block;
+
+      vertical-align: baseline;
+    }
+
+    @include respond-to("large") {
+      display: none;
+    }
+  }
+
+  &__desktop {
+    display: none;
+
+    @include respond-to("large") {
+      display: inline-block;
+
+      vertical-align: baseline;
+    }
   }
 }

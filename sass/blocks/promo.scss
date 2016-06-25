@@ -1,11 +1,34 @@
 .promo {
+  position: relative;
+
   text-align: center;
 
-  background: $gray--light url("../img/hero-mobile@1x.jpg") no-repeat center top;
+  background-color: $gray--lighten;
+  background-image: url("../img/hero-mobile@1x.jpg");
+
+  background-repeat: no-repeat;
+  background-position: center top;
+
+  @include wavy-line;
+
+  @include respond-to("retina") {
+    background-image: url("../img/hero-mobile@2x.jpg");
+    background-size: 575px auto;
+  }
 
   @include respond-to("medium") {
     border-top: $border-main;
     margin-top: -61px;
+    background-size: cover;
+    background-size: 1150px;
+  }
+
+  @include respond-to("large") {
+    background-image: url("../img/hero-desktop@1x.jpg");
+
+    @include respond-to("retina") {
+      background-image: url("../img/hero-desktop@2x.jpg");
+    }
   }
 
   &__container {
@@ -20,8 +43,8 @@
 
   &__title {
     padding: 30px;
-    padding-top: 90px;
-    padding-bottom: 125px;
+    padding-top: 88px;
+    padding-bottom: 123px;
     margin: 0;
 
     text-align: center;

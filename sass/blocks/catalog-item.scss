@@ -14,32 +14,22 @@
   }
 
   &__photo {
-    width: 100%;
+    margin: 0 auto;
+    width: 260px;
+
     height: 195px;
+    background: red;
 
     background: $gray--light;
 
     @include respond-to("medium") {
-      width: 50%;
+      width: 334px;
       height: 334px;
     }
 
     @include respond-to("large") {
       width: 100%;
       height: 462px;
-    }
-
-    img {
-      width: 100%;
-      height: 195px;
-
-      @include respond-to("medium") {
-        height: 334px;
-      }
-
-      @include respond-to("large") {
-        height: 462px;
-      }
     }
   }
 
@@ -53,6 +43,7 @@
       display: flex;
       flex-direction: column;
       width: 50%;
+      flex-grow: 1;
       padding-top: 25px;
     }
 
@@ -61,6 +52,14 @@
       width: auto;
 
       flex-grow: 1;
+
+      &:hover {
+        box-shadow: 0 10px 20px 5px rgba(0, 0, 0, 0.1);
+      }
+
+      &:active {
+        box-shadow: 0 6px 10px 2px rgba(0, 0, 0, 0.1);
+      }
     }
   }
 
@@ -76,6 +75,17 @@
       text-decoration: none;
 
       color: $black;
+
+      @include respond-to("large") {
+
+        &:hover {
+          color: rgba(0, 0, 0, 0.5);
+        }
+
+        &:active {
+          color: rgba(0, 0, 0, 0.3);
+        }
+      }
     }
   }
 
@@ -132,6 +142,17 @@
     vertical-align: middle;
     font-size: 0;
 
-    background: url("../img/icon-cart.svg") no-repeat center;
+    fill: $gray-210;
+
+    @include respond-to("large") {
+
+      &:hover  {
+        fill: $color-success;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
   }
 }

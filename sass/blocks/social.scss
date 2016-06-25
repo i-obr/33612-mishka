@@ -20,9 +20,9 @@
 
   li {
     display: inline-block;
-    margin-right: 35px;
+    margin-right: 40px;
 
-    vertical-align: top;
+    vertical-align: middle;
 
     &:last-child {
       margin-right: 0;
@@ -30,20 +30,35 @@
   }
 
   &__link {
-    display: block;
-    width: 25px;
-    height: 30px;
 
-    &--inst {
-      background: url("../img/icon-insta.svg") no-repeat center;
+    @include respond-to("large") {
+
+      &:hover {
+        fill: $color-success;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
+  }
+
+  &__icon {
+
+    &--insta {
+      width: 22px;
+      height: 21px;
     }
 
     &--fb {
-      background: url("../img/icon-fb.svg") no-repeat center;
+      width: 15px;
+      height: 29px;
     }
 
     &--tw {
-      background: url("../img/icon-twitter.svg") no-repeat center;
+      width: 24px;
+      height: 20px;
     }
+
   }
 }

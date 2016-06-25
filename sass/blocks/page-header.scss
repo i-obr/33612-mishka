@@ -7,7 +7,9 @@
     @include respond-to("medium") {
       @include container;
 
-      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+
     }
   }
 
@@ -21,11 +23,10 @@
     color: $gray--darken;
 
     @include respond-to("medium") {
-      position: absolute;
-      top: 85px;
-      right: 30px;
-
       display: block;
+      margin-left: auto;
+      margin-top: -61px;
+      z-index: 4;
     }
   }
 }

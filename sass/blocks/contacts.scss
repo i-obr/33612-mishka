@@ -3,10 +3,8 @@
 
   text-align: center;
 
-  /*outline: 1px solid red;*/
-
   @include respond-to("medium") {
-    margin-bottom: 60px;
+    margin-bottom: 55px;
   }
 
   @include respond-to("large") {
@@ -31,7 +29,7 @@
 
   &__title {
     margin: 0;
-    padding-top: 45px;
+    padding-top: 43px;
     padding-bottom: 25px;
 
     text-align: left;
@@ -39,21 +37,8 @@
     @include respond-to("medium") {
       position: relative;
 
-      padding-top: 60px;
+      padding-top: 65px;
       margin-bottom: 20px;
-
-      &::after {
-        content: "";
-
-        position: absolute;
-        bottom: 10px;
-        right: 0;
-
-        width: 50px;
-        height: 82px;
-
-        background: url("../img/icon-flag.svg") no-repeat center;
-      }
     }
 
     @include respond-to("large") {
@@ -62,10 +47,26 @@
 
       padding-top: 0;
       padding-left: 175px;
+    }
+  }
 
-      &::after {
-        left: 60px;
-      }
+  &__icon-flag {
+    display: none;
+
+    @include respond-to("medium") {
+      position: absolute;
+      bottom: 10px;
+      right: 0;
+
+      display: inline-block;
+      width: 50px;
+      height: 82px;
+
+      vertical-align: middle;
+    }
+
+    @include respond-to("large") {
+      left: 60px;
     }
   }
 
@@ -101,7 +102,7 @@
 
   &__items {
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
 
     line-height: 2.1428;
 
@@ -140,6 +141,17 @@
 
     border-bottom: 2px solid $green;
     width: 185px;
+
+    @include respond-to("large") {
+
+      &:hover {
+        color: $color-success;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
   }
 
   &__address {
@@ -153,7 +165,7 @@
   &__map {
     min-height: 455px;
     width: 100%;
-    margin-bottom: 40px;
+    margin-bottom: 37px;
 
     text-align: center;
 
@@ -179,12 +191,10 @@
   }
 
   &__button {
-    padding-left: 48px;
-    padding-right: 48px;
+    width: 260px;
 
     @include respond-to("medium") {
-      padding-left: 40px;
-      padding-right: 40px;
+      width: 230px;
     }
 
     @include respond-to("large") {

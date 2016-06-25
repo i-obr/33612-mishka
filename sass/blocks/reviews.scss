@@ -1,16 +1,26 @@
 .reviews {
+  position: relative;
+
   text-align: center;
 
-  margin-bottom: 45px;
+  @include wavy-line;
 
   @include respond-to("medium") {
-    margin-bottom: 85px;
+    padding-bottom: 80px;
 
-    background: url(../img/review@1x.jpg) no-repeat 0 top;
+
+    background-image: url("../img/review@1x.jpg");
+    background-repeat: no-repeat;
+    background-position: 0 top;
+    background-size: 350px 457px;
+
+    @include respond-to("retina") {
+      background-image: url("/img/review@2x.jpg");
+    }
   }
 
   @include respond-to("large") {
-    margin-bottom: 90px;
+    margin-bottom: 10px;
 
     background: none;
   }
@@ -26,7 +36,15 @@
     }
 
     @include respond-to("large") {
-      background: url(../img/review@1x.jpg) no-repeat left 30px top;
+      background-image: url("../img/review@1x.jpg");
+      background-repeat: no-repeat;
+      background-position: left 30px top;
+      background-size: contain;
+
+      @include respond-to("retina") {
+        background-image: url("../img/review@2x.jpg");
+
+      }
     }
   }
 
@@ -58,7 +76,7 @@
 
   &__item {
     margin: 0;
-    margin-bottom: 30px;
+    margin-bottom: 35px;
 
     text-align: left;
 
@@ -70,6 +88,8 @@
     }
 
     cite {
+      display: block;
+
       font-style: normal;
       font-size: $font-size--text;
       font-weight: 700;
@@ -108,16 +128,15 @@
   }
 
   &__button {
-    padding-left: 80px;
-    padding-right: 80px;
+    width: 260px;
+    margin-bottom: 45px;
 
     @include respond-to("medium") {
       position: absolute;
       top: 75px;
       right: 30px;
 
-      padding-left: 40px;
-      padding-right: 36px;
+      width: 175px;
     }
   }
 }
