@@ -81,8 +81,15 @@
     &--phone {
 
       @include respond-to("medium") {
-        padding-top: 65px;
+        padding-top: 60px;
         padding-bottom: 20px;
+      }
+    }
+
+    &--email {
+
+      @include respond-to("medium") {
+        padding-top: 0px;
       }
     }
   }
