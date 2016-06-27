@@ -79,6 +79,7 @@ input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   font-size: $font-size;
   line-height: 1.125;
+  opacity: 0.5;
 
   color: $gray--darken;
 

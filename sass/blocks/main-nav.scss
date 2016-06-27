@@ -17,7 +17,6 @@
     &--opened .main-nav__list {
       transform: translateY(0);
 
-      height: 159px;
       transition: all 0.4s;
     }
   }
@@ -54,7 +53,7 @@
       flex-wrap: wrap;
       align-items: flex-start;
 
-      width: 70%;
+      width: 60%;
 
       order: 2;
 
@@ -64,8 +63,8 @@
     }
 
     @include respond-to("large") {
-      width: 420px;
       order: 1;
+      width: 420px;
 
       li:nth-child(2) {
         border-left: $border-main;
@@ -76,7 +75,7 @@
 
       @include respond-to("medium") {
         order: 1;
-        width: auto;
+        width: 350px;
 
         li {
           border-left: $border-main;
@@ -85,7 +84,7 @@
 
       @include respond-to("large") {
         order: 3;
-        width: auto;
+        width: 350px;
       }
     }
   }
@@ -151,12 +150,6 @@
       padding-bottom: 19px;
 
       @include respond-to("medium") {
-        padding-top: 25px;
-        padding-left: 76px;
-        padding-bottom: 23px;
-      }
-
-      @include respond-to("large") {
         padding-top: 35px;
         padding-right: 31px;
         padding-bottom: 27px;
@@ -247,11 +240,6 @@
     fill: $gray-210;
 
     @include respond-to("medium") {
-      left: 33px;
-      top: 33px;
-    }
-
-    @include respond-to("large") {
       position: static;
     }
   }
@@ -269,39 +257,34 @@
 
     &::-webkit-input-placeholder {
       color: $black;
+      opacity: 1;
   }
 
     @include respond-to("medium") {
+      position: absolute;
       width: 1px;
-      margin-right: 5px;
+      padding: 0;
+      height: 88px;
+      top: 0;
+      right: 83px;
 
       font-weight: 400;
 
       transition: width 0.5s;
 
       &:focus {
-        width: 165px;
-        padding-right: 5px;
-        padding-bottom: 8px;
-
-        border-bottom: $border-button;
-      }
-    }
-
-    @include respond-to("large") {
-      position: absolute;
-      top: 0;
-      right: 78px;
-
-      height: 88px;
-      padding: 0;
-
-      &:focus {
-        width: 230px;
+        width: 170px;
         padding: 0;
         padding-left: 10px;
         border: 0;
         border-left: $border-main;
+      }
+    }
+
+    @include respond-to("large") {
+
+      &:focus {
+        width: 230px;
       }
     }
   }
