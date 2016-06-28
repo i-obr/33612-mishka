@@ -5,7 +5,7 @@
   position: relative;
   z-index: 2;
 
-  @include respond-to("medium-only") {
+  @include respond-to("mobile-only") {
     &--closed .main-nav__list {
       transform: translateY(-394px);
       height: 0;
@@ -13,7 +13,7 @@
     }
   }
 
-  @include respond-to("medium-only") {
+  @include respond-to("mobile-only") {
     &--opened .main-nav__list {
       transform: translateY(0);
 
@@ -21,7 +21,7 @@
     }
   }
 
-  @include respond-to("medium-only") {
+  @include respond-to("mobile-only") {
     &--no-js .main-nav__buns {
       display: none;
     }
