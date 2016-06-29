@@ -72,7 +72,7 @@
 
   &__title-main {
     margin-bottom: 5px;
-    flex-basis: 100%;
+    width: 100%;
     flex-grow: 1;
 
     font-weight: 700;
@@ -80,7 +80,7 @@
     white-space: nowrap;
 
     @include respond-to("medium") {
-      flex-basis: 500px;
+      width: 500px;
       margin-bottom: 0;
 
       white-space: normal;
@@ -101,7 +101,7 @@
     color: $green--dark;
 
     @include respond-to("medium") {
-      flex-basis: 115px;
+      width: 115px;
       padding: 15px 0;
       padding-bottom: 10px;
 
@@ -109,8 +109,8 @@
     }
 
     @include respond-to("large") {
-      flex-basis: 170px;
-      padding: 0 40px;
+      width: 175px;
+      padding: 0 45px;
     }
   }
 
