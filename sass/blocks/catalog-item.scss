@@ -119,10 +119,6 @@
     @include respond-to("medium") {
       margin-top: auto;
     }
-
-    @include respond-to("large") {
-      padding-top: 20px;
-    }
   }
 
   &__number {
@@ -131,6 +127,7 @@
 
     @include respond-to("medium") {
       font-size: ($font-size--text + 2);
+      line-height: 1.5;
     }
   }
 

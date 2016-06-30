@@ -1,9 +1,10 @@
 .button {
   display: inline-block;
   box-sizing: border-box;
-  padding: 9px;
+  padding: 16px 10px;
 
   font-size: $font-size--button;
+  line-height: 1;
   font-weight: 700;
   font-family: $font-open-sans;
   text-transform: uppercase;

@@ -71,7 +71,9 @@
 
   &__description {
     margin: 0;
-    margin-bottom: 20px;
+    margin-bottom: 17px;
+
+    line-height: 1.857;
 
     @include respond-to("medium") {
       margin-bottom: 7px;

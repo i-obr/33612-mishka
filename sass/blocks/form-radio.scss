@@ -25,6 +25,8 @@
       padding-top: 15px;
       padding-bottom: 15px;
       padding-left: 80px;
+
+      line-height: 1;
     }
 
     @include respond-to("large") {

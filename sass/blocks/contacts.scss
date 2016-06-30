@@ -4,11 +4,12 @@
   text-align: center;
 
   @include respond-to("medium") {
-    margin-bottom: 55px;
+    margin-bottom: 60px;
   }
 
   @include respond-to("large") {
     padding-top: 70px;
+    margin-bottom: 50px;
   }
 
   &__container {
@@ -29,7 +30,7 @@
 
     @include respond-to("medium") {
       padding: 0 30px;
-      margin-bottom: 50px;
+      margin-bottom: 55px;
     }
 
     @include respond-to("large") {
@@ -58,6 +59,7 @@
 
     @include respond-to("large") {
       padding-top: 70px;
+      padding-bottom: 30px;
     }
   }
 
@@ -112,7 +114,9 @@
       width: 50%;
       justify-content: flex-start;
       align-items: flex-start;
-      margin-bottom: 0
+      margin-bottom: 0;
+
+      line-height: 1.875;
     }
 
     @include respond-to("large") {

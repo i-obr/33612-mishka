@@ -42,7 +42,7 @@
   }
 
   &__copyright {
-    padding-top: 17px;
+    padding-top: 25px;
     padding-bottom: 23px;
     white-space: nowrap;
 
@@ -55,7 +55,7 @@
     p {
       margin: 0;
 
-      font-size: $font-size--button;
+      font-size: ($font-size--button + 2);
       line-height: 1;
       font-weight: 700;
 

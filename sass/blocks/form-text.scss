@@ -17,6 +17,7 @@
 
   @include respond-to("large") {
     width: 700px;
+    margin-bottom: 35px;
   }
 
   label {
@@ -24,6 +25,7 @@
 
     @include respond-to("medium") {
       margin-right: 25px;
+      line-height: 1;
     }
   }
 

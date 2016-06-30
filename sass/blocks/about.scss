@@ -1,4 +1,5 @@
 .about {
+
   @include respond-to("medium") {
     margin-bottom: 30px;
   }

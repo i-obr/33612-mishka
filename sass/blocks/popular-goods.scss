@@ -45,7 +45,7 @@
     align-items: flex-end;
     flex-wrap: wrap;
     margin: 0;
-    margin-bottom: 25px;
+    margin-bottom: 28px;
     padding-top: 30px;
 
     @include respond-to("medium") {
@@ -134,7 +134,7 @@
 
   &__description {
     margin-top: 0;
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 
     text-align: left;
 
@@ -176,7 +176,10 @@
       margin-bottom: 50px;
 
       td {
+        padding-top: 11px;
+        padding-bottom: 11px;
         font-size: ($font-size--text + 1);
+        line-height: 1.333;
       }
     }
 
@@ -223,6 +226,11 @@
 
       font-size: ($font-size + 2);
       text-align: left;
+    }
+
+    @include respond-to("large") {
+      line-height: 1.333;
+      margin-bottom: 35px;
     }
   }
 
