@@ -41,22 +41,23 @@
       padding-right: 60%;
       box-sizing: border-box;
 
-      font-size: $font-size--button;
+      font-size: ($font-size--button + 2);
       font-family: $font-tahoma;
       font-weight: 700;
       line-height: 1.3333;
       text-decoration: none;
+      vertical-align: middle;
 
       color: $white;
 
-      @include respond-to("large") {
+      @include respond-to("medium") {
 
         &:active {
           color: rgba(250, 250, 250, 0.3);
         }
 
         &:active .sub-nav__icon {
-          fill: #37b2a0;
+          opacity: 0.3;
         }
       }
     }
@@ -68,15 +69,19 @@
         padding-top: 30px;
         padding-left: 35px;
 
-        font-size: $font-size--button + 2;
+        font-size: ($font-size--button + 4);
         line-height: 1.5;
       }
     }
 
-    @include respond-to("large") {
+    @include respond-to("medium") {
 
       &:hover {
         transform: translateY(-5px);
+      }
+
+      &:hover .sub-nav__icon {
+        fill: #5ab1a6;
       }
     }
   }

@@ -29,7 +29,7 @@
   &__mishka {
     fill: $black;
 
-    @include respond-to("large") {
+    @include respond-to("medium") {
 
       &:hover {
         fill: $color-success;
@@ -42,7 +42,7 @@
   }
 
   &__copyright {
-    padding-top: 17px;
+    padding-top: 25px;
     padding-bottom: 23px;
     white-space: nowrap;
 
@@ -55,11 +55,11 @@
     p {
       margin: 0;
 
-      font-size: $font-size--button;
+      font-size: ($font-size--button + 2);
       line-height: 1;
       font-weight: 700;
 
-      @include respond-to("large") {
+      @include respond-to("medium") {
 
         &:active {
           opacity: 0.3;

@@ -29,7 +29,7 @@ $border-button:               2px solid $gray--darken;
 
 $font-size--text:             14px;
 $font-size:                   16px;
-$font-size--button:           18px;
+$font-size--button:           $font-size;
 $font-size--title:            24px;
 
 $font-open-sans:              "Open Sans", "Arial", sans-serif;

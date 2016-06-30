@@ -26,14 +26,6 @@
 
     text-align: left;
     transform: translateX(-20px);
-  }
-
-  @include respond-to("large") {
-    order: 2;
-    align-self: flex-start;
-    padding-top: 5px;
-    padding-bottom: 5px;
-    transform: translateX(-35px);
 
     a {
       &:hover {
@@ -44,6 +36,14 @@
         fill: rgba(0, 0, 0, 0.3);
       }
     }
+  }
+
+  @include respond-to("large") {
+    order: 2;
+    align-self: flex-start;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    transform: translateX(-35px);
   }
 
   &__mobile {
