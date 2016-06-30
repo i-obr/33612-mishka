@@ -8,22 +8,37 @@
   }
 
   @include respond-to("large") {
-    position: relative;
-
-    margin-bottom: 105px;
-
-    text-align: left;
+    padding-top: 70px;
   }
 
   &__container {
+
+    @include respond-to("large") {
+      @include container;
+
+      display: flex;
+      flex-wrap: wrap;
+    }
+  }
+
+  &__wrapper {
     @include container;
 
     padding: 0;
+    margin-bottom: 35px;
 
     @include respond-to("medium") {
       padding: 0 30px;
+      margin-bottom: 50px;
+    }
 
-      font-size: 0;
+    @include respond-to("large") {
+      width: 525px;
+      padding: 0;
+      padding-left: 175px;
+      margin: 0;
+
+      text-align: left;
     }
   }
 
@@ -42,11 +57,7 @@
     }
 
     @include respond-to("large") {
-      position: absolute;
-      top: 140px;
-
-      padding-top: 0;
-      padding-left: 175px;
+      padding-top: 70px;
     }
   }
 
@@ -66,27 +77,11 @@
     }
 
     @include respond-to("large") {
-      left: 60px;
+      left: -114px;
     }
   }
 
-  &__wrapper {
-    margin-bottom: 35px;
-
-    @include respond-to("medium") {
-      margin-bottom: 50px;
-    }
-
-    @include respond-to("large") {
-      @include clearfix;
-
-      width: 50%;
-      padding-top: 70px;
-      margin-bottom: 40px;
-    }
-  }
-
-  &__column-left {
+  &__list {
 
     @include respond-to("medium") {
       display: flex;
@@ -95,8 +90,6 @@
 
     @include respond-to("large") {
       flex-direction: column;
-      width: 100%;
-      margin-top: 170px;
     }
   }
 
@@ -111,6 +104,10 @@
     display: flex;
     justify-content: space-between;
 
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     @include respond-to("medium") {
       width: 50%;
       justify-content: flex-start;
@@ -119,9 +116,8 @@
     }
 
     @include respond-to("large") {
-      width: 100%;
-      padding-left: 175px;
-      margin-bottom: 30px;
+      width: auto;
+      margin-bottom: 25px;
     }
   }
 
@@ -133,6 +129,7 @@
   }
 
   &__email {
+    width: 185px;
     padding-bottom: 0px;
 
     text-decoration: none;
@@ -140,18 +137,6 @@
     color: $gray--darken;
 
     border-bottom: 2px solid $green;
-    width: 185px;
-
-    @include respond-to("large") {
-
-      &:hover {
-        color: $color-success;
-      }
-
-      &:active {
-        opacity: 0.3;
-      }
-    }
   }
 
   &__address {
@@ -181,10 +166,6 @@
     }
 
     @include respond-to("large") {
-      position: absolute;
-      left: 50%;
-      top: 70px;
-
       width: 525px;
       margin-bottom: 0;
     }
@@ -198,8 +179,8 @@
     }
 
     @include respond-to("large") {
+      transform: translateY(-52px);
       margin-left: 175px;
-      margin-bottom: 0;
     }
   }
 }
