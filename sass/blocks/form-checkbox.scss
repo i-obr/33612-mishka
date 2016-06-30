@@ -50,19 +50,18 @@
       padding-left: 80px;
 
       line-height: 52px;
-    }
 
-    @include respond-to("large") {
       &:hover {
 
-      &::before {
-        border-color: $color-success;
+        &::before {
+          border-color: $color-success;
+        }
       }
-    }
     }
   }
 
-  input[type="checkbox"]:disabled + label::before {
+  input[type="checkbox"]:disabled + label::before,
+  input[type="checkbox"]:disabled + label:hover::before {
     border-color: $color-disabled;
   }
 

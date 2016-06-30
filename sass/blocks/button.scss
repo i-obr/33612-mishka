@@ -19,7 +19,7 @@
 
   outline: none;
 
-  @include respond-to("large") {
+  @include respond-to("medium") {
 
     &:hover {
       background: $gray--darken;

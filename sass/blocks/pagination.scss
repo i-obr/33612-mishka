@@ -29,9 +29,6 @@
     @include respond-to("medium") {
       width: 88px;
       border: none;
-    }
-
-    @include respond-to("large") {
 
       &:hover .pagination__icon {
         fill: #666666;

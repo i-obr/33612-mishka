@@ -29,7 +29,7 @@
   &__mishka {
     fill: $black;
 
-    @include respond-to("large") {
+    @include respond-to("medium") {
 
       &:hover {
         fill: $color-success;
@@ -59,7 +59,7 @@
       line-height: 1;
       font-weight: 700;
 
-      @include respond-to("large") {
+      @include respond-to("medium") {
 
         &:active {
           opacity: 0.3;

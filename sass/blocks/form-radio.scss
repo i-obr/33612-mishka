@@ -39,7 +39,8 @@
     }
   }
 
-  input[type="radio"]:disabled + label::before {
+  input[type="radio"]:disabled + label::before,
+  input[type="radio"]:disabled + label:hover::before {
     border-color: $color-disabled;
   }
 

@@ -141,6 +141,16 @@
     color: $gray--darken;
 
     border-bottom: 2px solid $green;
+
+    @include respond-to("medium") {
+      &:hover {
+        color: $green;
+      }
+
+      &:active {
+        opacity: 0.3;
+      }
+    }
   }
 
   &__address {

@@ -31,7 +31,7 @@
 
   &__link {
 
-    @include respond-to("large") {
+    @include respond-to("medium") {
 
       &:hover {
         fill: $color-success;
