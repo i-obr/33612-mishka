@@ -50,7 +50,7 @@
       }
     }
 
-    &::before {
+    /*&::before {
       content: "";
 
       position: absolute;
@@ -66,7 +66,7 @@
       background-image: url("../img/icon-play.svg");
       background-repeat: no-repeat;
     }
-
+*/
     iframe {
       width: 260px;
       height: 150px;
@@ -91,23 +91,28 @@
       @include respond-to("retina") {
         background-image: url("../img/video-desktop@2x.jpg");
       }
+    }
+  }
 
-      &:hover {
-        &::before {
-          content: "";
+  &__play {
+    position: absolute;
+    top: 50%;
+    left: 50%;
 
-          transform: scale(1.2);
-        }
-      }
+    margin-top: -38px;
+    margin-left: -52px;
 
-      &:active {
-        &::before {
-          content: "";
+    background-color: transparent;
+    outline: none;
+    border: none;
 
-          transform: scale(0.8);
-          opacity: 0.9;
-        }
-      }
+    &:hover {
+      transform: scale(1.2);
+    }
+
+    &:active {
+      transform: scale(0.8);
+      opacity: 0.3;
     }
   }
 
@@ -204,8 +209,7 @@
   }
 
   &__button {
-    padding-left: 25px;
-    padding-right: 25px;
+    width: 192px;
 
     @include respond-to("medium") {
       width: 87.5%;
