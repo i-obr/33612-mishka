@@ -137,6 +137,8 @@
     padding-left: 90px;
     margin: 0;
 
+    margin-bottom: 95px;
+
     @include respond-to("medium") {
       position: relative;
       padding-top: 35px;
@@ -194,7 +196,8 @@
   }
 
   &__button {
-    width: 192px;
+    padding-left: 28px;
+    padding-right: 28px;
 
     @include respond-to("medium") {
       width: 87.5%;
@@ -202,7 +205,9 @@
     }
 
     @include respond-to("large") {
-      width: 62.5%;
+      width: auto;
+      padding-left: 45px;
+      padding-right: 45px;
       margin-left: 20px;
     }
   }

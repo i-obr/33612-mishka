@@ -61,6 +61,10 @@
 
       @include respond-to("medium") {
 
+        &:hover .page-footer__ha-logo {
+          fill: #46c1ae;
+        }
+
         &:active {
           opacity: 0.3;
         }

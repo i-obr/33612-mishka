@@ -235,11 +235,13 @@
   }
 
   &__button {
-    width: 260px;
+    padding-left: 86px;
+    padding-right: 86px;
     margin-bottom: 35px;
 
     @include respond-to("medium") {
-      width: 290px;
+      padding-left: 101px;
+      padding-right: 101px;
       margin-bottom: 0;
     }
   }
