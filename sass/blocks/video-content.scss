@@ -11,19 +11,16 @@
   @include respond-to("large") {
     display: flex;
     justify-content: flex-start;
-
     padding-top: 0;
     margin-bottom: 100px;
   }
 
   &__frame {
     position: relative;
-
     width: 258px;
     height: 150px;
     margin: 0 auto;
     margin-top: 95px;
-
     background-color: $gray--light;
     background-image: url("../img/video-mobile@1x.jpg");
     background-repeat: no-repeat;
@@ -40,9 +37,7 @@
       width: 100%;
       height: 455px;
       margin-top: 0;
-
       border-bottom: $border-main;
-
       background-image: url("../img/video-tablet@1x.jpg");
 
       @include respond-to("retina") {
@@ -53,7 +48,6 @@
     iframe {
       width: 260px;
       height: 150px;
-
       border: none;
 
       @include respond-to("medium") {
@@ -68,7 +62,6 @@
 
     @include respond-to("large") {
       width: 682px;
-
       background-image: url("../img/video-desktop@1x.jpg");
 
       @include respond-to("retina") {
@@ -81,10 +74,8 @@
     position: absolute;
     top: 50%;
     left: 50%;
-
     margin-top: -38px;
     margin-left: -52px;
-
     background-color: transparent;
     outline: none;
     border: none;
@@ -107,7 +98,6 @@
 
     @include respond-to("medium") {
       margin-bottom: 45px;
-
       border: $border-main;
 
       &:hover {
@@ -129,14 +119,11 @@
     position: absolute;
     top: 0;
     left: 0;
-
     text-align: left;
-
     padding: 25px;
     padding-top: 25px;
     padding-left: 90px;
     margin: 0;
-
     margin-bottom: 95px;
 
     @include respond-to("medium") {
@@ -158,10 +145,8 @@
     position: absolute;
     top: 30px;
     left: 30px;
-
     width: 35px;
     height: 30px;
-
     fill: $green;
 
     @include respond-to("medium") {
@@ -180,7 +165,6 @@
     padding-right: 20px;
     padding-bottom: 20px;
     padding-left: 35px;
-
     text-align: left;
 
     @include respond-to("medium") {

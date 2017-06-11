@@ -17,7 +17,6 @@
 
     @include respond-to("medium") {
       padding: 0 30px;
-
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
@@ -31,7 +30,6 @@
   &__group {
     padding: 0;
     padding-bottom: 20px;
-
     text-align: left;
 
     &--bg-gray {
@@ -39,7 +37,6 @@
       @include respond-to("medium") {
         padding-top: 5px;
         padding-bottom: 5px;
-
         background: $gray;
       }
     }
@@ -59,7 +56,6 @@
     @include respond-to("medium") {
       width: 100%;
       padding-top: 50px;
-      // padding-bottom: 60px;
       padding-bottom: 30px;
       padding-left: 50px;
     }
@@ -122,27 +118,22 @@
     display: inline-block;
     width: 100%;
     margin-bottom: 10px;
-
     font-size: $font-size;
     line-height: 1;
     font-weight: 700;
     font-family: $font-open-sans;
     text-transform: uppercase;
     vertical-align: middle;
-
     color: $green;
 
     &::after {
       content: "";
-
       position: absolute;
       top: 50%;
       right: 0;
-
       width: 80%;
       height: 1px;
       z-index: 1;
-
       background: $green;
     }
 
@@ -172,7 +163,6 @@
 
   &__small-text {
     display: none;
-
     font-size: $font-size;
     font-family: $font-open-sans;
 

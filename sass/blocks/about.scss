@@ -37,7 +37,6 @@
   &__list {
     margin: 0;
     padding: 0;
-
     list-style: none;
 
     @include respond-to("medium") {
@@ -53,14 +52,11 @@
 
   &__item {
     position: relative;
-
     padding-top: 55px;
     padding-bottom: 27px;
-
     font-size: $font-size;
     line-height: 1.25;
     font-weight: 700;
-
     color: $black;
 
     @include respond-to("medium") {
@@ -103,7 +99,6 @@
     position: absolute;
     top: 0;
     left: 0;
-
     fill: $green;
 
     &--ecology {

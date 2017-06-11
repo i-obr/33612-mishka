@@ -1,11 +1,8 @@
 .sub-nav {
   padding: 0;
   margin: 0;
-
   list-style: none;
-
   text-align: left;
-
   background: $green;
 
   @include respond-to("medium") {
@@ -18,7 +15,6 @@
 
     &::after {
       content: "";
-
       position: absolute;
       top: 23px;
     }
@@ -33,21 +29,18 @@
 
     a {
       position: relative;
-
       display: inline-block;
       width: 100%;
       padding: 30px;
       padding-top: 25px;
       padding-right: 60%;
       box-sizing: border-box;
-
       font-size: ($font-size--button + 2);
       font-family: $font-tahoma;
       font-weight: 700;
       line-height: 1.3333;
       text-decoration: none;
       vertical-align: middle;
-
       color: $white;
 
       @include respond-to("medium") {
@@ -68,7 +61,6 @@
       a {
         padding-top: 30px;
         padding-left: 35px;
-
         font-size: ($font-size--button + 4);
         line-height: 1.5;
       }
@@ -89,7 +81,6 @@
   &__icon {
     position: absolute;
     top: 23px;
-
     fill: #35a999;
 
     @include respond-to("medium") {

@@ -1,7 +1,6 @@
 .main-nav {
   width: 100%;
   text-align: left;
-
   position: relative;
   z-index: 2;
 
@@ -16,7 +15,6 @@
   @include respond-to("mobile-only") {
     &--opened .main-nav__list {
       transform: translateY(0);
-
       transition: all 0.4s;
     }
   }
@@ -45,14 +43,12 @@
   &__list {
     padding: 0;
     margin: 0;
-
     list-style: none;
 
     @include respond-to("medium") {
       display: flex;
       flex-wrap: wrap;
       align-items: flex-start;
-
       width: 60%;
 
       order: 2;
@@ -101,7 +97,6 @@
 
       @include respond-to("large") {
         display: inline-block;
-
         vertical-align: top;
       }
     }
@@ -112,13 +107,11 @@
     width: 100%;
     padding: 27px 0;
     padding-left: 75px;
-
     font-size: $font-size;
     line-height: 1.5;
     font-weight: 700;
     text-decoration: none;
     vertical-align: bottom;
-
     color: $black;
 
     @include respond-to("medium") {
@@ -166,14 +159,12 @@
         padding-right: 34px;
         padding-bottom: 20px;
         padding-left: 0;
-
         font-size: $font-size--text;
       }
 
       @include respond-to("large") {
         padding-top: 32px;
         padding-bottom: 32px;
-
         font-size: $font-size;
       }
     }
@@ -186,7 +177,6 @@
         padding-right: 34px;
         padding-bottom: 20px;
         padding-left: 0;
-
         font-size: $font-size--text;
       }
     }
@@ -210,7 +200,6 @@
     position: absolute;
     top: 30px;
     left: 30px;
-
     width: 20px;
     height: 20px;
     fill: $gray-210;
@@ -230,10 +219,8 @@
     position: absolute;
     top: 30px;
     left: 30px;
-
     width: 20px;
     height: 20px;
-
     fill: $gray-210;
 
     @include respond-to("medium") {
@@ -246,9 +233,7 @@
     vertical-align: top;
     width: 85%;
     padding: 10px 0;
-
     background: $white;
-
     outline: none;
     border: none;
 
@@ -264,9 +249,7 @@
       height: 88px;
       top: 0;
       right: 83px;
-
       font-weight: 400;
-
       transition: width 0.5s;
 
       &:focus {
@@ -305,24 +288,19 @@
     width: 20px;
     height: 2px;
     background: $black;
-
     padding: 0;
-
     transition: background 0.4s ease-in-out 0s;
-
     border: 0;
     outline: 0;
 
     &::before,
     &::after {
       content: "";
-
       position: absolute;
       left: 0;
       width: 100%;
       height: 2px;
       background: $black;
-
       transition: transform 0.4s ease-in-out 0s;
     }
 

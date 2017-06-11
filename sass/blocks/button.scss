@@ -1,7 +1,6 @@
 .button {
   display: inline-block;
   padding: 16px 10px;
-
   font-size: $font-size--button;
   line-height: 1;
   font-weight: 700;
@@ -10,12 +9,9 @@
   vertical-align: middle;
   text-decoration: none;
   text-align: center;
-
   border: $border-button;
-
   color: $gray--darken;
   background: transparent;
-
   outline: none;
 
   @include respond-to("medium") {

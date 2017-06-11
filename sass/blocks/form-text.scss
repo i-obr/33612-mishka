@@ -29,7 +29,6 @@
     display: flex;
     align-items: center;
     width: 100%;
-
     margin-bottom: 30px;
   }
 
@@ -51,14 +50,11 @@
     width: 100%;
     padding-top: 17px;
     padding-bottom: 15px;
-
     font-family: $font-verdana;
     font-size: ($font-size + 2);
     background: transparent;
-
     border:none;
     border-bottom: 2px solid $gray--darken;
-
     outline: none;
 
     &:focus {
@@ -100,7 +96,6 @@
     &--textarea {
       height: 150px;
       padding: 15px;
-
       border: $border-button;
 
       @include respond-to("medium") {
@@ -116,10 +111,8 @@
 
   &__icon {
     position: absolute;
-
     top: 15px;
     right: 5px;
-
     fill: $gray-210;
 
     @include respond-to("medium") {

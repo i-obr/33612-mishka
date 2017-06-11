@@ -1,6 +1,5 @@
 .contacts {
   margin-bottom: 40px;
-
   text-align: center;
 
   @include respond-to("medium") {
@@ -38,7 +37,6 @@
       padding: 0;
       padding-left: 175px;
       margin: 0;
-
       text-align: left;
     }
   }
@@ -47,12 +45,10 @@
     margin: 0;
     padding-top: 43px;
     padding-bottom: 25px;
-
     text-align: left;
 
     @include respond-to("medium") {
       position: relative;
-
       padding-top: 65px;
       margin-bottom: 20px;
     }
@@ -70,11 +66,9 @@
       position: absolute;
       bottom: 10px;
       right: 0;
-
       display: inline-block;
       width: 50px;
       height: 82px;
-
       vertical-align: middle;
     }
 
@@ -98,11 +92,8 @@
   &__items {
     margin: 0;
     margin-bottom: 28px;
-
     line-height: 2.1428;
-
     text-align: left;
-
     display: flex;
     justify-content: space-between;
 
@@ -115,7 +106,6 @@
       justify-content: flex-start;
       align-items: flex-start;
       margin-bottom: 0;
-
       line-height: 1.875;
     }
 
@@ -135,11 +125,8 @@
   &__email {
     width: 185px;
     padding-bottom: 0px;
-
     text-decoration: none;
-
     color: $gray--darken;
-
     border-bottom: 2px solid $green;
 
     @include respond-to("medium") {
@@ -165,9 +152,7 @@
     min-height: 455px;
     width: 100%;
     margin-bottom: 37px;
-
     text-align: center;
-
     background: $gray;
 
     img {
@@ -190,7 +175,6 @@
     padding-right: 59px;
 
     @include respond-to("medium") {
-      /*width: 230px;*/
       padding-left: 43px;
       padding-right: 43px;
     }

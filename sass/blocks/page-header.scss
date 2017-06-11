@@ -14,11 +14,8 @@
 
   &__delivery {
     display: none;
-
     padding: 18px 0;
-
     font-size: $font-size--text;
-
     color: $gray--darken;
 
     @include respond-to("medium") {

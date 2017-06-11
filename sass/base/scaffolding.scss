@@ -8,11 +8,9 @@ html {
 
 body {
   min-width: 320px;
-
   font-family: $font-verdana;
   font-size: $font-size;
   line-height: 1.71429;
-
   background: $white;
   color: $black;
 }
@@ -21,7 +19,6 @@ h1,
 h2 {
   font-size: $font-size--title;
   line-height: 1.25;
-
   color: $black;
 
   @include respond-to("medium") {
@@ -38,7 +35,6 @@ h3 {
   font-size: $font-size;
   line-height: 1.5;
   font-weight: 700;
-
   color: $black;
 
   @include respond-to("medium") {
@@ -51,7 +47,6 @@ p {
   font-size: $font-size--text;
   font-family: $font-open-sans;
   line-height: 1.724;
-
   color: $gray--darken;
 
   @include respond-to("medium") {
@@ -66,9 +61,7 @@ label {
   font-weight: 700;
   font-family: $font-verdana;
   vertical-align: middle;
-
   color: $black;
-
   cursor: pointer;
 
   @include respond-to("medium") {
@@ -97,7 +90,6 @@ textarea::-webkit-input-placeholder {
   font-size: $font-size;
   line-height: 1.125;
   opacity: 0.5;
-
   color: $gray--darken;
 
   @include respond-to("medium") {

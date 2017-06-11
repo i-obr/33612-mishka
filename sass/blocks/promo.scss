@@ -1,11 +1,8 @@
 .promo {
   position: relative;
-
   text-align: center;
-
   background-color: $gray--lighten;
   background-image: url("../img/hero-mobile@1x.jpg");
-
   background-repeat: no-repeat;
   background-position: center top;
 
@@ -20,6 +17,7 @@
     border-top: $border-main;
     margin-top: -61px;
     background-size: 1150px auto;
+
     @include respond-to("retina") {
     background-image: url("../img/hero-mobile@2x.jpg");
   }
@@ -50,7 +48,6 @@
     padding-top: 88px;
     padding-bottom: 123px;
     margin: 0;
-
     text-align: center;
 
     @include respond-to("medium") {
