@@ -76,6 +76,22 @@ label {
   }
 }
 
+label.error {
+  color: $color-error;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+
+  @include respond-to("medium") {
+    left: 50px;
+  }
+
+  @include respond-to("large") {
+    left: 0;
+  }
+}
+
 input::-webkit-input-placeholder,
 textarea::-webkit-input-placeholder {
   font-size: $font-size;
